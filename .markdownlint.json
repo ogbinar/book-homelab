@@ -1,0 +1,10 @@
+{
+  "line-length": {
+    "level": "warning",
+    "max": 80
+  },
+  "no-trailing-spaces": true,
+  "no-multiple-blanks": true,
+  "indentation": 2,
+  "fenced-code-language": false
+}

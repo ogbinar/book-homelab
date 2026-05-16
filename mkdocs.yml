@@ -1,5 +1,8 @@
+---
 site_name: "Bahay Bahayan: Build Your First Homelab"
-site_description: "Start Small. Learn Fast. Build What's Yours. — A Filipino-first guide to building your homelab."
+site_description: >
+  Start Small. Learn Fast. Build What's Yours.
+  A Filipino-first guide to building your homelab.
 site_url: https://book-homelab.pages.dev
 repo_url: https://github.com/book-homelab/book-homelab
 repo_name: book-homelab/book-homelab
@@ -58,7 +61,8 @@ extra_css:
 plugins:
   - search:
       lang: en
-      separator: '[\s\u200b\-_,:!=\[\]()\/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      separator: >
+        [\s\u200b\-_,:!=\[\]()\/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])
   - social:
       cards: true
       cards_layout_options:
