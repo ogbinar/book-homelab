@@ -1,0 +1,88 @@
+/* Bahay Bahayan — Filipino-inspired color overrides for MkDocs Material */
+
+/* Primary: sunset orange, Accent: tropical teal */
+[data-md-color-primary="deep-orange"] {
+  --md-primary-fg-color: #E65100;
+  --md-primary-fg-color--light: #FF8A65;
+  --md-primary-fg-color--dark: #BF360C;
+  --md-primary-bg-color: #fff3e0;
+  --md-primary-bg-color--light: #ffe0b2;
+}
+
+/* Accent teal */
+[data-md-color-accent="teal"] {
+  --md-accent-fg-color: #00695C;
+  --md-accent-fg-color--transparent: #00695C20;
+  --md-accent-bg-color: #e0f2f1;
+  --md-accent-bg-color--light: #b2dfdb;
+}
+
+/* Homepage hero */
+.md-main__inner {
+  margin-top: 0;
+}
+
+/* Admonition custom colors for callout types */
+.admonition.lean-path,
+.admonition.leanpath {
+  --md-admonition-bg-color: #e8f5e9;
+  --md-admonition-text-color: #1b5e20;
+  --md-admonition-border-color: #4caf50;
+}
+
+[data-md-color-scheme="slate"] .admonition.lean-path,
+[data-md-color-scheme="slate"] .admonition.leanpath {
+  --md-admonition-bg-color: #1b5e2015;
+  --md-admonition-text-color: #a5d6a7;
+  --md-admonition-border-color: #4caf50;
+}
+
+.admonition.ph-context,
+.admonition.phcontext {
+  --md-admonition-bg-color: #fff3e0;
+  --md-admonition-text-color: #e65100;
+  --md-admonition-border-color: #ff9800;
+}
+
+[data-md-color-scheme="slate"] .admonition.ph-context,
+[data-md-color-scheme="slate"] .admonition.phcontext {
+  --md-admonition-bg-color: #e6510015;
+  --md-admonition-text-color: #ffcc80;
+  --md-admonition-border-color: #ff9800;
+}
+
+.admonition.career-boost,
+.admonition.careerboost {
+  --md-admonition-bg-color: #e3f2fd;
+  --md-admonition-text-color: #0d47a1;
+  --md-admonition-border-color: #2196f3;
+}
+
+[data-md-color-scheme="slate"] .admonition.career-boost,
+[data-md-color-scheme="slate"] .admonition.careerboost {
+  --md-admonition-bg-color: #0d47a115;
+  --md-admonition-text-color: #90caf9;
+  --md-admonition-border-color: #2196f3;
+}
+
+/* Table styling for comparison tables */
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+}
+
+/* Code block headers */
+.md-typeset .highlight {
+  border-radius: 8px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation section headers */
+.md-nav--primary .md-nav__title--site {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #E65100;
+}
