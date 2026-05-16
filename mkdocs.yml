@@ -4,8 +4,8 @@ site_description: >
   Start Small. Learn Fast. Build What's Yours.
   A Filipino-first guide to building your homelab.
 site_url: https://book-homelab.pages.dev
-repo_url: https://github.com/book-homelab/book-homelab
-repo_name: book-homelab/book-homelab
+repo_url: https://github.com/ogbinar/book-homelab
+repo_name: ogbinar/book-homelab
 copyright: "Bahay Bahayan is released under CC BY-SA 4.0. Free forever."
 
 theme:
@@ -13,8 +13,7 @@ theme:
   font:
     text: Inter
     code: JetBrains Mono
- palette:
-    # Scheme 1: Bahay Bahayan (Original - Warm Filipino Sunset)
+  palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep orange
@@ -22,7 +21,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to Cyberpunk mode
-    # Scheme 2: Cyberpunk Manila (Neon Nights)
     - media: "(prefers-color-scheme: light)"
       scheme: cyberpunk
       primary: pink
@@ -30,7 +28,6 @@ theme:
       toggle:
         icon: material/flash-light
         name: Switch to Matrix mode
-    # Scheme 3: Matrix Terminal (Green on Black)
     - media: "(prefers-color-scheme: dark)"
       scheme: matrix
       primary: green
@@ -38,7 +35,6 @@ theme:
       toggle:
         icon: material/terminal
         name: Switch to Synthwave mode
-    # Scheme 4: Synthwave 2077 (Retro Future)
     - media: "(prefers-color-scheme: dark)"
       scheme: synthwave
       primary: purple
@@ -46,7 +42,6 @@ theme:
       toggle:
         icon: material/gradient
         name: Switch to Ocean mode
-    # Scheme 5: Ocean Deep (Cool Blues)
     - media: "(prefers-color-scheme: dark)"
       scheme: ocean
       primary: blue
@@ -54,7 +49,6 @@ theme:
       toggle:
         icon: material/waves
         name: Switch to Bahay Bahayan mode
-    # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep orange
@@ -82,39 +76,13 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/book-homelab/book-homelab
+      link: https://github.com/ogbinar/book-homelab
     - icon: fontawesome/brands/discord
       link: https://discord.gg/bahay-bahayan
   generator: false
 
 extra_css:
   - assets/custom.css
-
-# ============================================
-# CRAZY COLOR SCHEMES GUIDE
-# ============================================
-# Toggle between these schemes using the palette toggle in the header:
-#
-# 1. BAHAY BAHAYAN (Default) - Warm Filipino sunset colors
-#    Orange + Teal, Cream background
-#    Perfect for: Daytime reading, traditional feel
-#
-# 2. CYBERPUNK MANILA - Neon EDSA at midnight
-#    Hot Pink + Cyan, Dark purple background
-#    Perfect for: Night mode, feeling futuristic
-#
-# 3. MATRIX TERMINAL - Green code rain
-#    Pure green on black with scanlines
-#    Perfect for: Feeling like a hacker, terminal vibes
-#
-# 4. SYNTHWAVE 2077 - Retro future Miami
-#    Purple + Orange gradient, glowing text
-#    Perfect for: Retro gaming vibes, sunset drives
-#
-# 5. OCEAN DEEP - Underwater cave
-#    Deep blues with turquoise accents
-#    Perfect for: Calm reading, underwater meditation
-# ============================================
 
 plugins:
   - search:
@@ -182,7 +150,6 @@ nav:
       - "Ch 10: Automation: Work Less": chapters/chapter-10.md
       - "Ch 11: Monitoring: Eyes on Everything": chapters/chapter-11.md
       - "Ch 12: Security: Don't Get Hacked": chapters/chapter-12.md
-      - "Ch 13: Remote Access": chapters/chapter-13.md
       - "Ch 14: Your Homelab Portfolio": chapters/chapter-14.md
   - Appendices:
       - "A: About the Author": appendix/author.md

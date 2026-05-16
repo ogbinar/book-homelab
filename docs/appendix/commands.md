@@ -9,7 +9,7 @@ _Quick reference for common CLI commands used in this book._
 ### Container Management
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker ps` | List running containers |
 | `docker ps -a` | List all containers (including stopped) |
 | `docker run -d <image>` | Run a container in detached mode |
@@ -25,7 +25,7 @@ _Quick reference for common CLI commands used in this book._
 ### Docker Images
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker images` | List downloaded images |
 | `docker pull <image>` | Download an image |
 | `docker rmi <image>` | Remove an image |
@@ -34,7 +34,7 @@ _Quick reference for common CLI commands used in this book._
 ### Docker Compose
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker compose up -d` | Start all services in the compose file |
 | `docker compose down` | Stop and remove all services |
 | `docker compose ps` | List all services and their status |
@@ -49,7 +49,7 @@ _Quick reference for common CLI commands used in this book._
 ### Docker Network
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker network ls` | List all Docker networks |
 | `docker network create <name>` | Create a new network |
 | `docker network rm <name>` | Remove a network |
@@ -57,7 +57,7 @@ _Quick reference for common CLI commands used in this book._
 ### Docker Volume
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker volume ls` | List all volumes |
 | `docker volume create <name>` | Create a new volume |
 | `docker volume rm <name>` | Remove a volume |
@@ -66,7 +66,7 @@ _Quick reference for common CLI commands used in this book._
 ### Docker System Cleanup
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `docker system df` | Show Docker disk usage |
 | `docker system prune` | Remove unused data |
 | `docker system prune -f` | Remove unused data (no confirmation) |
@@ -79,7 +79,7 @@ _Quick reference for common CLI commands used in this book._
 ### File Management
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `ls` | List files |
 | `ls -la` | List all files (including hidden) |
 | `cd <directory>` | Change directory |
@@ -95,7 +95,7 @@ _Quick reference for common CLI commands used in this book._
 ### Disk and Storage
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `df -h` | Show disk usage (human-readable) |
 | `du -sh <directory>` | Show directory size |
 | `lsblk` | List block devices (disks, partitions) |
@@ -106,7 +106,7 @@ _Quick reference for common CLI commands used in this book._
 ### Memory and CPU
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `free -h` | Show memory usage |
 | `uptime` | Show system uptime and load average |
 | `top` | Show real-time process list |
@@ -115,7 +115,7 @@ _Quick reference for common CLI commands used in this book._
 ### Network
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `ip addr show` or `ip a` | Show network interfaces and IPs |
 | `ip route \| grep default` | Show default gateway (router IP) |
 | `ping <host>` | Test connectivity |
@@ -128,7 +128,7 @@ _Quick reference for common CLI commands used in this book._
 ### Network Scanning
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `sudo apt install nmap` | Install nmap |
 | `sudo nmap -sn <range>` | Scan for active devices |
 | `nmap -p <ports> <host>` | Scan specific ports |
@@ -136,7 +136,7 @@ _Quick reference for common CLI commands used in this book._
 ### Package Management (Ubuntu/Debian)
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `sudo apt update` | Update package list |
 | `sudo apt upgrade` | Upgrade all packages |
 | `sudo apt install <package>` | Install a package |
@@ -146,7 +146,7 @@ _Quick reference for common CLI commands used in this book._
 ### Cron (Scheduled Tasks)
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `crontab -e` | Edit your cron jobs |
 | `crontab -l` | List your cron jobs |
 | `crontab -r` | Remove all cron jobs |
@@ -154,7 +154,7 @@ _Quick reference for common CLI commands used in this book._
 ### Systemd (Services)
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `sudo systemctl status <service>` | Check service status |
 | `sudo systemctl start <service>` | Start a service |
 | `sudo systemctl stop <service>` | Stop a service |
@@ -165,7 +165,7 @@ _Quick reference for common CLI commands used in this book._
 ### SSH
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `ssh username@host` | Connect to a remote server |
 | `ssh -i <key> username@host` | Connect using a specific key |
 | `ssh-keygen -t ed25519` | Generate a new SSH key |
@@ -175,7 +175,7 @@ _Quick reference for common CLI commands used in this book._
 ### Backup and Archive
 
 | Command | What It Does |
-|---|---|
+| --- | --- |
 | `tar czf <archive.tar.gz> <source>` | Create a compressed archive |
 | `tar xzf <archive.tar.gz>` | Extract a compressed archive |
 | `tar tzf <archive.tar.gz>` | List contents of an archive |
@@ -185,7 +185,7 @@ _Quick reference for common CLI commands used in this book._
 ## Quick Reference: Chapter Command Map
 
 | Chapter | Key Commands |
-|---|---|
+| --- | --- |
 | Ch 1 | `ssh`, `sudo apt update`, `sudo apt upgrade` |
 | Ch 2 | `ssh-keygen`, `ssh-copy-id`, `sudo apt install` |
 | Ch 3 | `docker run`, `docker ps`, `docker logs` |

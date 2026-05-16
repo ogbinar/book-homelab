@@ -290,7 +290,7 @@ When appropriate, include a translation table showing how homelab terms map
 to professional language:
 
 | Homelab Term | Professional Term |
-|---|---|
+| --- | --- |
 | "I run a homelab" | "I manage self-hosted infrastructure" |
 | "I installed Docker" | "I deployed containerized applications" |
 
@@ -338,7 +338,8 @@ When an AI agent is asked to write or edit content:
 8. **Question assumptions**: If a tech choice seems arbitrary, ask
    "Why this over that?"
 
-### Example AI Prompt Template:
+### Example AI Prompt Template
+
 ```
 "Write chapter N on [TOPIC] following the template structure defined in
 agents.md.
@@ -403,6 +404,7 @@ Tone: Empathetic but candid, opinionated, witty, anti-gatekeeping."
 ## 10. Living Document Protocol
 
 This file evolves with the project:
+
 - Changes require **consensus** (human + AI review)
 - Major shifts go in a `CHANGELOG.md`
 - Version this file: `agents.md v1.0`
