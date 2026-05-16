@@ -33,14 +33,14 @@ theme:
       primary: green
       accent: lime
       toggle:
-        icon: material/terminal
+        icon: material/console
         name: Switch to Synthwave mode
     - media: "(prefers-color-scheme: dark)"
       scheme: synthwave
       primary: purple
       accent: orange
       toggle:
-        icon: material/gradient
+        icon: material/palette
         name: Switch to Ocean mode
     - media: "(prefers-color-scheme: dark)"
       scheme: ocean
