@@ -10,6 +10,7 @@ A complete backup strategy following the 3-2-1 rule: automated local backups to 
 - Your homelab stack from Chapter 8
 - An external USB drive (at least 2x your total data size)
 - Optional: A cloud storage account (Google Drive, Backblaze B2, etc.)
+- Basic backup from Chapter 5 (if you set one up)
 
 ---
 
@@ -21,7 +22,7 @@ You can reinstall everything. But your **data**? The photos you took? The docume
 
 **Data loss is the one failure you cannot recover from.**
 
-This chapter is your insurance policy. It might feel unnecessary right now — everything is working fine. But the best time to set up backups is before you need them. Not after.
+If you set up a quick manual backup in Chapter 5, you have a safety net. But a manual copy is not a strategy. This chapter upgrades you from "I hope I backed up" to "I know my backups work" — with the full 3-2-1 strategy, automation, and tested restore drills.
 
 ---
 

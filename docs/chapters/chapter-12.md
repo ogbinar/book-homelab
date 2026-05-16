@@ -401,7 +401,7 @@ Now let's prove your security works:
 
 ## What's Next
 
-Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. In Chapter 14, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.**
+Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. In Chapter 13, we'll set up remote access so you can reach your lab from anywhere. Then in Chapter 14, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.**
 
 **Homework:**
 1. Set up SSH key authentication and disable password login

@@ -337,7 +337,7 @@ Where to share your work:
 1. **GitHub** — The standard for tech portfolios. Employers check it.
 2. **LinkedIn** — Post about your homelab. Tag it #homelab #selfhosted. Filipino tech recruiters are active here.
 3. **Homelab Forum** — Share your setup. Get feedback. Learn from others.
-4. **Personal website** — Once you build one (Chapter 13 in v2), link to it.
+4. **Personal website** — Once you build one, link your homelab portfolio to it.
 5. **Facebook groups** — "Homelab Philippines," "Self-Hosted Philippines"
 
 > **💡 Quick Win:** Post your homelab story on LinkedIn this week. Use the professional translations above. You might get a recruiter reaching out.

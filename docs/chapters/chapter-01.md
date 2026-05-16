@@ -100,7 +100,7 @@ Here's a taste of what's possible. Don't worry about building all of these — t
 | Run a Kubernetes cluster | k3s | ⭐⭐⭐ Hard |
 | Chat with your documents using AI | Ollama + RAG | ⭐⭐⭐ Hard |
 
-**Notice:** Everything starts simple. Even the hard stuff has an easy入门 point.
+**Notice:** Everything starts simple. Even the hard stuff has an easy starting point.
 
 ---
 

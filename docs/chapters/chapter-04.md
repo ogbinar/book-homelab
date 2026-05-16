@@ -19,7 +19,7 @@ You've got a server. You've got Docker. You've got Uptime Kuma watching over eve
 
 This chapter is about building something useful. Something you'll touch every day. Something that makes you go: *Hindi ko kailangan magbayad ng subscription para sa 'to.*
 
-You get to choose. Pick ONE of these four services and deploy it. You can always add more later — but for now, focus on one and make it good.
+You get to choose. Pick at least one — we recommend starting with 2-3 so you have enough services for Chapter 8. You can always add more later, but for now, pick a couple and make them good.
 
 ---
 
@@ -206,7 +206,7 @@ Whichever service you chose, take 30 minutes to configure it properly:
 Now let's prove it works:
 
 1. **Restart your server** (`sudo reboot`) — When it comes back, check that your service is running
-2. **Turn off WiFi on your phone** and use mobile data — Can you still access your service on your home network? (No, and that's expected — see Chapter 6 for remote access)
+2. **Turn off WiFi on your phone** and use mobile data — Can you still access your service on your home network? (No, and that's expected — see Chapter 13 for remote access)
 3. **Delete the container** (`docker rm -f servicename`) and recreate it from your deployment command — Your data should still be there (because of volumes)
 
 > **🔥 The Chaos Champion:** For Pi-hole specifically — unplug your router, wait 30 seconds, plug it back in. When your internet is back, try loading a website with ads. If Pi-hole is working, the ads won't load even though your internet is working. That's the magic of DNS-level blocking.
@@ -248,7 +248,7 @@ Most Filipinos access the internet primarily from phones. All four services abov
 
 - **Vaultwarden:** Official Bitwarden app (iOS + Android)
 - **Nextcloud:** Official Nextcloud app (iOS + Android)
-- **Pi-hole:** Fdnf屏 Dashboard (mobile browser) + Admin Panel
+- **Pi-hole:** Web Dashboard (mobile browser) + Admin Panel
 - **Jellyfin:** Jellyfin app (Android), browser-based (iOS)
 
 ### Storage Considerations

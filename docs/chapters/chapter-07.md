@@ -105,11 +105,6 @@ services:
       - ./caddy-data:/data
       - ./caddy-config:/config
     network_mode: host
-
-networks:
-  default:
-    external:
-      name: bridge
 ```
 
 > **Note:** We use `network_mode: host` because Caddy needs to bind to ports 80 and 443 directly. This gives it the best performance and simplicity.
@@ -132,14 +127,14 @@ Start with a basic configuration:
     auto_https off
 }
 
-# Replace these with your actual service container names and ports
-# This is the magic: Caddy reads Docker labels automatically,
-# but we'll do it manually first to understand how it works
+# Replace these with your actual service container names and ports.
+# Remove routes for services you haven't deployed — this Caddyfile is a template.
+# Uncomment and customize the ones you need:
 
 # Uptime Kuma
-kuma.homelab.local {
-    reverse_proxy uptime-kuma:3001
-}
+# kuma.homelab.local {
+#     reverse_proxy uptime-kuma:3001
+# }
 
 # Vaultwarden
 vault.homelab.local {
@@ -152,9 +147,14 @@ nextcloud.homelab.local {
 }
 
 # Jellyfin
-jellyfin.homelab.local {
-    reverse_proxy jellyfin:8096
-}
+# jellyfin.homelab.local {
+#     reverse_proxy jellyfin:8096
+# }
+
+# Pi-hole
+# pihole.homelab.local {
+#     reverse_proxy pihole:80
+# }
 ```
 
 ### Step 3: Update Your Hosts File

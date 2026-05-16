@@ -135,7 +135,7 @@ cAdvisor (Container Advisor) collects container metrics:
     container_name: cadvisor
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "9101:8080"
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro

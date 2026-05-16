@@ -25,7 +25,7 @@ practical, affordable, and privacy-first skills.
 
 We don't just provide "copy-paste" commands; we provide the **intuition**
 behind the configuration. Every `docker run` comes with a "why."
-Every `incus launch` explains the networking model.
+Every `docker network create` explains the networking model.
 
 ---
 
@@ -43,7 +43,7 @@ Every `incus launch` explains the networking model.
 
 - If a specific tool is bloated or "cloud-washed," say so
 - Provide a **"Why We Use This"** section for every major tech choice
-- Example: *"We use Incus over Proxmox VE for containers because..."*
+- Example: *"We use Docker Compose over Kubernetes for homelabs because..."*
 
 ### Witty & Grounded
 
@@ -164,7 +164,7 @@ and builds to technical depth.
 - All infrastructure steps should be accompanied by a **"Reproducibility
   Check"**:
   - Docker Compose file
-  - Incus snapshot command
+  - Docker snapshot/commit command
   - Ansible playbook snippet
 - Version pin everything
 
@@ -173,8 +173,8 @@ and builds to technical depth.
 - Avoid GUI-only tutorials
 - If a GUI is used, explain the CLI/API equivalent happening in the
   background
-- Example: *"The 'Create Network' button you just clicked ran `incus network
-  create` with these flags..."*
+- Example: *"The 'Create Network' button you just clicked ran `docker network
+create` with these flags..."*
 
 ---
 

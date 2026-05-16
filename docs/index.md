@@ -79,6 +79,18 @@ Here's what self-hosting can save you:
 
 ---
 
+## About the Author
+
+**Myk** is not a hardcore sysadmin or enterprise architect. He's just someone who likes to tinker, experiment, and see how far existing computers can still go before throwing them away.
+
+What started as curiosity slowly turned into a homelab, a personal cloud, and eventually a small AI lab built mostly from **recycled hardware, open-source software, and lots of trial and error.**
+
+This guide is heavily inspired by the spirit of **[Data Engineering Pilipinas (DEP)](https://dataengineering.ph/)** — a community built around learning openly, sharing knowledge freely, and helping people grow without gatekeeping.
+
+> **The goal is not perfection.** The goal is to build, learn, break things, fix them, and hopefully help others do the same.
+
+---
+
 ## Ready?
 
 Let's start with **[Chapter 1: Ano ba ang Homelab?](chapters/chapter-01.md)** →

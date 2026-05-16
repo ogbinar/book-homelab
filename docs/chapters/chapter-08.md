@@ -230,7 +230,13 @@ volumes:
   jellyfin-cache:
 ```
 
-### Step 3: Create an Environment File
+### Step 3: Customize the Stack
+
+This compose file includes every service you've deployed so far. If you only deployed some of them (e.g., you only chose Vaultwarden in Chapter 4), remove the services you don't have. The compose file is a template — customize it to your setup.
+
+For example, if you don't have Pi-hole or Jellyfin, delete their entire service blocks and their volumes from the `volumes:` section at the bottom. Keep the services and volumes that match what you've deployed.
+
+### Step 4: Create an Environment File
 
 ```bash
 # Create .env file for secrets
@@ -254,7 +260,7 @@ PIHOLE_PASSWORD=your-pihole-password
 > echo ".env" >> ~/homelab/.gitignore
 > ```
 
-### Step 4: Stop Old Containers and Start the Stack
+### Step 5: Stop Old Containers and Start the Stack
 
 ```bash
 # Stop all old containers (one by one)
@@ -276,7 +282,7 @@ cd ~/homelab
 docker compose up -d
 ```
 
-### Step 5: Verify Everything Works
+### Step 6: Verify Everything Works
 
 ```bash
 # Check all containers are running

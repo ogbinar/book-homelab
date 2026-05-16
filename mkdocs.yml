@@ -13,15 +13,47 @@ theme:
   font:
     text: Inter
     code: JetBrains Mono
-  palette:
-    # Light mode
+ palette:
+    # Scheme 1: Bahay Bahayan (Original - Warm Filipino Sunset)
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep orange
       accent: teal
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Switch to Cyberpunk mode
+    # Scheme 2: Cyberpunk Manila (Neon Nights)
+    - media: "(prefers-color-scheme: light)"
+      scheme: cyberpunk
+      primary: pink
+      accent: cyan
+      toggle:
+        icon: material/flash-light
+        name: Switch to Matrix mode
+    # Scheme 3: Matrix Terminal (Green on Black)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: matrix
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/terminal
+        name: Switch to Synthwave mode
+    # Scheme 4: Synthwave 2077 (Retro Future)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: synthwave
+      primary: purple
+      accent: orange
+      toggle:
+        icon: material/gradient
+        name: Switch to Ocean mode
+    # Scheme 5: Ocean Deep (Cool Blues)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: ocean
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/waves
+        name: Switch to Bahay Bahayan mode
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -57,6 +89,32 @@ extra:
 
 extra_css:
   - assets/custom.css
+
+# ============================================
+# CRAZY COLOR SCHEMES GUIDE
+# ============================================
+# Toggle between these schemes using the palette toggle in the header:
+#
+# 1. BAHAY BAHAYAN (Default) - Warm Filipino sunset colors
+#    Orange + Teal, Cream background
+#    Perfect for: Daytime reading, traditional feel
+#
+# 2. CYBERPUNK MANILA - Neon EDSA at midnight
+#    Hot Pink + Cyan, Dark purple background
+#    Perfect for: Night mode, feeling futuristic
+#
+# 3. MATRIX TERMINAL - Green code rain
+#    Pure green on black with scanlines
+#    Perfect for: Feeling like a hacker, terminal vibes
+#
+# 4. SYNTHWAVE 2077 - Retro future Miami
+#    Purple + Orange gradient, glowing text
+#    Perfect for: Retro gaming vibes, sunset drives
+#
+# 5. OCEAN DEEP - Underwater cave
+#    Deep blues with turquoise accents
+#    Perfect for: Calm reading, underwater meditation
+# ============================================
 
 plugins:
   - search:
@@ -124,11 +182,13 @@ nav:
       - "Ch 10: Automation: Work Less": chapters/chapter-10.md
       - "Ch 11: Monitoring: Eyes on Everything": chapters/chapter-11.md
       - "Ch 12: Security: Don't Get Hacked": chapters/chapter-12.md
+      - "Ch 13: Remote Access": chapters/chapter-13.md
       - "Ch 14: Your Homelab Portfolio": chapters/chapter-14.md
   - Appendices:
-      - "A: Glossary": appendix/glossary.md
-      - "B: Hardware Buying Guide": appendix/hardware.md
-      - "C: Common Errors": appendix/errors.md
-      - "D: Service Directory": appendix/services.md
-      - "E: Community": appendix/community.md
-      - "F: Commands Reference": appendix/commands.md
+      - "A: About the Author": appendix/author.md
+      - "B: Glossary": appendix/glossary.md
+      - "C: Hardware Buying Guide": appendix/hardware.md
+      - "D: Common Errors": appendix/errors.md
+      - "E: Service Directory": appendix/services.md
+      - "F: Community": appendix/community.md
+      - "G: Commands Reference": appendix/commands.md

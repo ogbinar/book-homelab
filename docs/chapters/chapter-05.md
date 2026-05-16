@@ -1,14 +1,13 @@
 # Chapter 5: Keeping It Alive
 
 ## What You'll Build
-A resilient homelab that survives reboots, crashes, and power outages. You'll set up auto-restart policies, automated backups, health checks, and update procedures.
+A resilient homelab that survives reboots, crashes, and power outages. You'll set up auto-restart policies, health monitoring, and Docker cleanup — so your services stay running with minimal effort.
 
 ## How Long It Takes
-1 hour (including reading and hands-on steps)
+45 minutes (including reading and hands-on steps)
 
 ## What You Need
 - Your server from Chapter 2 with Docker and at least one service running (Chapter 4)
-- An external USB drive or secondary storage (for backups)
 - Internet connection
 
 ---
@@ -68,134 +67,7 @@ docker update --restart unless-stopped <container-name>
 > docker update --restart on-failure:5 <container-name>
 > ```
 
-### Step 2: Set Up Automated Backups
-
-Data is more important than services. Services can always be redeployed. Data — your photos, your passwords, your documents — once it's gone, it's gone.
-
-We'll use a simple but effective backup strategy: copy your Docker volumes to an external drive.
-
-**If you have an external USB drive:**
-
-```bash
-# Create a backup script
-nano ~/homelab-backup.sh
-```
-
-Paste this:
-
-```bash
-#!/bin/bash
-# ~/homelab-backup.sh — Simple homelab backup script
-
-# Configuration
-BACKUP_DIR="/media/usb-backup/homelab-backup"
-DATE=$(date +%Y-%m-%d_%H%M%S)
-RETENTION_DAYS=30
-SERVICES="uptime-kuma vaultwarden nextcloud pihole jellyfin"
-
-# Create backup directory
-mkdir -p "${BACKUP_DIR}/${DATE}"
-
-# Backup each service's data
-for service in $SERVICES; do
-  # Check if the container exists
-  if docker ps -a --format '{{.Names}}' | grep -q "^${service}$"; then
-    echo "Backing up ${service}..."
-    docker run --rm \
-      -v "${service}_data:/data:ro" \
-      -v "${BACKUP_DIR}/${DATE}:/backup" \
-      alpine tar czf "/backup/${service}.tar.gz" -C /data . 2>/dev/null || \
-    echo "  ⚠ Could not backup ${service} (volume may not exist)"
-  fi
-done
-
-# Clean old backups
-find "${BACKUP_DIR}" -maxdepth 1 -type d -mtime +${RETENTION_DAYS} -exec rm -rf {} \;
-
-echo "Backup complete: ${DATE}"
-```
-
-Make it executable:
-```bash
-chmod +x ~/homelab-backup.sh
-```
-
-Test it:
-```bash
-~/homelab-backup.sh
-```
-
-**How to mount an external USB drive on Ubuntu:**
-```bash
-# Find the USB drive
-lsblk
-
-# Create a mount point
-sudo mkdir -p /media/usb-backup
-
-# Mount it (replace sdb1 with your actual drive partition)
-sudo mount /dev/sdb1 /media/usb-backup
-
-# Make it persist across reboots
-# Get the UUID
-sudo blkid /dev/sdb1
-
-# Add to fstab (replace UUID with your actual one)
-echo 'UUID=your-uuid-here /media/usb-backup ext4 defaults 0 2' | sudo tee -a /etc/fstab
-```
-
-### Step 3: Schedule Automatic Backups
-
-Use `cron` to run your backup script automatically:
-
-```bash
-# Edit your crontab
-crontab -e
-```
-
-Add this line to run backups daily at 3 AM:
-```
-0 3 * * * /home/your-username/homelab-backup.sh >> /home/your-username/backup.log 2>&1
-```
-
-Replace `your-username` with your actual username.
-
-**Verify it's scheduled:**
-```bash
-crontab -l
-```
-
-> **💡 Quick Win:** Even if you skip everything else in this chapter, setting up automated backups is the single most important thing you can do. Data loss is the one failure you can't recover from.
-
-### Step 4: Test Your Backup (The Most Important Step)
-
-A backup you haven't tested is just a hope. Let's verify you can actually restore:
-
-```bash
-# Find your latest backup
-ls -la ~/homelab-backup/homelab-backup/
-
-# Extract the latest backup to a test location
-LATEST=$(ls -td ~/homelab-backup/homelab-backup/*/ | head -1)
-mkdir -p /tmp/backup-test
-tar xzf "${LATEST}uptime-kuma.tar.gz" -C /tmp/backup-test
-
-# Check the contents
-ls -la /tmp/backup-test
-```
-
-If you can see files in `/tmp/backup-test`, your backup works.
-
-**The restore drill:**
-1. Delete your container: `docker rm -f uptime-kuma`
-2. Clean your data: `rm -rf ~/uptime-kuma/data/*`
-3. Restore from backup: `tar xzf ~/homelab-backup/homelab-backup/LATEST/uptime-kuma.tar.gz -C ~/uptime-kuma/data/`
-4. Recreate the container (same command from Chapter 3)
-5. Verify it works in your browser
-
-> **🔥 Stress Test:** Do this restore drill. It takes 15 minutes. It might feel unnecessary now. But when something actually breaks (and it will), you'll be the person who smiles because you already know how to fix it.
-
-### Step 5: Set Up Health Monitoring
+### Step 2: Set Up Health Monitoring
 
 Uptime Kuma (which you installed in Chapter 3) is already monitoring your services — but let's make sure it's actually watching the right things.
 
@@ -212,23 +84,37 @@ Uptime Kuma (which you installed in Chapter 3) is already monitoring your servic
 - **Interval:** 1 minute
 - **Keywords:** `200` (alert if "200" doesn't appear in the response)
 
+### Step 3: Keep Docker Clean
+
+Over time, Docker accumulates unused images, stopped containers, and build cache. Clean regularly:
+
+```bash
+# Remove stopped containers
+docker container prune
+
+# Remove unused images
+docker image prune -a
+
+# Remove unused volumes
+docker volume prune
+
+# Remove everything unused (careful!)
+docker system prune -a --volumes
+```
+
+**Schedule this monthly:**
+```bash
+# Add to crontab (first Sunday of each month at 4 AM)
+0 4 1 * * docker system prune -f --volumes
+```
+
+> **⚠️ Watch Out:** `docker system prune -a --volumes` removes EVERYTHING unused, including volumes. Only use this if you're sure you have backups. For regular cleanup, use `docker system prune -f` (without `-a` and `--volumes`).
+
+> **💡 Quick Win:** Run `docker system df` anytime to see how much disk space Docker is using. You'll be surprised.
+
 ---
 
 ## 🔵 The Why
-
-### The 3-2-1 Backup Rule
-
-Professional data protection follows the **3-2-1 rule**:
-- **3** copies of your data (original + 2 backups)
-- **2** different types of storage (e.g., internal drive + external drive)
-- **1** copy offsite (e.g., cloud storage, friend's house, USB drive at office)
-
-For homelabbers, this looks like:
-- **Copy 1:** Your live data on the server
-- **Copy 2:** Your external USB drive (local backup)
-- **Copy 3:** Optional — sync to a cloud service or another location
-
-> **💸 The Lean Path:** If you don't have an external drive yet, your backup is "manual: copy important data to a friend's house or Google Drive." That's better than nothing. We're building toward automation, but starting is what matters.
 
 ### Why Auto-Restart Matters
 
@@ -241,15 +127,31 @@ Without auto-restart, every container crash means:
 
 With auto-restart, steps 1-5 happen automatically. You only get involved when something truly needs your attention.
 
-### Why Testing Backups Matters
+### Why Monitoring Matters
 
-Studies show that **60% of organizations with a backup strategy discover it doesn't work** when they need it. Common reasons:
-- Corrupted backup files
-- Missing files in the backup
-- Backup process silently failing
-- Restoring to incompatible hardware/software
+Uptime Kuma doesn't just tell you something is down — it tells you **when** it went down and **how long** it was down. That history is gold when debugging:
 
-Testing proves your backup works. Not "probably works." Works.
+> "Your service went down at 3:14 AM on Tuesday. It was down for 12 minutes. That lines up with a Docker update that ran at 3:00 AM."
+
+### Why Docker Cleanup Matters
+
+Docker is a bit of a hoarder. Every time you pull a new image, the old one stays on disk. Every time you stop a container, its data might persist. Over weeks, this adds up:
+
+```bash
+# Check Docker disk usage
+docker system df
+```
+
+**Expected output:**
+```
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          15        8         2.1GB     1.3GB (62%)
+Containers      8         5         150MB     45MB (30%)
+Local Volumes   10        8         3.2GB     800MB (25%)
+Build Cache     0         0         0B        0B
+```
+
+Running `docker system prune` reclaimed 1.3GB. That's free space you didn't know you had.
 
 ---
 
@@ -276,63 +178,43 @@ services:
       - vault-data:/data
 ```
 
-Named volumes make backup scripts more predictable:
+### Backup Awareness
+
+A quick manual backup is all you need right now. Before you move on, copy your service data somewhere safe:
+
 ```bash
-docker run --rm \
-  -v kuma-data:/data:ro \
-  -v /tmp/backup:/backup \
-  alpine tar czf "/backup/uptime-kuma.tar.gz" -C /data .
+# Copy your service data to a backup folder
+mkdir -p ~/homelab-backup
+cp -r ~/uptime-kuma/data ~/homelab-backup/
+cp -r ~/vaultwarden/data ~/homelab-backup/ 2>/dev/null || true
 ```
+
+This is a basic safety net. In **Chapter 9**, you'll set up the full automated backup strategy with the 3-2-1 rule, external drives, and restore drills. For now, this manual copy is enough to prevent data loss while you keep learning.
 
 ### Backup Strategies Compared
 
 | Strategy | Pros | Cons | Best For |
 |---|---|---|---|
+| **Manual copy** (above) | Simple, no setup | Easy to forget | Right now |
 | **rsync to external drive** | Simple, fast, incremental | Manual setup | Beginners |
-| **Docker volume backup** (above) | Container-aware, automated | Tar files aren't searchable | Docker-heavy setups |
+| **Docker volume backup** | Container-aware, automated | Tar files aren't searchable | Docker-heavy setups |
 | **Restic** | Encrypted, deduplicated, cloud support | Steeper learning curve | Advanced users |
 | **BorgBackup** | Excellent deduplication, encrypted | Linux-only, complex | Large datasets |
-| **Proxmox Backup Server** | VM/container-aware, incremental | Requires Proxmox | Virtualization users |
 
-### Docker Cleanup
-
-Over time, Docker accumulates unused images, stopped containers, and build cache. Clean regularly:
-
-```bash
-# Remove stopped containers
-docker container prune
-
-# Remove unused images
-docker image prune -a
-
-# Remove unused volumes
-docker volume prune
-
-# Remove everything unused (careful!)
-docker system prune -a --volumes
-```
-
-**Schedule this monthly:**
-```bash
-# Add to crontab (first Sunday of each month at 4 AM)
-0 4 1 * * docker system prune -f --volumes
-```
-
-> **⚠️ Watch Out:** `docker system prune -a --volumes` removes EVERYTHING unused, including volumes. Only use this if you're sure you have backups. For regular cleanup, use `docker system prune -f` (without `-a` and `--volumes`).
+> **💸 The Lean Path:** If you don't have an external drive yet, your backup is "manual: copy important data to a friend's house or Google Drive." That's better than nothing.
 
 ---
 
 ## 💼 Career Boost
 
 **What you learned that employers care about:**
-- Disaster recovery planning
-- Backup strategy design (3-2-1 rule)
-- Automation with cron and scripting
-- System reliability engineering
+- Container restart policies and reliability engineering
+- Health monitoring and observability
+- System maintenance and resource management
 - Testing and validation procedures
 
 **Interview talking point:**
-> *"I implemented a 3-2-1 backup strategy for my homelab infrastructure, with automated daily backups verified through monthly restore drills. I use cron-scheduled scripts to maintain 30 days of backup history, achieving RPO (Recovery Point Objective) of 24 hours and RTO (Recovery Time Objective) of 15 minutes."*
+> *"I implemented auto-restart policies and health monitoring for my homelab infrastructure using Docker's restart policies and Uptime Kuma, achieving 99%+ uptime with automated recovery from crashes and power outages."*
 
 ---
 
@@ -388,23 +270,36 @@ docker pull nextcloud:latest
 
 ---
 
+## Stress Test
+
+Now let's prove your homelab is resilient:
+
+1. **Stop all containers** — `docker compose down` (or `docker stop <name>` for each). Then run `docker start <name>` or `docker compose up -d`. They should come back up cleanly.
+2. **Kill a container** — `docker kill uptime-kuma`. With `restart: unless-stopped`, it should come back automatically within a few seconds. Check with `docker ps`.
+3. **Run Docker cleanup** — `docker system prune -f`. Check that your services are still running after. They should be — pruning removes unused resources, not running containers.
+4. **Simulate a power outage** — `sudo reboot`. When your server comes back, SSH in and check `docker ps`. All your containers with `restart: unless-stopped` should be running automatically.
+
+> **🔥 The Chaos Champion:** Set a container to `restart: always` instead of `unless-stopped`. Stop it manually (`docker stop <name>`), then wait — it will restart even though you explicitly stopped it. Now change it back to `unless-stopped` (`docker update --restart unless-stopped <name>`), stop it again, and verify it stays stopped. This teaches you the difference between the two policies.
+
+---
+
 ## What's Next
 
-Your services are running, they restart automatically, and your data is backed up. In Chapter 6, we'll explore your network — how devices talk to each other, how to make your services accessible across your home, and the fundamentals of networking that every homelabber needs to understand.
+Your services are running, they restart automatically, and you have health monitoring in place. In Chapter 6, we'll explore your network — how devices talk to each other, how to make your services accessible across your home, and the fundamentals of networking that every homelabber needs to understand.
 
 **Homework:**
 1. Verify your auto-restart policy is set on all containers
-2. Run your backup script and verify the output
-3. Practice a restore from backup
-4. Set up cron for automatic daily backups
-5. Add monitors in Uptime Kuma for all your services
+2. Set up monitors in Uptime Kuma for all your services
+3. Run `docker system df` to see Docker's disk usage
+4. Do a manual backup of your service data (copy to ~/homelab-backup/)
+5. Reboot your server and verify everything comes back up
 
 ---
 
 ## Go Deeper
 
-- [3-2-1 Backup Strategy Explained](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) — Backblaze's guide
 - [Docker Restart Policies](https://docs.docker.com/reference/cli/docker/container/run/#restart) — Official docs
-- [Cron Documentation](https://man7.org/linux/man-pages/man5/crontab.5.html) — Linux cron reference
-- [Restic Documentation](https://restic.readthedocs.io/) — Advanced backup tool
+- [Uptime Kuma Documentation](https://github.com/louislam/uptime-kuma) — Monitoring setup
+- [Docker System Prune](https://docs.docker.com/reference/cli/docker/system/prune/) — Disk cleanup reference
 - [apcupsd Documentation](https://apcupsd.github.io/apcupsd/) — UPS management
+- [Restic Documentation](https://restic.readthedocs.io/) — Advanced backup tool (Chapter 9)
