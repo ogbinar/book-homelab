@@ -22,6 +22,14 @@ Join their Discord. Attend their meetups. Connect with other Filipino tech enthu
 
 ---
 
+## About the Author
+
+**Myk Ogbinar** — [ogbinar.com](https://ogbinar.com)
+
+Data, AI, and community work with a practical point of view. This guide is part of Myk's ongoing commitment to open-source education and Filipino tech communities.
+
+---
+
 ## Why DEP?
 
 > **"The best homelabber is not the one with the most servers. It's the one who helps others build theirs."**
