@@ -1,5 +1,5 @@
 mkdocs>=1.6
 mkdocs-material[imaging]>=9.5
 mkdocs-material-extensions>=1.3
-mkdocs-git-revision-date-plugin>=1.3
+mkdocs-git-revision-date-plugin>=0.3
 pymdown-extensions>=10.0
