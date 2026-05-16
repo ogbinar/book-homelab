@@ -1,0 +1,130 @@
+site_name: "Bahay Bahayan: Build Your First Homelab"
+site_description: "Start Small. Learn Fast. Build What's Yours. — A Filipino-first guide to building your homelab."
+site_url: https://book-homelab.pages.dev
+repo_url: https://github.com/book-homelab/book-homelab
+repo_name: book-homelab/book-homelab
+copyright: "Bahay Bahayan is released under CC BY-SA 4.0. Free forever."
+
+theme:
+  name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      quote: material/book-open-page-variant
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/book-homelab/book-homelab
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/bahay-bahayan
+  generator: false
+
+extra_css:
+  - assets/custom.css
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\u200b\-_,:!=\[\]()\/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - social:
+      cards: true
+      cards_layout_options:
+        background_color: "#E65100"
+        color: "#FFFFFF"
+  - git-revision-date
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - footnotes
+  - toc:
+      permalink: "#"
+      baselevel: 1
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - "Part I: Bahay Bahayan":
+      - part-i.md
+      - "Ch 1: Ano ba ang Homelab?": chapters/chapter-01.md
+      - "Ch 2: Your First Server": chapters/chapter-02.md
+      - "Ch 3: Hello, Container": chapters/chapter-03.md
+      - "Ch 4: Something Useful": chapters/chapter-04.md
+      - "Ch 5: Keeping It Alive": chapters/chapter-05.md
+      - "Ch 6: Your First Network": chapters/chapter-06.md
+  - "Part II: Lumaki":
+      - part-ii.md
+      - "Ch 7: The Reverse Proxy": chapters/chapter-07.md
+      - "Ch 8: Multiple Services, One System": chapters/chapter-08.md
+      - "Ch 9: Your Data, Safe": chapters/chapter-09.md
+      - "Ch 10: Automation: Work Less": chapters/chapter-10.md
+      - "Ch 11: Monitoring: Eyes on Everything": chapters/chapter-11.md
+      - "Ch 12: Security: Don't Get Hacked": chapters/chapter-12.md
+      - "Ch 14: Your Homelab Portfolio": chapters/chapter-14.md
+  - Appendices:
+      - "A: Glossary": appendix/glossary.md
+      - "B: Hardware Buying Guide": appendix/hardware.md
+      - "C: Common Errors": appendix/errors.md
+      - "D: Service Directory": appendix/services.md
+      - "E: Community": appendix/community.md
+      - "F: Commands Reference": appendix/commands.md
