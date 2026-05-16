@@ -119,7 +119,7 @@ and builds to technical depth.
 ### Section Requirements
 
 | Section | Required? | Notes |
-|---------|-----------|-------|
+| --- | --- | --- |
 | What You'll Build | ✅ Yes | Clear outcome statement |
 | How Long It Takes | ✅ Yes | Realistic estimate |
 | What You Need | ✅ Yes | Prerequisites list |
@@ -135,6 +135,7 @@ and builds to technical depth.
 | Go Deeper | ✅ Yes | Further reading links |
 
 ### Code Block Standards
+
 - Always include filename/context comment on first line
 - Use language-specific syntax highlighting
 - No truncated code blocks (use `...` only for emphasis, not actual omission)
@@ -248,7 +249,8 @@ There are 8 callout types in the book:
 > Think of it as the postal system for IP packets.
 ```
 
-### Code Block Standards
+### Code Block Formatting
+
 - Always include filename/context comment on first line
 - Use language-specific syntax highlighting
 - No truncated code blocks (use `...` only for emphasis, not actual omission)
