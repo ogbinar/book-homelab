@@ -2,6 +2,8 @@
 
 _How to connect with other homelabbers._
 
+> **Quick Reference:** Join the community — **[Data Engineering Pilipinas](https://dataengineering.ph/)**. Share your portfolio — **[Chapter 14](chapters/chapter-14.md)**.
+
 ---
 
 ## The Only Community You Need

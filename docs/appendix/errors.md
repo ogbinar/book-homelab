@@ -2,6 +2,8 @@
 
 _Frequent mistakes and how to fix them._
 
+> **Quick Reference:** Most errors are covered in **[Chapter 3](chapters/chapter-03.md)** (Docker basics), **[Chapter 5](chapters/chapter-05.md)** (keeping services alive), **[Chapter 10](chapters/chapter-10.md)** (automation).
+
 ---
 
 ## Docker Errors

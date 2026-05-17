@@ -6,6 +6,8 @@ _Self-hosted services and tools recommended for your homelab._
 
 ## Services Covered in This Book
 
+> **Quick Reference:** See **[Chapter 4](chapters/chapter-04.md)** for deployment, **[Chapter 7](chapters/chapter-07.md)** for reverse proxy setup, **[Chapter 11](chapters/chapter-11.md)** for monitoring.
+
 ### Uptime Kuma — Monitoring
 | Detail | Info |
 |---|---|

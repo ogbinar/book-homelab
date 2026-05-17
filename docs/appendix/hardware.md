@@ -2,6 +2,8 @@
 
 _Recommended hardware for building your homelab, from lean to turbo._
 
+> **Quick Reference:** Hardware setup — **[Chapter 2](chapters/chapter-02.md)**. Power considerations — **[Chapter 5](chapters/chapter-05.md)**. Storage planning — **[Chapter 8](chapters/chapter-08.md)**.
+
 ---
 
 ## 🟢 Lean Path: ₱0-₱5,000

@@ -165,7 +165,7 @@ Before you move on, prove your "why" is real:
 
 ## What's Next
 
-Now that you know what a homelab is and why you might want one, it's time to get practical. In the next chapter, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.
+Now that you know what a homelab is and why you might want one, it's time to get practical. In **[Chapter 2: Your First Server](chapters/chapter-02.md)**, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.
 
 **Homework:** Write down your "why." Keep it somewhere you'll see it. We'll come back to it.
 
