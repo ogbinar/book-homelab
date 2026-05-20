@@ -1,0 +1,3401 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+">
+      
+      
+      
+        <link rel="canonical" href="https://book-homelab.pages.dev/appendix/errors/">
+      
+      
+        <link rel="prev" href="../hardware/">
+      
+      
+        <link rel="next" href="../services/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>D: Common Errors - Bahay Bahayan: Build Your First Homelab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m19%202-5%204.5v11l5-4.5zM6.5%205C4.55%205%202.45%205.4%201%206.5v14.66c0%20.25.25.5.5.5.1%200%20.15-.07.25-.07%201.35-.65%203.3-1.09%204.75-1.09%201.95%200%204.05.4%205.5%201.5%201.35-.85%203.8-1.5%205.5-1.5%201.65%200%203.35.31%204.75%201.06.1.05.15.03.25.03.25%200%20.5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7%200-4.15.65-5.5%201.5V6.5C10.55%205.4%208.45%205%206.5%205%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="D: Common Errors - Bahay Bahayan: Build Your First Homelab" />
+<meta property="og:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="og:image" content="https://book-homelab.pages.dev/assets/images/social/appendix/errors.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://book-homelab.pages.dev/appendix/errors/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="D: Common Errors - Bahay Bahayan: Build Your First Homelab" />
+<meta property="twitter:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="twitter:image" content="https://book-homelab.pages.dev/assets/images/social/appendix/errors.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#common-errors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bahay Bahayan: Build Your First Homelab" class="md-header__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bahay Bahayan: Build Your First Homelab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              D: Common Errors
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to Cyberpunk mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Cyberpunk mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="cyberpunk" data-md-color-primary="pink" data-md-color-accent="cyan"  aria-label="Switch to Matrix mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Matrix mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="matrix" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to Synthwave mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to Synthwave mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="synthwave" data-md-color-primary="purple" data-md-color-accent="orange"  aria-label="Switch to Ocean mode"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to Ocean mode" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 12a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 17.5 9a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-3-4A1.5 1.5 0 0 1 13 6.5 1.5 1.5 0 0 1 14.5 5 1.5 1.5 0 0 1 16 6.5 1.5 1.5 0 0 1 14.5 8m-5 0A1.5 1.5 0 0 1 8 6.5 1.5 1.5 0 0 1 9.5 5 1.5 1.5 0 0 1 11 6.5 1.5 1.5 0 0 1 9.5 8m-3 4A1.5 1.5 0 0 1 5 10.5 1.5 1.5 0 0 1 6.5 9 1.5 1.5 0 0 1 8 10.5 1.5 1.5 0 0 1 6.5 12M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9 1.5 1.5 0 0 0 1.5-1.5c0-.39-.15-.74-.39-1-.23-.27-.38-.62-.38-1a1.5 1.5 0 0 1 1.5-1.5H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="ocean" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Switch to Bahay Bahayan mode"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="Switch to Bahay Bahayan mode" for="__palette_5" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33m0-6h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2V6h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0C17.22 5.53 18.61 6 20 6m0 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_5">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bahay Bahayan: Build Your First Homelab" class="md-nav__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bahay Bahayan: Build Your First Homelab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Bahay Bahayan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part-i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan — Your First Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Ano ba ang Homelab?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Your First Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Hello, Container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Something Useful
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Keeping It Alive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Your First Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: Lumaki
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part-ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki — Growing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: The Reverse Proxy + Remote Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Multiple Services, One System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Your Data, Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Automation: Work Less
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Monitoring: Eyes on Everything
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Security: Don't Get Hacked
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/chapter-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Your Homelab Portfolio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../author/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A: About the Author
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B: Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C: Hardware Buying Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D: Common Errors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D: Common Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-is-already-allocated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "port is already allocated"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-space-left-on-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "no space left on device"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-exited-with-non-zero-exit-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "container exited with non-zero exit code"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unable-to-pull-image-rate-limited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "unable to pull image" / rate limited
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-docker-socket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "permission denied" — Docker socket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "volume already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "network already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healthcheck-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "healthcheck failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-manifest-unknown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "image manifest unknown"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-is-restarting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "container is restarting"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-address-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "bind: address already in use"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "docker: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-compose-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "invalid compose file"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-mount-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "volume mount failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxmox-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxmox Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proxmox Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-creation-failed-no-storage-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "VM creation failed — no storage available"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm-wont-start-qemu-killed-by-oom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "VM won't start — QEMU killed by OOM"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-bridge-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "network bridge not working"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-io-wait-is-high" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "disk io wait is high"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-backend-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "storage backend not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-update-broke-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "firmware update broke boot"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lxc-container-template-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "LXC container template not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zfs-pool-wont-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "ZFS pool won't mount"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-pinning-causing-hangs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "CPU pinning causing hangs"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linuxsystem-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux/System Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux/System Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-full-but-df-shows-plenty-of-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "disk full but df shows plenty of space"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "sudo: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-installation-failed-dependency-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "package installation failed — dependency error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-disconnected-connection-reset-by-peer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "SSH disconnected — connection reset by peer"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "systemd service won't start"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-permissions-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "file permissions error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-is-wrong-ssl-certificates-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "time is wrong — SSL certificates fail"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-is-too-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "swap is too slow"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cant-resolve-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "can't resolve hostname"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-not-reachable-from-outside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "port not reachable from outside"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-drops-intermittently" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "WiFi drops intermittently"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-not-assigning-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "DHCP not assigning IP"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-works-but-websites-wont-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "DNS works but websites won't load"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgnat-port-forwarding-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "CGNAT — port forwarding doesn't work"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-specific-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Specific Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Specific Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vaultwarden-admin_token-not-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vaultwarden: "ADMIN_TOKEN not set"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vaultwarden-database-locked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vaultwarden: "database locked"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi-hole-ftl-not-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pi-hole: "FTL not starting"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi-hole-gravity-list-update-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pi-hole: "gravity list update failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcloud-database-connection-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nextcloud: "Database connection failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcloud-memory-cache-could-not-be-initialized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nextcloud: "Memory cache could not be initialized"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jellyfin-transcoding-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jellyfin: "transcoding fails"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jellyfin-library-scan-finds-nothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jellyfin: "library scan finds nothing"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-auto-https-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caddy: "auto-HTTPS failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-reverse-proxy-dial-connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caddy: "reverse proxy: dial: connection refused"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prometheus-tsdb-compaction-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prometheus: "TSDB compaction failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grafana-data-source-is-unreachable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana: "data source is unreachable"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-universal-debugging-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Universal Debugging Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-ask-for-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Ask for Help
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Ask for Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-time-to-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good time to ask:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-to-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to ask:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-ask-a-good-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to ask a good question:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E: Service Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F: Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G: Commands Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Appendix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-is-already-allocated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "port is already allocated"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-space-left-on-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "no space left on device"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-exited-with-non-zero-exit-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "container exited with non-zero exit code"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unable-to-pull-image-rate-limited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "unable to pull image" / rate limited
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-docker-socket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "permission denied" — Docker socket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "volume already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "network already exists"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healthcheck-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "healthcheck failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-manifest-unknown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "image manifest unknown"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-is-restarting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "container is restarting"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-address-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "bind: address already in use"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "docker: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-compose-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "invalid compose file"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-mount-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "volume mount failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxmox-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxmox Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proxmox Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-creation-failed-no-storage-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "VM creation failed — no storage available"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm-wont-start-qemu-killed-by-oom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "VM won't start — QEMU killed by OOM"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-bridge-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "network bridge not working"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-io-wait-is-high" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "disk io wait is high"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-backend-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "storage backend not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-update-broke-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "firmware update broke boot"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lxc-container-template-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "LXC container template not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zfs-pool-wont-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "ZFS pool won't mount"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-pinning-causing-hangs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "CPU pinning causing hangs"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linuxsystem-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux/System Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux/System Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-full-but-df-shows-plenty-of-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "disk full but df shows plenty of space"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "sudo: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-installation-failed-dependency-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "package installation failed — dependency error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-disconnected-connection-reset-by-peer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "SSH disconnected — connection reset by peer"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "systemd service won't start"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-permissions-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "file permissions error"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-is-wrong-ssl-certificates-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "time is wrong — SSL certificates fail"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-is-too-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "swap is too slow"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cant-resolve-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "can't resolve hostname"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-not-reachable-from-outside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "port not reachable from outside"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-drops-intermittently" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "WiFi drops intermittently"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dhcp-not-assigning-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "DHCP not assigning IP"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-works-but-websites-wont-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "DNS works but websites won't load"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgnat-port-forwarding-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "CGNAT — port forwarding doesn't work"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-specific-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Specific Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Specific Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vaultwarden-admin_token-not-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vaultwarden: "ADMIN_TOKEN not set"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vaultwarden-database-locked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vaultwarden: "database locked"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi-hole-ftl-not-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pi-hole: "FTL not starting"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pi-hole-gravity-list-update-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pi-hole: "gravity list update failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcloud-database-connection-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nextcloud: "Database connection failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nextcloud-memory-cache-could-not-be-initialized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nextcloud: "Memory cache could not be initialized"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jellyfin-transcoding-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jellyfin: "transcoding fails"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jellyfin-library-scan-finds-nothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jellyfin: "library scan finds nothing"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-auto-https-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caddy: "auto-HTTPS failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-reverse-proxy-dial-connection-refused" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caddy: "reverse proxy: dial: connection refused"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prometheus-tsdb-compaction-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prometheus: "TSDB compaction failed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grafana-data-source-is-unreachable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafana: "data source is unreachable"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-universal-debugging-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Universal Debugging Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-ask-for-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Ask for Help
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Ask for Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#good-time-to-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good time to ask:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-to-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to ask:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-ask-a-good-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to ask a good question:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="common-errors">Common Errors<a class="headerlink" href="#common-errors" title="Permanent link">#</a></h1>
+<p><em>The top 50+ errors you'll encounter, with causes, solutions, and Philippines-specific context.</em></p>
+<blockquote>
+<p><strong>Quick Reference:</strong> Most errors are covered in <strong><a href="chapters/chapter-03.md">Chapter 3</a></strong> (Docker basics), <strong><a href="chapters/chapter-05.md">Chapter 5</a></strong> (keeping services alive), <strong><a href="chapters/chapter-07.md">Chapter 7</a></strong> (reverse proxy + remote access).</p>
+</blockquote>
+<hr />
+<h2 id="how-to-use-this-appendix">How to Use This Appendix<a class="headerlink" href="#how-to-use-this-appendix" title="Permanent link">#</a></h2>
+<p>Each error entry follows this format:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ERROR: [exact error message]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>CAUSE: [plain English explanation]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>SOLUTION: [step-by-step fix]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>PH CONTEXT: [ISP-specific or local infrastructure note]
+</span></code></pre></div>
+<p>Use the table of contents below to jump to your error category, or search (Ctrl+F) for keywords.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="#docker-errors">Docker Errors (15)</a></li>
+<li><a href="#proxmox-errors">Proxmox Errors (10)</a></li>
+<li><a href="#linuxsystem-errors">Linux/System Errors (13)</a></li>
+<li><a href="#network-errors">Network Errors (10)</a></li>
+<li><a href="#service-specific-errors">Service-Specific Errors (12)</a></li>
+<li><a href="#the-universal-debugging-checklist">The Universal Debugging Checklist</a></li>
+</ul>
+<hr />
+<h2 id="docker-errors">Docker Errors<a class="headerlink" href="#docker-errors" title="Permanent link">#</a></h2>
+<h3 id="port-is-already-allocated">"port is already allocated"<a class="headerlink" href="#port-is-already-allocated" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>docker: Error response from daemon: driver failed programming external connectivity on endpoint ... Bind for 0.0.0.0:8080 failed: port is already allocated.</code></p>
+<p><strong>CAUSE:</strong> Another container or service is already using the port you're trying to map.</p>
+<p><strong>SOLUTION:</strong>
+1. Find what's using the port: <code>sudo lsof -i :8080</code>
+2. Stop the conflicting container: <code>docker stop &lt;container-name&gt;</code>
+3. Or use a different port in your docker-compose.yml or docker run command</p>
+<p><strong>PH CONTEXT:</strong> If you're running multiple homelabs or services from different guides, port conflicts are the #1 issue. Keep a running list: Kuma=3001, Vault=8080, Nextcloud=8081, Jellyfin=8096, Pi-hole=8082, Caddy=80/443, Prometheus=9090, Grafana=3000.</p>
+<hr />
+<h3 id="no-space-left-on-device">"no space left on device"<a class="headerlink" href="#no-space-left-on-device" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>docker: no space left on device</code> or <code>Write failed</code> errors during <code>docker pull</code> or <code>docker run</code>.</p>
+<p><strong>CAUSE:</strong> Your disk is full. Docker needs free space for new images, container layers, and logs.</p>
+<p><strong>SOLUTION:</strong>
+1. Check disk usage: <code>df -h</code>
+2. Check Docker usage: <code>docker system df</code>
+3. Quick cleanup: <code>docker system prune -a --volumes</code> (⚠️ removes EVERYTHING unused — be careful)
+4. Safer cleanup: <code>docker system prune</code> (removes stopped containers, unused networks, dangling images)
+5. Remove specific images: <code>docker image prune -a</code>
+6. For logs eating space: <code>sudo truncate -s 0 /var/log/syslog</code></p>
+<p><strong>PH CONTEXT:</strong> If you're on mobile data, pulling large Docker images can consume a lot of bandwidth. Pull images on WiFi when possible. Some Philippine ISPs also have data caps on certain plans.</p>
+<hr />
+<h3 id="container-exited-with-non-zero-exit-code">"container exited with non-zero exit code"<a class="headerlink" href="#container-exited-with-non-zero-exit-code" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>docker ps</code> shows a container as <code>Exited (1)</code>, <code>Exited (137)</code>, or <code>Exited (139)</code>.</p>
+<p><strong>CAUSE:</strong> The application inside the container crashed.
+- Exit code 1 = general error (bad config, missing dependency)
+- Exit code 137 = killed by OOM (Out of Memory) — the system killed the container
+- Exit code 139 = segmentation fault — the application accessed invalid memory</p>
+<p><strong>SOLUTION:</strong>
+1. Check logs: <code>docker logs &lt;container-name&gt;</code>
+2. If OOM (exit 137): Your server needs more RAM. Either upgrade RAM or use a lighter container.
+3. If general error (exit 1): Read the logs carefully. Most container errors explain exactly what went wrong.
+4. If segfault (exit 139): Update the container image — you may be running a buggy version.</p>
+<p><strong>PH CONTEXT:</strong> On low-RAM setups (4GB or less), OOM kills are extremely common when running multiple services. Start with 2-3 lightweight services and add more as you upgrade RAM.</p>
+<hr />
+<h3 id="unable-to-pull-image-rate-limited">"unable to pull image" / rate limited<a class="headerlink" href="#unable-to-pull-image-rate-limited" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Error response from daemon: toomanyrequests: You have reached your pull rate limit.</code> or <code>Error: unable to pull image</code></p>
+<p><strong>CAUSE:</strong> Docker Hub rate limiting. Free accounts can pull 100 images per 6 hours from the same IP.</p>
+<p><strong>SOLUTION:</strong>
+1. Log in to Docker Hub: <code>docker login</code> (gives you a higher rate limit)
+2. Wait and try again
+3. Cache images before you need them: <code>docker pull &lt;image&gt;</code> during a quiet time
+4. Use a mirror: Some Philippine networks benefit from Docker mirror proxies</p>
+<p><strong>PH CONTEXT:</strong> Docker Hub can be slow from the Philippines due to routing. If pulls are taking forever, try during off-peak hours (late night, early morning PH time).</p>
+<hr />
+<h3 id="permission-denied-docker-socket">"permission denied" — Docker socket<a class="headerlink" href="#permission-denied-docker-socket" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Cannot connect to the Docker daemon. Is the docker daemon running?</code> or <code>permission denied while trying to connect to the Docker daemon socket</code></p>
+<p><strong>CAUSE:</strong> Your user isn't in the <code>docker</code> group.</p>
+<p><strong>SOLUTION:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>newgrp<span class="w"> </span>docker
+</span></code></pre></div>
+Then log out and log back in (or reboot).</p>
+<p><strong>PH CONTEXT:</strong> This is the first thing beginners miss. Always run this after installing Docker, before trying any <code>docker</code> commands.</p>
+<hr />
+<h3 id="volume-already-exists">"volume already exists"<a class="headerlink" href="#volume-already-exists" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>create &lt;name&gt;: "&lt;name&gt;" volume name is already in use</code></p>
+<p><strong>CAUSE:</strong> A volume with the same name already exists from a previous container.</p>
+<p><strong>SOLUTION:</strong>
+1. List volumes: <code>docker volume ls</code>
+2. Remove unused volumes: <code>docker volume prune</code>
+3. Or rename the volume in your docker-compose.yml
+4. Or remove the specific volume: <code>docker volume rm &lt;name&gt;</code></p>
+<hr />
+<h3 id="network-already-exists">"network already exists"<a class="headerlink" href="#network-already-exists" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>container failed to start - failed to create network: network ... already exists</code></p>
+<p><strong>CAUSE:</strong> A Docker network with the same name already exists.</p>
+<p><strong>SOLUTION:</strong>
+1. List networks: <code>docker network ls</code>
+2. Remove unused networks: <code>docker network prune</code>
+3. Or remove the specific network: <code>docker network rm &lt;name&gt;</code></p>
+<hr />
+<h3 id="healthcheck-failed">"healthcheck failed"<a class="headerlink" href="#healthcheck-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Container health status shows <code>unhealthy</code> in <code>docker ps</code>.</p>
+<p><strong>CAUSE:</strong> The health check command inside the container is failing. Could be a misconfiguration, resource constraints, or the service itself isn't ready yet.</p>
+<p><strong>SOLUTION:</strong>
+1. Check health check logs: <code>docker inspect --format='{{json .State.Health}}' &lt;container&gt;</code>
+2. Run the health check command manually inside the container: <code>docker exec &lt;container&gt; &lt;healthcheck-command&gt;</code>
+3. If the service just needs more time, increase the health check timeout in your docker-compose.yml
+4. If the service is genuinely broken, check regular logs: <code>docker logs &lt;container&gt;</code></p>
+<hr />
+<h3 id="image-manifest-unknown">"image manifest unknown"<a class="headerlink" href="#image-manifest-unknown" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>manifest for &lt;image&gt; not found: manifest unknown</code></p>
+<p><strong>CAUSE:</strong> The image tag you're requesting doesn't exist, or the image is for a different architecture.</p>
+<p><strong>SOLUTION:</strong>
+1. Check available tags on Docker Hub
+2. For Raspberry Pi (ARM): Make sure to use ARM-specific images or tags like <code>linux/arm64</code>
+3. Specify the platform explicitly: <code>docker run --platform linux/arm64 &lt;image&gt;</code>
+4. Use <code>latest</code> tag if a specific version doesn't exist</p>
+<p><strong>PH CONTEXT:</strong> Raspberry Pi users hit this most often. Always check if a Docker image supports ARM64 before pulling. Look for <code>linux/arm64</code> or <code>linux/arm/v7</code> in the image's manifest.</p>
+<hr />
+<h3 id="container-is-restarting">"container is restarting"<a class="headerlink" href="#container-is-restarting" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Container shows <code>Health: starting</code> or <code>Restarting (1) 5 seconds ago</code> in <code>docker ps</code>.</p>
+<p><strong>CAUSE:</strong> The container keeps crashing and Docker's restart policy keeps trying to bring it back up.</p>
+<p><strong>SOLUTION:</strong>
+1. Stop the restart loop: <code>docker stop &lt;container&gt;</code> then <code>docker rm &lt;container&gt;</code>
+2. Run manually to see the error: <code>docker run --rm &lt;image&gt;</code> (watch the output for the actual error)
+3. Fix the underlying issue (config, permissions, missing env vars)
+4. Recreate with <code>docker compose up -d</code></p>
+<p><strong>PH CONTEXT:</strong> This happens when you copy-paste a docker-compose.yml without adjusting environment variables. Always check that your <code>.env</code> file matches the container's expected variables.</p>
+<hr />
+<h3 id="bind-address-already-in-use">"bind: address already in use"<a class="headerlink" href="#bind-address-already-in-use" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Error starting userland proxy: listen tcp4 0.0.0.0:80: bind: address already in use</code></p>
+<p><strong>CAUSE:</strong> A process on the host (not in Docker) is already using the port.</p>
+<p><strong>SOLUTION:</strong>
+1. Find what's using the port: <code>sudo lsof -i :80</code> or <code>sudo ss -tlnp | grep :80</code>
+2. Common culprits: Apache (<code>apache2</code>), Nginx (<code>nginx</code>), Caddy running outside Docker
+3. Stop the conflicting service: <code>sudo systemctl stop apache2</code>
+4. Or disable it: <code>sudo systemctl disable apache2</code>
+5. Or use a different port</p>
+<p><strong>PH CONTEXT:</strong> If you installed Apache or Nginx from apt as part of a web development setup, they'll grab port 80 automatically. This is the most common port conflict on fresh Ubuntu installs.</p>
+<hr />
+<h3 id="docker-command-not-found">"docker: command not found"<a class="headerlink" href="#docker-command-not-found" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>bash: docker: command not found</code></p>
+<p><strong>CAUSE:</strong> Docker isn't installed, or it's not in your PATH.</p>
+<p><strong>SOLUTION:</strong>
+1. Install Docker: Follow the installation steps in Chapter 3
+2. If using Docker Desktop on WSL2: <code>wsl --update &amp;&amp; wsl --shutdown</code> then restart
+3. Check if Docker is running: <code>sudo systemctl status docker</code></p>
+<hr />
+<h3 id="invalid-compose-file">"invalid compose file"<a class="headerlink" href="#invalid-compose-file" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>ERROR: yaml: line X: mapping values are not allowed in this context</code></p>
+<p><strong>CAUSE:</strong> Your docker-compose.yml has a YAML syntax error — usually wrong indentation or a missing colon.</p>
+<p><strong>SOLUTION:</strong>
+1. Check the line number in the error message
+2. YAML is sensitive to indentation — use spaces, NOT tabs
+3. Validate your file: <code>docker compose config</code> (shows parsed config, highlights errors)
+4. Common mistake: forgetting a colon after a key, or mixing tabs and spaces</p>
+<hr />
+<h3 id="volume-mount-failed">"volume mount failed"<a class="headerlink" href="#volume-mount-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>ERROR: for &lt;container&gt; Cannot start service ... mount path does not exist</code></p>
+<p><strong>CAUSE:</strong> The host directory you're trying to mount doesn't exist.</p>
+<p><strong>SOLUTION:</strong>
+1. Create the directory: <code>mkdir -p ~/my-service/config</code>
+2. Set permissions: <code>chmod -R 755 ~/my-service</code>
+3. Recreate: <code>docker compose up -d</code></p>
+<p><strong>PH CONTEXT:</strong> When copy-pasting paths, make sure the directory structure exists first. The <code>-p</code> flag in <code>mkdir -p</code> creates parent directories automatically.</p>
+<hr />
+<h2 id="proxmox-errors">Proxmox Errors<a class="headerlink" href="#proxmox-errors" title="Permanent link">#</a></h2>
+<h3 id="vm-creation-failed-no-storage-available">"VM creation failed — no storage available"<a class="headerlink" href="#vm-creation-failed-no-storage-available" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>volume 'local-lvm:vm/100/vm-100-disk-0.qcow2' already exists</code> or <code>no storage available</code></p>
+<p><strong>CAUSE:</strong> Either the VM ID is already in use, or your storage pool is full.</p>
+<p><strong>SOLUTION:</strong>
+1. Check running VMs: <code>qm list</code>
+2. Check storage: <code>df -h</code> or check in the Proxmox web UI
+3. If storage is full: clean up old backups, expand the storage pool, or add a new disk
+4. If VM ID conflict: delete the orphaned VM or use a different ID</p>
+<hr />
+<h3 id="vm-wont-start-qemu-killed-by-oom">"VM won't start — QEMU killed by OOM"<a class="headerlink" href="#vm-wont-start-qemu-killed-by-oom" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> VM fails to start, and <code>dmesg | grep -i oom</code> shows OOM killer activity.</p>
+<p><strong>CAUSE:</strong> Proxmox host doesn't have enough RAM to allocate to the VM.</p>
+<p><strong>SOLUTION:</strong>
+1. Check host RAM: <code>free -h</code>
+2. Reduce VM RAM allocation in Proxmox UI or via <code>qm set &lt;vmid&gt; -memory &lt;MB&gt;</code>
+3. Close unused VMs or containers on the host
+4. Add more RAM to the host (best long-term solution)</p>
+<p><strong>PH CONTEXT:</strong> On budget hardware (8-16GB RAM), running even 2-3 VMs can exceed available memory. Use LXC containers instead of full VMs when possible — they use significantly less RAM.</p>
+<hr />
+<h3 id="network-bridge-not-working">"network bridge not working"<a class="headerlink" href="#network-bridge-not-working" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> VMs can't reach the internet, or can't be reached from outside.</p>
+<p><strong>SOLUTION:</strong>
+1. Check bridge config: <code>cat /etc/network/interfaces</code> — look for <code>auto vmbr0</code> and <code>bridge-interfaces eth0</code>
+2. Restart networking: <code>systemctl restart networking</code>
+3. Check Proxmox web UI → Datacenter → Your Node → Sysinfo → Network
+4. Ensure your VM's network is set to <code>vmbr0</code> (not <code>vmbr1</code> or other)</p>
+<p><strong>PH CONTEXT:</strong> If your ISP uses CGNAT, your Proxmox VMs will share your host's CGNAT IP. They won't have unique public IPs. This is normal — use Cloudflare Tunnel or Tailscale for remote access.</p>
+<hr />
+<h3 id="disk-io-wait-is-high">"disk io wait is high"<a class="headerlink" href="#disk-io-wait-is-high" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> System feels sluggish, <code>iostat</code> shows high <code>%iowait</code>.</p>
+<p><strong>CAUSE:</strong> Disk can't keep up with VM/container I/O requests.</p>
+<p><strong>SOLUTION:</strong>
+1. Check which VM/container is using the most I/O: <code>iotop</code>
+2. Move VMs from HDD to SSD storage
+3. Increase disk I/O limits in Proxmox for non-critical VMs
+4. Add more RAM (more cache = less disk reads)</p>
+<hr />
+<h3 id="storage-backend-not-found">"storage backend not found"<a class="headerlink" href="#storage-backend-not-found" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>storage 'xxxx' not found on node 'pve'</code></p>
+<p><strong>CAUSE:</strong> A storage path configured in Proxmox doesn't exist on the filesystem.</p>
+<p><strong>SOLUTION:</strong>
+1. Check storage path: <code>ls -la /path/to/storage</code>
+2. Create the directory: <code>mkdir -p /path/to/storage</code>
+3. Or fix the storage definition in Proxmox UI → Datacenter → Storage
+4. For NFS mounts: check if the NFS server is reachable (<code>ping &lt;nfs-server&gt;</code>)</p>
+<hr />
+<h3 id="firmware-update-broke-boot">"firmware update broke boot"<a class="headerlink" href="#firmware-update-broke-boot" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Proxmox won't boot after a <code>apt update &amp;&amp; apt upgrade</code>.</p>
+<p><strong>SOLUTION:</strong>
+1. Boot from Proxmox ISO and try repair
+2. If you have a backup: restore from backup
+3. Check the Proxmox forum — this is rare but happens with kernel updates
+4. <strong>Prevention:</strong> Always backup before major upgrades. Test upgrades on a non-production node first.</p>
+<p><strong>PH CONTEXT:</strong> Internet outages during <code>apt upgrade</code> can leave partial installs. If your connection drops mid-update, run <code>sudo dpkg --configure -a</code> to finish the pending configurations when you're back online.</p>
+<hr />
+<h3 id="lxc-container-template-not-found">"LXC container template not found"<a class="headerlink" href="#lxc-container-template-not-found" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>storage 'local' not found</code> or <code>template not available</code> when trying to create an LXC container.</p>
+<p><strong>CAUSE:</strong> The LXC template isn't downloaded for the selected storage.</p>
+<p><strong>SOLUTION:</strong>
+1. Download templates: In Proxmox UI → Datacenter → Templates → download the template you need
+2. Or via CLI: <code>pct update</code> after creating the container
+3. Check available templates: <code>pct push</code> or check the Proxmox template list</p>
+<hr />
+<h3 id="zfs-pool-wont-mount">"ZFS pool won't mount"<a class="headerlink" href="#zfs-pool-wont-mount" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> ZFS pool shows as <code>UNAVAIL</code> after reboot.</p>
+<p><strong>SOLUTION:</strong>
+1. Import the pool: <code>zpool import -a</code>
+2. Check pool status: <code>zpool status</code>
+3. If a disk is missing: <code>zpool clear &lt;poolname&gt;</code>
+4. Make sure the pool auto-imports on boot: <code>zpool set autostart=yes &lt;poolname&gt;</code></p>
+<p><strong>PH CONTEXT:</strong> Power outages (brownouts) can corrupt ZFS pools. A UPS is essential if you're using ZFS. Without one, consider ext4 with regular backups instead.</p>
+<hr />
+<h3 id="cpu-pinning-causing-hangs">"CPU pinning causing hangs"<a class="headerlink" href="#cpu-pinning-causing-hangs" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> VM or container becomes unresponsive after enabling CPU pinning.</p>
+<p><strong>SOLUTION:</strong>
+1. Remove CPU pinning: In Proxmox UI → Options → CPU pinning → clear
+2. Or via CLI: <code>qm set &lt;vmid&gt; -cpus 0</code> (0 = use all available cores)
+3. Restart the VM
+4. If you need pinning, pin to fewer cores and leave some available for the host</p>
+<hr />
+<h2 id="linuxsystem-errors">Linux/System Errors<a class="headerlink" href="#linuxsystem-errors" title="Permanent link">#</a></h2>
+<h3 id="disk-full-but-df-shows-plenty-of-space">"disk full but df shows plenty of space"<a class="headerlink" href="#disk-full-but-df-shows-plenty-of-space" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>No space left on device</code> but <code>df -h</code> shows 50%+ free space.</p>
+<p><strong>CAUSE:</strong> All inodes are used up (many small files), OR deleted files are still held open by running processes.</p>
+<p><strong>SOLUTION:</strong>
+1. Check inodes: <code>df -i</code>
+2. If inodes are full: find directories with many files: <code>find / -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n</code>
+3. If deleted files hold space: <code>sudo lsof | grep deleted</code> — restart the holding process
+4. Clean up log files: <code>sudo journalctl --vacuum-size=100M</code></p>
+<hr />
+<h3 id="sudo-command-not-found">"sudo: command not found"<a class="headerlink" href="#sudo-command-not-found" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>sudo: command not found</code></p>
+<p><strong>CAUSE:</strong> You're logged in as root (no sudo needed) or sudo isn't installed.</p>
+<p><strong>SOLUTION:</strong>
+1. If you're root: just run the command without <code>sudo</code>
+2. If sudo isn't installed: <code>apt install sudo</code>
+3. Check your user: <code>whoami</code> — if it says <code>root</code>, you're already root</p>
+<hr />
+<h3 id="package-installation-failed-dependency-error">"package installation failed — dependency error"<a class="headerlink" href="#package-installation-failed-dependency-error" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>E: Unable to correct problems, you have held broken packages.</code></p>
+<p><strong>CAUSE:</strong> A package requires another package that isn't available or conflicts with an installed package.</p>
+<p><strong>SOLUTION:</strong>
+1. Fix dependencies: <code>sudo apt --fix-broken install</code>
+2. Update package lists: <code>sudo apt update</code>
+3. Try installing again: <code>sudo apt install &lt;package&gt;</code>
+4. For held packages: <code>sudo apt unhold &lt;package&gt;</code></p>
+<p><strong>PH CONTEXT:</strong> If your internet connection drops during <code>apt update</code>, your package lists may be inconsistent. Always run <code>sudo apt update &amp;&amp; sudo apt upgrade</code> as a single command to avoid partial updates.</p>
+<hr />
+<h3 id="ssh-disconnected-connection-reset-by-peer">"SSH disconnected — connection reset by peer"<a class="headerlink" href="#ssh-disconnected-connection-reset-by-peer" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Connection to &lt;IP&gt; closed by remote host</code> or <code>Connection reset by peer</code></p>
+<p><strong>CAUSE:</strong> The server rebooted, the network dropped, or a firewall rule changed.</p>
+<p><strong>SOLUTION:</strong>
+1. Check if the server is reachable: <code>ping &lt;IP&gt;</code>
+2. If using Tailscale: check if Tailscale is running on both ends (<code>tailscale status</code>)
+3. If you have physical access: check the server directly
+4. If no physical access: check with your hosting provider or, for homelab, wait for the network to recover</p>
+<p><strong>PH CONTEXT:</strong> In the Philippines, brownouts cause sudden reboots. Configure your BIOS to "Power On After Power Loss" (varies by motherboard) so your server comes back up automatically.</p>
+<hr />
+<h3 id="systemd-service-wont-start">"systemd service won't start"<a class="headerlink" href="#systemd-service-wont-start" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>systemctl start &lt;service&gt;</code> fails with no clear error.</p>
+<p><strong>SOLUTION:</strong>
+1. Check the service status: <code>systemctl status &lt;service&gt;</code>
+2. Check logs: <code>journalctl -u &lt;service&gt; -e</code> (shows recent log entries)
+3. Check the service file: <code>systemctl cat &lt;service&gt;</code>
+4. Reload systemd: <code>sudo systemctl daemon-reload</code>
+5. Try again: <code>sudo systemctl start &lt;service&gt;</code></p>
+<hr />
+<h3 id="file-permissions-error">"file permissions error"<a class="headerlink" href="#file-permissions-error" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Permission denied</code> when accessing a file or directory.</p>
+<p><strong>SOLUTION:</strong>
+1. Check current permissions: <code>ls -la &lt;file&gt;</code>
+2. Fix ownership: <code>sudo chown -R &lt;user&gt;:&lt;group&gt; &lt;path&gt;</code>
+3. Fix permissions: <code>chmod -R 755 &lt;path&gt;</code> (for directories) or <code>chmod 644 &lt;path&gt;</code> (for files)
+4. For Docker volumes: make sure the host directory has the right UID/GID matching the container user</p>
+<hr />
+<h3 id="time-is-wrong-ssl-certificates-fail">"time is wrong — SSL certificates fail"<a class="headerlink" href="#time-is-wrong-ssl-certificates-fail" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>SSL certificate problem: certificate has expired</code> or services reject connections due to cert errors.</p>
+<p><strong>CAUSE:</strong> Your server's clock is wrong. SSL certificates are time-sensitive.</p>
+<p><strong>SOLUTION:</strong>
+1. Check current time: <code>date</code>
+2. Enable NTP (time sync): <code>timedatectl set-ntp true</code>
+3. Manually sync: <code>sudo ntpdate pool.ntp.org</code>
+4. Install NTP daemon: <code>sudo apt install chrony</code> (recommended over ntp)</p>
+<p><strong>PH CONTEXT:</strong> Servers without a UPS may lose their BIOS clock after a brownout. If your time is wrong after a power outage, this is almost certainly the cause.</p>
+<hr />
+<h3 id="swap-is-too-slow">"swap is too slow"<a class="headerlink" href="#swap-is-too-slow" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> System is sluggish, and <code>htop</code> shows high swap usage.</p>
+<p><strong>CAUSE:</strong> Your server is running out of RAM and using swap (disk-based memory), which is much slower.</p>
+<p><strong>SOLUTION:</strong>
+1. Check swap usage: <code>swapon --show</code> and <code>free -h</code>
+2. Add swap if needed: <code>sudo fallocate -l 2G /swapfile &amp;&amp; sudo chmod 600 /swapfile &amp;&amp; sudo mkswap /swapfile &amp;&amp; sudo swapon /swapfile</code>
+3. Make swap permanent: Add <code>/swapfile none swap sw 0 0</code> to <code>/etc/fstab</code>
+4. Adjust swappiness: <code>sudo sysctl vm.swappiness=10</code> (lower = prefer RAM)
+5. <strong>Best fix:</strong> Add more physical RAM</p>
+<hr />
+<h2 id="network-errors">Network Errors<a class="headerlink" href="#network-errors" title="Permanent link">#</a></h2>
+<h3 id="cant-resolve-hostname">"can't resolve hostname"<a class="headerlink" href="#cant-resolve-hostname" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>Could not resolve hostname</code> or <code>ping: unknown host</code></p>
+<p><strong>CAUSE:</strong> DNS configuration is wrong or the DNS server is unreachable.</p>
+<p><strong>SOLUTION:</strong>
+1. Check DNS config: <code>cat /etc/resolv.conf</code>
+2. Test with an IP: <code>ping 8.8.8.8</code> — if this works, your internet is fine but DNS is the problem
+3. Try public DNS: <code>sudo nano /etc/systemd/resolved.conf</code> → set <code>DNS=8.8.8.8 1.1.1.1</code>
+4. Restart: <code>sudo systemctl restart systemd-resolved</code>
+5. For Docker: check that containers are on the same network</p>
+<hr />
+<h3 id="port-not-reachable-from-outside">"port not reachable from outside"<a class="headerlink" href="#port-not-reachable-from-outside" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Can access service locally but not from another device or outside your network.</p>
+<p><strong>SOLUTION:</strong>
+1. Check firewall: <code>sudo ufw status</code> — make sure the port is allowed
+2. Check if service is listening on 0.0.0.0 (not just 127.0.0.1): <code>sudo ss -tlnp | grep &lt;port&gt;</code>
+3. Check router port forwarding (if applicable)
+4. Check if you're behind CGNAT (see Chapter 7)
+5. Try from a device on mobile data to rule out local network issues</p>
+<p><strong>PH CONTEXT:</strong> Most Philippine ISPs use CGNAT, so port forwarding won't work. Use Tailscale or Cloudflare Tunnel instead (Chapter 7). If you need to confirm CGNAT, compare your router's WAN IP with whatismyipaddress.com.</p>
+<hr />
+<h3 id="wifi-drops-intermittently">"WiFi drops intermittently"<a class="headerlink" href="#wifi-drops-intermittently" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Connection drops every few minutes or under load.</p>
+<p><strong>SOLUTION:</strong>
+1. Check WiFi driver: <code>lspci -k | grep -A 3 -i network</code>
+2. Power saving can cause drops: <code>iwconfig</code> → check if power management is on
+3. Disable power saving: <code>sudo iwconfig &lt;interface&gt; power off</code>
+4. <strong>Best fix:</strong> Use Ethernet for your server. WiFi is unreliable for 24/7 services.
+5. If you must use WiFi: get a USB 5GHz WiFi adapter (more stable than 2.4GHz)</p>
+<p><strong>PH CONTEXT:</strong> Some Philippine ISPs-provided routers have weak built-in WiFi. If you're using the ISP router as your WiFi access point, consider buying a separate ASUS or TP-Link router.</p>
+<hr />
+<h3 id="dhcp-not-assigning-ip">"DHCP not assigning IP"<a class="headerlink" href="#dhcp-not-assigning-ip" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Device gets a <code>169.254.x.x</code> address (APIPA) instead of a proper IP.</p>
+<p><strong>CAUSE:</strong> The DHCP server (router) isn't responding.</p>
+<p><strong>SOLUTION:</strong>
+1. Renew DHCP lease: <code>sudo dhclient -r</code> then <code>sudo dhclient</code>
+2. Check router DHCP settings — is it enabled? Is the address pool full?
+3. Try a static IP temporarily while troubleshooting
+4. Restart the router
+5. Check for MAC address filtering on the router</p>
+<p><strong>PH CONTEXT:</strong> PLDT and Globe routers sometimes run out of DHCP addresses when many devices connect (phones, laptops, smart TVs, etc.). Restarting the router usually fixes this.</p>
+<hr />
+<h3 id="dns-works-but-websites-wont-load">"DNS works but websites won't load"<a class="headerlink" href="#dns-works-but-websites-wont-load" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>nslookup google.com</code> works but browsers show "can't connect."</p>
+<p><strong>CAUSE:</strong> DNS is fine, but the actual HTTP/HTTPS connection is failing.</p>
+<p><strong>SOLUTION:</strong>
+1. Check if the service is running: <code>curl http://localhost:PORT</code>
+2. Check firewall: <code>sudo ufw status</code>
+3. Check if the proxy is working: <code>curl -v http://example.com</code>
+4. For Docker: check that the container is running and healthy
+5. Check MTU settings: <code>ping -M do -s 1472 google.com</code> (if this fails, your MTU is too high)</p>
+<hr />
+<h3 id="cgnat-port-forwarding-doesnt-work">"CGNAT — port forwarding doesn't work"<a class="headerlink" href="#cgnat-port-forwarding-doesnt-work" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Port forwarding rules are configured but external access still fails.</p>
+<p><strong>CAUSE:</strong> Your ISP uses CGNAT (Carrier-Grade NAT), meaning your router doesn't have a public IP.</p>
+<p><strong>SOLUTION:</strong>
+1. Confirm CGNAT: Compare your router's WAN IP with whatismyipaddress.com
+2. If CGNAT confirmed: use Cloudflare Tunnel or Tailscale (Chapter 7)
+3. Call your ISP and ask for a public IP — some will give it for free or for ₱300-₱500/month
+4. <strong>PLDT:</strong> Call 171, ask for "public IP para sa homelab"
+5. <strong>Globe:</strong> Call 211, ask for "fixed IP" — rarely available
+6. <strong>Converge:</strong> Call 8888, sometimes gives public IP on request</p>
+<hr />
+<h2 id="service-specific-errors">Service-Specific Errors<a class="headerlink" href="#service-specific-errors" title="Permanent link">#</a></h2>
+<h3 id="vaultwarden-admin_token-not-set">Vaultwarden: "ADMIN_TOKEN not set"<a class="headerlink" href="#vaultwarden-admin_token-not-set" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Vaultwarden admin panel inaccessible or won't start with admin features.</p>
+<p><strong>SOLUTION:</strong>
+1. Set the ADMIN_TOKEN environment variable in your docker-compose.yml:
+   <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">environment</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ADMIN_TOKEN=$(openssl rand -base64 48)</span>
+</span></code></pre></div>
+2. Restart: <code>docker compose restart vaultwarden</code>
+3. Access admin panel at <code>http://vault.homelab.local/admin</code></p>
+<hr />
+<h3 id="vaultwarden-database-locked">Vaultwarden: "database locked"<a class="headerlink" href="#vaultwarden-database-locked" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>database is locked</code> error in Vaultwarden logs.</p>
+<p><strong>SOLUTION:</strong>
+1. Stop Vaultwarden: <code>docker compose stop vaultwarden</code>
+2. Check for file locks: <code>lsof /path/to/vaultwarden.db</code>
+3. Ensure only one Vaultwarden container is running
+4. Restart: <code>docker compose up -d vaultwarden</code>
+5. If the database is corrupted: restore from backup</p>
+<hr />
+<h3 id="pi-hole-ftl-not-starting">Pi-hole: "FTL not starting"<a class="headerlink" href="#pi-hole-ftl-not-starting" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Pi-hole container starts but DNS doesn't work. <code>pihole-FTL</code> service is down.</p>
+<p><strong>SOLUTION:</strong>
+1. Check if port 53 is already in use: <code>sudo lsof -i :53</code>
+2. If something else is using port 53, stop it or change Pi-hole's DNS port
+3. Check Pi-hole logs: <code>docker logs pihole</code>
+4. Restart: <code>docker restart pihole</code>
+5. If DNS still doesn't work: set your router's DNS to your Pi-hole IP</p>
+<p><strong>PH CONTEXT:</strong> On some PH routers (especially PLDT), the router's own DNS service may conflict with Pi-hole. Set Pi-hole as the DNS in your router's DHCP settings, not on individual devices.</p>
+<hr />
+<h3 id="pi-hole-gravity-list-update-failed">Pi-hole: "gravity list update failed"<a class="headerlink" href="#pi-hole-gravity-list-update-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> <code>pihole -g</code> fails to download blocklists.</p>
+<p><strong>SOLUTION:</strong>
+1. Check DNS resolution: <code>nslookup gravity.pi-hole.org</code>
+2. If DNS is broken, fix it first (see DNS errors above)
+3. Try with a different DNS: <code>PIHOLE_DNS='8.8.8.8' pihole -g</code>
+4. Check disk space: <code>df -h</code>
+5. Some blocklists may be temporarily unavailable — try again later</p>
+<hr />
+<h3 id="nextcloud-database-connection-failed">Nextcloud: "Database connection failed"<a class="headerlink" href="#nextcloud-database-connection-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Nextcloud shows "Could not connect to database."</p>
+<p><strong>SOLUTION:</strong>
+1. Check that the database container is running: <code>docker ps</code>
+2. Check the database password matches in your <code>.env</code> file and docker-compose.yml
+3. Check network connectivity: <code>docker exec nextcloud ping db</code>
+4. Restart the database: <code>docker compose restart db</code>
+5. If the database is corrupted: restore from backup</p>
+<hr />
+<h3 id="nextcloud-memory-cache-could-not-be-initialized">Nextcloud: "Memory cache could not be initialized"<a class="headerlink" href="#nextcloud-memory-cache-could-not-be-initialized" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Nextcloud warns about Redis or APCu cache not being configured.</p>
+<p><strong>SOLUTION:</strong>
+1. Add Redis to your docker-compose.yml:
+   <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">redis</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:alpine</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;127.0.0.1:6379:6379&quot;</span>
+</span></code></pre></div>
+2. Add to Nextcloud config (<code>config/config.php</code>):
+   <div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">&#39;memcache.distributed&#39; =&gt; &#39;\OC\Memcache\Redis&#39;,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">&#39;memcache.local&#39; =&gt; &#39;\OC\Memcache\Redis&#39;,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">&#39;memcache.locking&#39; =&gt; &#39;\OC\Memcache\Redis&#39;,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">&#39;redis&#39; =&gt; [</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">  &#39;host&#39; =&gt; &#39;redis&#39;,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">  &#39;port&#39; =&gt; 6379,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">],</span>
+</span></code></pre></div></p>
+<hr />
+<h3 id="jellyfin-transcoding-fails">Jellyfin: "transcoding fails"<a class="headerlink" href="#jellyfin-transcoding-fails" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Video won't play or transcoding uses 100% CPU.</p>
+<p><strong>SOLUTION:</strong>
+1. Check Jellyfin logs: <code>docker logs jellyfin</code>
+2. In Jellyfin web UI → Dashboard → Transcoding → check hardware acceleration
+3. For Intel Quick Sync (NUC, some mini PCs): enable QSV in settings
+4. For ARM (Raspberry Pi): use software transcoding or limit to 720p
+5. Check that the GPU device is passed to the container: <code>--device /dev/dri:/dev/dri</code></p>
+<p><strong>PH CONTEXT:</strong> On low-power homelab hardware (N100, i5 8th gen), 1080p transcoding is fine. 4K transcoding requires a newer CPU with Quick Sync or a dedicated GPU. Most PH users are better off converting media to 1080p H.264 once, then streaming the converted version.</p>
+<hr />
+<h3 id="jellyfin-library-scan-finds-nothing">Jellyfin: "library scan finds nothing"<a class="headerlink" href="#jellyfin-library-scan-finds-nothing" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Jellyfin dashboard shows empty library despite having media files.</p>
+<p><strong>SOLUTION:</strong>
+1. Check that the media directory is mounted correctly in docker-compose.yml
+2. Verify permissions: the Jellyfin container user needs read access to the media files
+3. In Jellyfin UI: Settings → Libraries → Scan library again
+4. Check Jellyfin logs: <code>docker logs jellyfin</code> for folder access errors</p>
+<hr />
+<h3 id="caddy-auto-https-failed">Caddy: "auto-HTTPS failed"<a class="headerlink" href="#caddy-auto-https-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Caddy logs show <code>auto-HTTPS: no suitable certificate found</code> or <code>ACME challenge failed</code>.</p>
+<p><strong>SOLUTION:</strong>
+1. If using a local domain (<code>.local</code>, <code>.home</code>), Caddy can't get a Let's Encrypt cert — that's expected. Use <code>http://</code> not <code>https://</code>
+2. If using a real domain:
+   - Check that DNS points to your server's public IP
+   - Check that ports 80 and 443 are open (for Let's Encrypt verification)
+   - If behind CGNAT, you can't use Let's Encrypt — use Cloudflare Tunnel instead
+   - Check Caddy logs: <code>docker logs caddy</code></p>
+<hr />
+<h3 id="caddy-reverse-proxy-dial-connection-refused">Caddy: "reverse proxy: dial: connection refused"<a class="headerlink" href="#caddy-reverse-proxy-dial-connection-refused" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Caddy starts but services show "502 Bad Gateway."</p>
+<p><strong>SOLUTION:</strong>
+1. Check that the target service is running: <code>docker ps</code>
+2. Check the service is on the same Docker network as Caddy
+3. Check the port in your Caddyfile matches the service's actual port
+4. If using <code>network_mode: host</code> with Caddy: use the server's IP instead of container names
+5. Restart Caddy: <code>docker compose restart caddy</code></p>
+<hr />
+<h3 id="prometheus-tsdb-compaction-failed">Prometheus: "TSDB compaction failed"<a class="headerlink" href="#prometheus-tsdb-compaction-failed" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Prometheus logs show compaction or WAL errors.</p>
+<p><strong>SOLUTION:</strong>
+1. Check disk space: <code>df -h</code> (Prometheus stores all metrics — it grows over time)
+2. Check Prometheus retention: set <code>retention.time</code> in your Prometheus config (e.g., <code>15d</code>)
+3. Increase storage if needed
+4. Restart: <code>docker compose restart prometheus</code></p>
+<hr />
+<h3 id="grafana-data-source-is-unreachable">Grafana: "data source is unreachable"<a class="headerlink" href="#grafana-data-source-is-unreachable" title="Permanent link">#</a></h3>
+<p><strong>ERROR:</strong> Grafana dashboard shows "Data source error" for Prometheus or other sources.</p>
+<p><strong>SOLUTION:</strong>
+1. Check that Prometheus is running: <code>docker ps</code>
+2. Check the Grafana data source URL — should be <code>http://prometheus:9090</code> (container name, not localhost)
+3. Check Docker network — both containers must be on the same network
+4. Test connectivity: <code>docker exec grafana wget -qO- http://prometheus:9090/api/v1/status/config</code></p>
+<hr />
+<h2 id="the-universal-debugging-checklist">The Universal Debugging Checklist<a class="headerlink" href="#the-universal-debugging-checklist" title="Permanent link">#</a></h2>
+<p>When something doesn't work, go through this list in order. This solves 80% of homelab issues:</p>
+<ol>
+<li><strong>Is it running?</strong> <code>docker ps</code> — Look for your container</li>
+<li><strong>What are the logs?</strong> <code>docker logs &lt;name&gt;</code> — Read the error message carefully</li>
+<li><strong>Is the port open?</strong> <code>sudo lsof -i :PORT</code> — Check port conflicts</li>
+<li><strong>Is the firewall blocking it?</strong> <code>sudo ufw status</code> — Check allowed ports</li>
+<li><strong>Can you reach it locally?</strong> <code>curl http://localhost:PORT</code> — Test on the server itself</li>
+<li><strong>Can you reach it from another device?</strong> <code>http://SERVER_IP:PORT</code> — Test from another machine</li>
+<li><strong>Is it a DNS issue?</strong> Try the IP address instead of the hostname</li>
+<li><strong>Did you restart after a config change?</strong> <code>docker compose up -d</code></li>
+<li><strong>Is it a CGNAT issue?</strong> Check if your ISP uses CGNAT (Chapter 7)</li>
+<li><strong>Is your server low on resources?</strong> <code>htop</code> and <code>df -h</code> — RAM and disk are the usual suspects</li>
+</ol>
+<hr />
+<h2 id="when-to-ask-for-help">When to Ask for Help<a class="headerlink" href="#when-to-ask-for-help" title="Permanent link">#</a></h2>
+<p>Sometimes you need outside help. Here's when and where:</p>
+<h3 id="good-time-to-ask">Good time to ask:<a class="headerlink" href="#good-time-to-ask" title="Permanent link">#</a></h3>
+<ul>
+<li>You've gone through the debugging checklist (above) and still can't figure it out</li>
+<li>The error message is something you've never seen before</li>
+<li>You've tried 3+ solutions from this appendix and nothing works</li>
+</ul>
+<h3 id="where-to-ask">Where to ask:<a class="headerlink" href="#where-to-ask" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Data Engineering Pilipinas (DEP) Discord</strong> — <a href="https://dataengineering.ph/">dataengineering.ph</a> — Filipino tech community, very helpful</li>
+<li><strong>r/homelab on Reddit</strong> — Large, active community</li>
+<li><strong>Docker Hub issues</strong> — For specific container problems</li>
+<li><strong>Proxmox Forum</strong> — For Proxmox-specific issues</li>
+<li><strong>GitHub Issues</strong> — For specific software bugs</li>
+</ul>
+<h3 id="how-to-ask-a-good-question">How to ask a good question:<a class="headerlink" href="#how-to-ask-a-good-question" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>What you tried</strong> — List what you've already done</li>
+<li><strong>What you expected</strong> — Describe what should have happened</li>
+<li><strong>What actually happened</strong> — Include the exact error message</li>
+<li><strong>Relevant logs</strong> — <code>docker logs &lt;container&gt;</code> or <code>journalctl -u &lt;service&gt;</code></li>
+<li><strong>Your setup</strong> — What hardware, what OS, what Docker version</li>
+</ol>
+<blockquote>
+<p><strong>🔥 The Chaos Champion:</strong> Intentionally break something. Stop a container, fill up your disk, block a port. Then go through the debugging checklist. Understanding how to fix things when they break is more valuable than knowing how to make them work in the first place.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2026-05-17
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../hardware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: C: Hardware Buying Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                C: Hardware Buying Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../services/" class="md-footer__link md-footer__link--next" aria-label="Next: E: Service Directory">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                E: Service Directory
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Bahay Bahayan is released under CC BY-SA 4.0. Free forever.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ogbinar/book-homelab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/bahay-bahayan" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.footer", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

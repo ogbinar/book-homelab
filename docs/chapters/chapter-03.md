@@ -22,7 +22,7 @@ The other way: use standard shipping containers. A container is the same size, s
 
 **Docker containers work the same way.** A container packages an application with everything it needs to run — the code, the runtime, the libraries, the settings. And it runs the same way on any computer, anywhere.
 
-That's why Docker is the gateway drug of homelabbing. Once you understand containers, everything else becomes easier.
+That's why Docker is the gateway drug of homelabbing. Once you understand containers, everything else becomes easier. *Parang nag-open ng bagong mundo — suddenly, you can run anything, anywhere, without breaking your system.*
 
 ---
 
@@ -292,6 +292,8 @@ docker compose pull
 docker compose up -d
 ```
 
+> **💸 Lean Path:** Docker Desktop is free for personal use and works on Windows and macOS. On Linux, Docker is always free. The container images you pull from Docker Hub are all free. There's zero cost to start containerizing your services — the only investment is your time.
+
 > **💡 Quick Win:** Start using Docker Compose from the beginning. Even for a single service, it makes your setup portable and documentable.
 
 ---
@@ -368,10 +370,12 @@ Now let's prove your Docker setup is solid:
 You've got Docker running and your first service deployed. In Chapter 4, we'll deploy something you'll actually use every day — a password manager, file storage, ad blocker, or media server. Pick one and make it yours.
 
 **Homework:**
-1. Practice the Docker commands above
+1. Practice the Docker commands above — *hindi ka mag-aaral kung hindi ka magse-practice*. Try `docker ps`, `docker logs`, `docker stop`, `docker start`.
 2. Check Uptime Kuma's dashboard and add a monitor for your server's public IP (use [checkip.amazonaws.com](https://checkip.amazonaws.com))
 3. Try stopping and starting the container: `docker stop uptime-kuma` then `docker start uptime-kuma`
-4. View the logs: `docker logs uptime-kuma`
+4. View the logs: `docker logs uptime-kuma` — *try to understand what you're seeing*
+
+> **🚀 Turbo:** Once you're comfortable with Docker, learn `docker inspect <container>` — it shows you the full configuration of any container. This is the single most useful command for debugging Docker issues. Also try `docker system df` to see how much disk space your containers are using.
 
 ---
 

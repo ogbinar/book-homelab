@@ -200,8 +200,8 @@ _Quick reference for common CLI commands used in this book._
 | Ch 10 | `crontab -e`, `docker compose pull`, `docker compose up -d` |
 | Ch 11 | `docker compose up -d`, `curl` |
 | Ch 12 | `ssh-keygen`, `ssh-copy-id`, `sudo ufw`, `sudo fail2ban-client` |
-| Ch 13 | `tailscale up`, `cloudflared tunnel create`, `cloudflared tunnel run` |
-| Ch 14 | `git init`, `git add`, `git commit`, `git push` |
+| Ch 7 | `tailscale up`, `cloudflared tunnel create`, `cloudflared tunnel run` |
+| Ch 13 | `git init`, `git add`, `git commit`, `git push` |
 
 ---
 

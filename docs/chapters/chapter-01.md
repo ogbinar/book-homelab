@@ -163,11 +163,60 @@ Before you move on, prove your "why" is real:
 
 ---
 
+## 🇵🇭 PH Context
+
+### Why Homelab Matters in the Philippines
+
+The Philippines presents unique challenges that make homelabbing especially valuable:
+
+- **Expensive cloud services:** AWS, GCP, and Azure pricing is in USD with no PH-specific discounts. A basic VPS costs ~$5-10/month (₱280-₱560/month) — that's money going overseas instead of staying local.
+- **Local ISP quirks:** Most Philippine ISPs (PLDT, Globe, Converge, DITO) assign dynamic IPs and use CGNAT, which means you can't easily point a domain to your home. Homelabbing teaches you to work around these limitations with reverse proxies, DNS, and tunneling tools.
+- **Unreliable power:** Brownouts and brownouts are real. A homelab forces you to think about UPS, graceful shutdowns, and data resilience — skills that are directly relevant in the PH context.
+- **Limited local cloud infrastructure:** Unlike the US or Singapore, the PH doesn't have many local cloud datacenters. Your data goes overseas either way, so you might as well control where it is.
+
+### Cost Comparison: Cloud vs. Homelab
+
+| Service | Cloud Cost (Monthly) | Homelab Cost (Monthly) | Annual Savings |
+|---|---|---|---|
+| Cloud VPS (1 CPU, 1GB RAM) | ₱280-₱560 | ₱70-₱175 (electricity) | ₱1,680-₱5,040 |
+| Google One 100GB | ₱59 | ₱0 (external drive) | ₱708 |
+| LastPass/1Password | ₱24-₱167 | ₱0 (Vaultwarden) | ₱288-₱2,004 |
+| Uptime monitoring (UptimeRobot) | ₱0-₱420 | ₱0 (Uptime Kuma) | ₱0-₱5,040 |
+| **Total for basic stack** | **₱363-₱1,187/mo** | **₱70-₱175/mo** | **₱3,276-₱12,168/yr** |
+
+**One-time hardware cost:** ₱0 (old laptop) to ₱15,000 (mini PC) — and it lasts 3-5 years.
+
+### Power Cost Awareness
+
+Meralco's average rate (2024) is ~₱10-₱12/kWh. Here's what common homelab hardware costs to run 24/7:
+
+| Hardware | Power (W) | Monthly Cost (Meralco ₱12/kWh) |
+|---|---|---|
+| Raspberry Pi 4 (8GB) | 5W | ~₱175 |
+| Intel N3450 mini PC | 15W | ~₱520 |
+| Dell OptiPlex Micro (i5-6500) | 30W | ~₱1,050 |
+| Desktop (reused, idle) | 60W | ~₱2,100 |
+
+**Tip:** Older hardware isn't just cheaper to buy — it's cheaper to run. A 6-year-old business mini PC uses less power than a modern gaming laptop doing nothing.
+
+### Local Community Resources
+
+The Filipino tech community is one of the best resources for homelabbers:
+
+- **Data Engineering Pilipinas (DEP):** [dataengineering.ph](https://dataengineering.ph/) — The community behind this book. Great Discord, regular meetups.
+- **Facebook Groups:** "Homelab Philippines," "Self-Hosted Philippines," "Pinoy Homelabbers" — Active communities sharing setups and advice
+- **Discord Servers:** Many Filipino tech Discord servers have homelab channels — ask in DEP's Discord
+- **Local hardware markets:** Computer City (Taft, Manila), Facebook Marketplace, Shopee/Lazada for deals
+
+---
+
 ## What's Next
 
 Now that you know what a homelab is and why you might want one, it's time to get practical. In **[Chapter 2: Your First Server](chapters/chapter-02.md)**, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.
 
 **Homework:** Write down your "why." Keep it somewhere you'll see it. We'll come back to it.
+
+> **🚀 Turbo:** If you want to skip the theory and start building right now, go to [awesome-selfhosted.net](https://awesome-selfhosted.net/) and pick one service to research. Write down what problem it solves for you. You'll have a much clearer direction when you reach Chapter 2.
 
 ---
 
@@ -178,5 +227,7 @@ Now that you know what a homelab is and why you might want one, it's time to get
 - [Techno Tim (YouTube)](https://www.youtube.com/@TechnoTim) — Homelab setup videos, beginner-friendly
 
 ---
+
+> **💸 Lean Path:** You don't need to buy anything. That old laptop gathering dust under your bed? That's your first server. The free trials from AWS, Google Cloud, and Azure are great for learning — but they expire. Your old laptop doesn't. Start with what you have.
 
 > **📢 Remember:** Your homelab doesn't need to be impressive. It needs to be yours. Start small. Be stubborn. Have fun.

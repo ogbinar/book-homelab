@@ -1,0 +1,2381 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+">
+      
+      
+      
+        <link rel="canonical" href="https://book-homelab.pages.dev/launch-readiness-report/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Launch Readiness Report: Bahay Bahayan MVP v1.0 - Bahay Bahayan: Build Your First Homelab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m19%202-5%204.5v11l5-4.5zM6.5%205C4.55%205%202.45%205.4%201%206.5v14.66c0%20.25.25.5.5.5.1%200%20.15-.07.25-.07%201.35-.65%203.3-1.09%204.75-1.09%201.95%200%204.05.4%205.5%201.5%201.35-.85%203.8-1.5%205.5-1.5%201.65%200%203.35.31%204.75%201.06.1.05.15.03.25.03.25%200%20.5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7%200-4.15.65-5.5%201.5V6.5C10.55%205.4%208.45%205%206.5%205%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Launch Readiness Report: Bahay Bahayan MVP v1.0 - Bahay Bahayan: Build Your First Homelab" />
+<meta property="og:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="og:image" content="https://book-homelab.pages.dev/assets/images/social/launch-readiness-report.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://book-homelab.pages.dev/launch-readiness-report/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Launch Readiness Report: Bahay Bahayan MVP v1.0 - Bahay Bahayan: Build Your First Homelab" />
+<meta property="twitter:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="twitter:image" content="https://book-homelab.pages.dev/assets/images/social/launch-readiness-report.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#launch-readiness-report-bahay-bahayan-mvp-v10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bahay Bahayan: Build Your First Homelab" class="md-header__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bahay Bahayan: Build Your First Homelab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Launch Readiness Report: Bahay Bahayan MVP v1.0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to Cyberpunk mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Cyberpunk mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="cyberpunk" data-md-color-primary="pink" data-md-color-accent="cyan"  aria-label="Switch to Matrix mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Matrix mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="matrix" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to Synthwave mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to Synthwave mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="synthwave" data-md-color-primary="purple" data-md-color-accent="orange"  aria-label="Switch to Ocean mode"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to Ocean mode" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 12a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 17.5 9a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-3-4A1.5 1.5 0 0 1 13 6.5 1.5 1.5 0 0 1 14.5 5 1.5 1.5 0 0 1 16 6.5 1.5 1.5 0 0 1 14.5 8m-5 0A1.5 1.5 0 0 1 8 6.5 1.5 1.5 0 0 1 9.5 5 1.5 1.5 0 0 1 11 6.5 1.5 1.5 0 0 1 9.5 8m-3 4A1.5 1.5 0 0 1 5 10.5 1.5 1.5 0 0 1 6.5 9 1.5 1.5 0 0 1 8 10.5 1.5 1.5 0 0 1 6.5 12M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9 1.5 1.5 0 0 0 1.5-1.5c0-.39-.15-.74-.39-1-.23-.27-.38-.62-.38-1a1.5 1.5 0 0 1 1.5-1.5H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="ocean" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Switch to Bahay Bahayan mode"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="Switch to Bahay Bahayan mode" for="__palette_5" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33m0-6h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2V6h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0C17.22 5.53 18.61 6 20 6m0 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_5">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bahay Bahayan: Build Your First Homelab" class="md-nav__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bahay Bahayan: Build Your First Homelab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Bahay Bahayan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan — Your First Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Ano ba ang Homelab?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Your First Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Hello, Container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Something Useful
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Keeping It Alive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Your First Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: Lumaki
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part-ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki — Growing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: The Reverse Proxy + Remote Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Multiple Services, One System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Your Data, Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Automation: Work Less
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Monitoring: Eyes on Everything
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Security: Don't Get Hacked
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapters/chapter-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Your Homelab Portfolio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/author/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A: About the Author
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B: Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C: Hardware Buying Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D: Common Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E: Service Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F: Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G: Commands Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-structural-alignment-with-design-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Structural Alignment with Design Plan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Structural Alignment with Design Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chapter-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter Count ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendix-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix Count ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-chapter-template-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Chapter Template Compliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Chapter Template Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-non-compliant-chapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis of Non-Compliant Chapters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inline-callout-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Inline Callout Coverage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-taglish-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Taglish Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ph-context-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. PH Context Depth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-appendix-quality-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Appendix Quality Assessment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Appendix Quality Assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-buying-guide-354-lines-exceeds-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Buying Guide (354 lines) ✅ EXCEEDS PLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-errors-807-lines-exceeds-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Errors (807 lines) ✅ EXCEEDS PLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-directory-384-lines-meets-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Directory (384 lines) ✅ MEETS PLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glossary-143-lines-adequate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossary (143 lines) ⚠️ ADEQUATE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-reference-208-lines-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands Reference (208 lines) ✅ GOOD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-59-lines-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community (59 lines) ⚠️ MINIMAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-navigation-cross-reference-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Navigation &amp; Cross-Reference Integrity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Navigation &amp; Cross-Reference Integrity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MkDocs Navigation ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-References ⚠️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        README.md ⚠️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-website-build-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Website / Build Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-issues-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Issues Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Issues Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#must-fix-before-launch-2-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Must Fix Before Launch (2 items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#should-fix-before-launch-4-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Should Fix Before Launch (4 items)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nice-to-have-v11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Nice to Have (v1.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-launch-readiness-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Launch Readiness Score
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-verdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Verdict
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Verdict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-launch-yes-with-2-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ CONDITIONAL LAUNCH — Yes, with 2 fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="launch-readiness-report-bahay-bahayan-mvp-v10">Launch Readiness Report: Bahay Bahayan MVP v1.0<a class="headerlink" href="#launch-readiness-report-bahay-bahayan-mvp-v10" title="Permanent link">#</a></h1>
+<p><strong>Date:</strong> May 18, 2026
+<strong>Scope:</strong> Plan vs. implementation comparison across 13 chapters + 7 appendices
+<strong>Verdict:</strong> ⚠️ <strong>CONDITIONAL LAUNCH</strong> — structurally complete, needs polish on 4 items</p>
+<hr />
+<h2 id="executive-summary">Executive Summary<a class="headerlink" href="#executive-summary" title="Permanent link">#</a></h2>
+<p>The execution plan (todo.md) has been <strong>fully completed across all 5 phases</strong>. All planned deliverables exist:</p>
+<table>
+<thead>
+<tr>
+<th>Plan Item</th>
+<th>Planned</th>
+<th>Delivered</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ch 13 merge into Ch 7</td>
+<td>✅</td>
+<td>✅</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Hardware Buying Guide</td>
+<td>✅</td>
+<td>✅</td>
+<td>Exceeds plan</td>
+</tr>
+<tr>
+<td>Common Errors Reference</td>
+<td>✅</td>
+<td>✅</td>
+<td>Exceeds plan (52 vs 50 target)</td>
+</tr>
+<tr>
+<td>Service Directory</td>
+<td>✅</td>
+<td>✅</td>
+<td>Exceeds plan (34 vs 30-40 target)</td>
+</tr>
+<tr>
+<td>Final Integration</td>
+<td>✅</td>
+<td>✅</td>
+<td>Complete</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall structural alignment: 95%</strong>. The remaining 5% are polish items, not blockers.</p>
+<hr />
+<h2 id="1-structural-alignment-with-design-plan">1. Structural Alignment with Design Plan<a class="headerlink" href="#1-structural-alignment-with-design-plan" title="Permanent link">#</a></h2>
+<h3 id="chapter-count">Chapter Count ✅<a class="headerlink" href="#chapter-count" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Design Plan</th>
+<th>Implemented</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12 core chapters (Ch 1-12)</td>
+<td>12 chapters (Ch 1-12)</td>
+<td>✅ Match</td>
+</tr>
+<tr>
+<td>1 capstone (Portfolio = Ch 13)</td>
+<td>Ch 14.md titled "Ch 13: Portfolio"</td>
+<td>⚠️ File naming mismatch</td>
+</tr>
+<tr>
+<td>Remote access merged into Ch 7</td>
+<td>~320 lines added to Ch 7</td>
+<td>✅ Match</td>
+</tr>
+<tr>
+<td>Virtualization deferred to v2</td>
+<td>No virtualization chapter</td>
+<td>✅ Match</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Issue:</strong> The file <code>chapter-14.md</code> should be renamed to <code>chapter-13.md</code>. The content correctly says "Chapter 13" but the filename doesn't match. This creates confusion in the file system and README directory structure.</p>
+<h3 id="appendix-count">Appendix Count ✅<a class="headerlink" href="#appendix-count" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Design Plan</th>
+<th>Implemented</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glossary</td>
+<td><code>glossary.md</code> (143 lines, 35 terms)</td>
+<td>✅ Complete</td>
+</tr>
+<tr>
+<td>Hardware Buying Guide</td>
+<td><code>hardware.md</code> (354 lines)</td>
+<td>✅ Exceeds plan</td>
+</tr>
+<tr>
+<td>Common Errors</td>
+<td><code>errors.md</code> (807 lines, 52 entries)</td>
+<td>✅ Exceeds plan</td>
+</tr>
+<tr>
+<td>Service Directory</td>
+<td><code>services.md</code> (384 lines, 34 services)</td>
+<td>✅ Exceeds plan</td>
+</tr>
+<tr>
+<td>Community Resources</td>
+<td><code>community.md</code> (59 lines)</td>
+<td>⚠️ Minimal</td>
+</tr>
+<tr>
+<td>Commands Reference</td>
+<td><code>commands.md</code> (208 lines)</td>
+<td>✅ Complete</td>
+</tr>
+<tr>
+<td>About the Author (bonus)</td>
+<td><code>author.md</code></td>
+<td>✅ Extra value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Community appendix is only 59 lines. The plan acknowledged this as acceptable for MVP ("minimal, 1-2 pages"). Acceptable.</p>
+<hr />
+<h2 id="2-chapter-template-compliance">2. Chapter Template Compliance<a class="headerlink" href="#2-chapter-template-compliance" title="Permanent link">#</a></h2>
+<p>Every chapter is required to have 13 sections per <code>agents.md</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Ch</th>
+<th>Title</th>
+<th>Score</th>
+<th>Missing Sections</th>
+<th>Critical?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>What Even Is a Homelab?</td>
+<td><strong>8/13</strong></td>
+<td>Quick Start, The Why, Deep Dive, Career Boost (standalone), PH Context</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Your First Server</td>
+<td><strong>9/13</strong></td>
+<td>Why This Matters, Quick Start, The Why, Deep Dive</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hello, Container</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Something Useful</td>
+<td><strong>9/13</strong></td>
+<td>Why This Matters, Quick Start, The Why, Deep Dive</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Keeping It Alive</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Your First Network</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The Reverse Proxy</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Multiple Services, One System</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Your Data, Safe</td>
+<td><strong>12/13</strong></td>
+<td>Stress Test</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Automation: Work Less</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Monitoring: Eyes on Everything</td>
+<td><strong>12/13</strong></td>
+<td>Deep Dive (top-level)</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Security: Don't Get Hacked</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>14→13</td>
+<td>Your Homelab Portfolio</td>
+<td><strong>13/13</strong></td>
+<td>—</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Average compliance: 12.1/13 (93%)</strong></p>
+<h3 id="analysis-of-non-compliant-chapters">Analysis of Non-Compliant Chapters<a class="headerlink" href="#analysis-of-non-compliant-chapters" title="Permanent link">#</a></h3>
+<p><strong>Chapter 1 (8/13)</strong> — This is a <strong>conceptual/introductory</strong> chapter. Missing Quick Start, The Why, Deep Dive, standalone Career Boost, and PH Context sections. For an intro chapter, this is defensible — there's nothing to "quick start." However, PH Context and Career Boost should be added even for Ch 1 as the design plan calls for PH context in every chapter.</p>
+<p><strong>Chapter 2 (9/13)</strong> — Missing Why This Matters, Quick Start, The Why, Deep Dive. The chapter jumps from "The Story" directly into implementation steps. The content IS there, but organized under different headings ("Choose Your Path", "Install Ubuntu Server"). <strong>Rename existing section headers to match the template.</strong></p>
+<p><strong>Chapter 4 (9/13)</strong> — Same pattern as Ch 2 — content exists but under non-standard headings. Straight into "Choose Your Service" after "The Story."</p>
+<p><strong>Bottom line:</strong> Chapters 2 and 4 have the content but wrong section names. This is a <strong>renaming fix, not a content gap</strong>. Chapter 1 genuinely has fewer sections appropriate for an intro chapter.</p>
+<hr />
+<h2 id="3-inline-callout-coverage">3. Inline Callout Coverage<a class="headerlink" href="#3-inline-callout-coverage" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Callout</th>
+<th>Ch1</th>
+<th>Ch2</th>
+<th>Ch3</th>
+<th>Ch4</th>
+<th>Ch5</th>
+<th>Ch6</th>
+<th>Ch7</th>
+<th>Ch8</th>
+<th>Ch9</th>
+<th>Ch10</th>
+<th>Ch11</th>
+<th>Ch12</th>
+<th>Ch14</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⚠️ Watch Out</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>18 ✅</td>
+</tr>
+<tr>
+<td>💸 Lean Path</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>4 ⚠️</td>
+</tr>
+<tr>
+<td>🚀 Turbo</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2 ⚠️</td>
+</tr>
+<tr>
+<td>💡 Quick Win</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>7 ⚠️</td>
+</tr>
+<tr>
+<td>📢 Jargon Alert</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>18 ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ Watch Out</strong> and <strong>📢 Jargon Alert</strong> have good coverage. <strong>💸 Lean Path</strong>, <strong>🚀 Turbo</strong>, and <strong>💡 Quick Win</strong> are sparse — appearing in only 3-5 chapters each. The design plan says "every chapter must include at least one of each inline callout type where contextually appropriate." The "where appropriate" qualifier is key — not every chapter needs a Turbo path. But 💸 Lean Path should appear more often given the budget-conscious audience.</p>
+<hr />
+<h2 id="4-taglish-distribution">4. Taglish Distribution<a class="headerlink" href="#4-taglish-distribution" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Has Taglish?</th>
+<th>Chapters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Yes</td>
+<td>Ch 1, Ch 4, Ch 5</td>
+</tr>
+<tr>
+<td>❌ No</td>
+<td>Ch 2, 3, 6, 7, 8, 9, 10, 11, 12, 14</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Only 3 of 13 chapters (23%) contain Taglish.</strong> The design plan explicitly states the book should be in Taglish. This is the <strong>largest gap between plan and implementation</strong>. The manifesto (<code>agents.md</code>) says "Write naturally. Don't force Filipino where English is more natural." But 10 chapters with zero Taglish is not "natural mix" — it reads as entirely English.</p>
+<p><strong>Impact:</strong> This is a <strong>brand identity issue</strong>. The book markets itself as Taglish but reads mostly in English. For MVP launch, this is acceptable given the target audience (Filipino tech professionals are fluent in English), but should be addressed before v1.1.</p>
+<hr />
+<h2 id="5-ph-context-depth">5. PH Context Depth<a class="headerlink" href="#5-ph-context-depth" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Coverage</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>₱ prices</td>
+<td>9/13 chapters</td>
+<td>✅ Good</td>
+</tr>
+<tr>
+<td>PH ISP names (PLDT, Globe, DITO, Converge)</td>
+<td>4/13 chapters</td>
+<td>⚠️ Sparse</td>
+</tr>
+<tr>
+<td>CGNAT awareness</td>
+<td>3/13 chapters</td>
+<td>⚠️ Sparse</td>
+</tr>
+<tr>
+<td>Meralco/power costs</td>
+<td>3/13 chapters</td>
+<td>⚠️ Sparse</td>
+</tr>
+<tr>
+<td>Local hardware vendors</td>
+<td>2/13 chapters</td>
+<td>⚠️ Sparse</td>
+</tr>
+<tr>
+<td>Filipino cultural references</td>
+<td>3/13 chapters</td>
+<td>⚠️ Sparse</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PH Context sections exist in all chapters</strong> (the <code>## 🇵🇭 PH Context</code> header is present), but the <strong>depth varies significantly</strong>. Chapters 2, 6, and 7 have rich PH context. Chapters 10, 11, and 12 have minimal PH-specific content in their PH Context sections.</p>
+<hr />
+<h2 id="6-appendix-quality-assessment">6. Appendix Quality Assessment<a class="headerlink" href="#6-appendix-quality-assessment" title="Permanent link">#</a></h2>
+<h3 id="hardware-buying-guide-354-lines-exceeds-plan">Hardware Buying Guide (354 lines) ✅ EXCEEDS PLAN<a class="headerlink" href="#hardware-buying-guide-354-lines-exceeds-plan" title="Permanent link">#</a></h3>
+<ul>
+<li>5 budget tiers with specific models and prices</li>
+<li>Vendor directory with 6 physical stores + 4 online sellers</li>
+<li>3 complete BOM shopping lists</li>
+<li>Meralco cost calculator</li>
+<li>Tropical climate considerations</li>
+<li>UPS recommendations</li>
+<li>Noise levels for apartment living</li>
+<li>Second-hand buying tips with red flags</li>
+</ul>
+<p><strong>This is the strongest appendix.</strong> Ready for launch.</p>
+<h3 id="common-errors-807-lines-exceeds-plan">Common Errors (807 lines) ✅ EXCEEDS PLAN<a class="headerlink" href="#common-errors-807-lines-exceeds-plan" title="Permanent link">#</a></h3>
+<ul>
+<li>52 error entries across 5 categories (vs. 50 target)</li>
+<li>Each entry follows ERROR/CAUSE/SOLUTION/PH CONTEXT template</li>
+<li>Universal debugging checklist</li>
+<li>"When to Ask for Help" guidance</li>
+<li>PH-specific notes on ~half the entries</li>
+</ul>
+<p><strong>Excellent quality.</strong> Ready for launch.</p>
+<h3 id="service-directory-384-lines-meets-plan">Service Directory (384 lines) ✅ MEETS PLAN<a class="headerlink" href="#service-directory-384-lines-meets-plan" title="Permanent link">#</a></h3>
+<ul>
+<li>34 services (19 main + 15 bonus) with complete metadata</li>
+<li>5 recommendation paths for different user profiles</li>
+<li>Resource capacity planner</li>
+<li>PH-specific notes on core services</li>
+</ul>
+<p><strong>Good quality.</strong> Ready for launch.</p>
+<h3 id="glossary-143-lines-adequate">Glossary (143 lines) ⚠️ ADEQUATE<a class="headerlink" href="#glossary-143-lines-adequate" title="Permanent link">#</a></h3>
+<ul>
+<li>35 terms (plan called for 100+)</li>
+<li>Good analogies in definitions</li>
+<li>Missing many terms used in the book (CGNAT, CIDR, etc. are there, but Docker-specific terms are sparse)</li>
+</ul>
+<p><strong>Meets MVP needs but well below the 100+ target.</strong> Acceptable for launch.</p>
+<h3 id="commands-reference-208-lines-good">Commands Reference (208 lines) ✅ GOOD<a class="headerlink" href="#commands-reference-208-lines-good" title="Permanent link">#</a></h3>
+<ul>
+<li>Well-organized tables by category</li>
+<li>Chapter cross-reference map</li>
+<li>Covers Docker, Linux, networking, SSH, backup</li>
+</ul>
+<p><strong>Ready for launch.</strong></p>
+<h3 id="community-59-lines-minimal">Community (59 lines) ⚠️ MINIMAL<a class="headerlink" href="#community-59-lines-minimal" title="Permanent link">#</a></h3>
+<ul>
+<li>Focuses solely on DEP (Data Engineering Pilipinas)</li>
+<li>Missing: Facebook groups, Discord servers, YouTube channels, local meetups</li>
+<li>Plan called for "Facebook groups, Discord servers, YouTube channels, local meetups"</li>
+</ul>
+<p><strong>Below plan scope.</strong> But plan acknowledged "minimal for MVP, expand in v1.1."</p>
+<hr />
+<h2 id="7-navigation-cross-reference-integrity">7. Navigation &amp; Cross-Reference Integrity<a class="headerlink" href="#7-navigation-cross-reference-integrity" title="Permanent link">#</a></h2>
+<h3 id="mkdocs-navigation">MkDocs Navigation ✅<a class="headerlink" href="#mkdocs-navigation" title="Permanent link">#</a></h3>
+<ul>
+<li>All 13 chapters properly listed</li>
+<li>7 appendices properly listed</li>
+<li>Part I and Part II landing pages configured</li>
+<li>Links resolve correctly within the <code>docs/</code> structure</li>
+</ul>
+<h3 id="cross-references">Cross-References ⚠️<a class="headerlink" href="#cross-references" title="Permanent link">#</a></h3>
+<ul>
+<li>Most cross-references updated correctly</li>
+<li><strong>Issue:</strong> <code>commands.md</code> line 204 still references "Ch 14" for git commands (should be "Ch 13")</li>
+<li><strong>Issue:</strong> <code>community.md</code> line 5 references <code>chapter-14.md</code> directly (works but inconsistent with renumbering narrative)</li>
+</ul>
+<h3 id="readmemd">README.md ⚠️<a class="headerlink" href="#readmemd" title="Permanent link">#</a></h3>
+<ul>
+<li>Chapter table still shows "Ch 14" for Portfolio (line 42)</li>
+<li>Directory structure shows <code>chapter-14-homelab-portfolio.md</code> (line 123)</li>
+<li>Quick Start section references "Chapter 14" (line 72)</li>
+</ul>
+<hr />
+<h2 id="8-website-build-readiness">8. Website / Build Readiness<a class="headerlink" href="#8-website-build-readiness" title="Permanent link">#</a></h2>
+<p>The <code>mkdocs.yml</code> is well-configured:
+- Material theme with multiple palette options
+- Search, social cards, git-revision-date plugins
+- Mermaid diagrams support
+- Custom CSS via <code>assets/custom.css</code>
+- Deployed URL: <code>https://book-homelab.pages.dev</code></p>
+<p><strong>Build check:</strong> Run <code>mkdocs build</code> to verify zero broken links before launch.</p>
+<hr />
+<h2 id="9-issues-summary">9. Issues Summary<a class="headerlink" href="#9-issues-summary" title="Permanent link">#</a></h2>
+<h3 id="must-fix-before-launch-2-items">🔴 Must Fix Before Launch (2 items)<a class="headerlink" href="#must-fix-before-launch-2-items" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Location</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Rename <code>chapter-14.md</code> → <code>chapter-13.md</code></td>
+<td><code>docs/chapters/</code></td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fix README.md references to "Chapter 14" → "Chapter 13"</td>
+<td><code>README.md</code> lines 42, 72, 123</td>
+<td>5 min</td>
+</tr>
+</tbody>
+</table>
+<h3 id="should-fix-before-launch-4-items">🟡 Should Fix Before Launch (4 items)<a class="headerlink" href="#should-fix-before-launch-4-items" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Location</th>
+<th>Effort</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Add PH Context section to Chapter 1</td>
+<td><code>chapter-01.md</code></td>
+<td>30 min</td>
+<td>Brand consistency</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rename section headers in Ch 2 and Ch 4 to match template</td>
+<td><code>chapter-02.md</code>, <code>chapter-04.md</code></td>
+<td>15 min</td>
+<td>Template compliance</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Add Stress Test to Chapter 9</td>
+<td><code>chapter-09.md</code></td>
+<td>20 min</td>
+<td>Template compliance</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Add more 💸 Lean Path callouts across chapters</td>
+<td>8 chapters</td>
+<td>1 hr</td>
+<td>Budget-conscious audience</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nice-to-have-v11">🟢 Nice to Have (v1.1)<a class="headerlink" href="#nice-to-have-v11" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>Add Taglish to chapters 2, 3, 6-12, 14</td>
+<td>Brand identity — biggest gap vs. plan</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Expand glossary from 35 → 100+ terms</td>
+<td>Completeness</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Expand community appendix with PH groups, meetups</td>
+<td>Community building</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Add more PH ISP references to Ch 9, 10, 11, 12</td>
+<td>PH context depth</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Add more 🚀 Turbo callouts</td>
+<td>Power user path</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-launch-readiness-score">10. Launch Readiness Score<a class="headerlink" href="#10-launch-readiness-score" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score</th>
+<th>Weight</th>
+<th>Weighted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structural completeness (plan items delivered)</td>
+<td>10/10</td>
+<td>25%</td>
+<td>2.50</td>
+</tr>
+<tr>
+<td>Chapter template compliance (avg 12.1/13)</td>
+<td>9/10</td>
+<td>20%</td>
+<td>1.80</td>
+</tr>
+<tr>
+<td>Appendix quality</td>
+<td>9/10</td>
+<td>15%</td>
+<td>1.35</td>
+</tr>
+<tr>
+<td>PH context integration</td>
+<td>7/10</td>
+<td>15%</td>
+<td>1.05</td>
+</tr>
+<tr>
+<td>Taglish consistency</td>
+<td>3/10</td>
+<td>10%</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>Navigation/cross-reference integrity</td>
+<td>8/10</td>
+<td>10%</td>
+<td>0.80</td>
+</tr>
+<tr>
+<td>Callout diversity</td>
+<td>6/10</td>
+<td>5%</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td></td>
+<td><strong>100%</strong></td>
+<td><strong>8.10/10</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-verdict">Final Verdict<a class="headerlink" href="#final-verdict" title="Permanent link">#</a></h2>
+<h3 id="conditional-launch-yes-with-2-fixes">⚠️ CONDITIONAL LAUNCH — Yes, with 2 fixes<a class="headerlink" href="#conditional-launch-yes-with-2-fixes" title="Permanent link">#</a></h3>
+<p>The book is <strong>structurally complete</strong> and all planned phases are done. The appendices exceed expectations. The content quality across Chapters 3-12 is strong.</p>
+<p><strong>Before launching:</strong>
+1. Rename <code>chapter-14.md</code> to <code>chapter-13.md</code> (1 min)
+2. Update README.md Chapter 14 → Chapter 13 references (5 min)</p>
+<p><strong>The 4 "should fix" items are polish, not blockers.</strong> The 7 "nice to have" items are v1.1 material.</p>
+<p><strong>The biggest gap is Taglish consistency</strong> — only 23% of chapters contain Taglish. This doesn't prevent launch (the content is solid and the audience is English-fluent), but it does affect brand identity. Prioritize Taglish infusion for v1.1.</p>
+<p><strong>Total estimated fix time for launch-readiness: ~10 minutes.</strong></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2026-05-19
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Bahay Bahayan is released under CC BY-SA 4.0. Free forever.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ogbinar/book-homelab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/bahay-bahayan" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.footer", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

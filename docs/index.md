@@ -54,13 +54,13 @@ Build a multi-service homelab that you actually use daily. Learn the patterns th
 
 | Chapter | Topic | Time |
 |---------|-------|------|
-| 7 | The Reverse Proxy | 2 hrs |
+| 7 | The Reverse Proxy + Remote Access | 3.5 hrs |
 | 8 | Multiple Services, One System | 3 hrs |
 | 9 | Your Data, Safe | 2 hrs |
 | 10 | Automation: Work Less | 2-3 hrs |
 | 11 | Monitoring: Eyes on Everything | 2 hrs |
 | 12 | Security: Don't Get Hacked | 2 hrs |
-| 14 | Your Homelab Portfolio | 2 hrs |
+| 13 | Your Homelab Portfolio | 2 hrs |
 
 ---
 

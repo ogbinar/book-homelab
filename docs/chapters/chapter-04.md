@@ -23,7 +23,18 @@ You get to choose. Pick at least one — we recommend starting with 2-3 so you h
 
 ---
 
-## Choose Your Service
+## Why This Matters
+
+Choosing your first service is about choosing your first win. You want something that:
+1. Solves a real problem you have
+2. Teaches you something useful
+3. You'll actually use every day
+
+The service you pick becomes the proof that self-hosting isn't just a hobby — it's a better way to manage your digital life.
+
+---
+
+## 🟢 Quick Start
 
 ### Option A: Vaultwarden — Your Own Password Manager
 
@@ -206,10 +217,38 @@ Whichever service you chose, take 30 minutes to configure it properly:
 Now let's prove it works:
 
 1. **Restart your server** (`sudo reboot`) — When it comes back, check that your service is running
-2. **Turn off WiFi on your phone** and use mobile data — Can you still access your service on your home network? (No, and that's expected — see Chapter 13 for remote access)
+2. **Turn off WiFi on your phone** and use mobile data — Can you still access your service on your home network? (No, and that's expected — see Chapter 7 for remote access)
 3. **Delete the container** (`docker rm -f servicename`) and recreate it from your deployment command — Your data should still be there (because of volumes)
 
 > **🔥 The Chaos Champion:** For Pi-hole specifically — unplug your router, wait 30 seconds, plug it back in. When your internet is back, try loading a website with ads. If Pi-hole is working, the ads won't load even though your internet is working. That's the magic of DNS-level blocking.
+
+---
+
+## 🔵 The Why
+
+### Why Deploy a Service Instead of Just Running Docker?
+
+Docker by itself is just a tool. A service is where Docker becomes **useful**. When you deploy Vaultwarden, Nextcloud, Pi-hole, or Jellyfin, you're not just running a container — you're:
+
+- Replacing a subscription you pay for
+- Taking control of your data
+- Learning the patterns that scale to any service
+
+The Docker command you run today is the same pattern you'll use for every service you deploy in the future. This chapter teaches you the **deploy, configure, verify** loop that's at the heart of homelabbing.
+
+---
+
+## 🟣 Deep Dive
+
+### Multi-Service Considerations
+
+When you're running multiple services, think about:
+
+1. **Resource allocation:** Each service needs CPU and RAM. Monitor usage with `docker stats`.
+2. **Network isolation:** Services shouldn't need to talk to each other unless they do. Use Docker networks to separate services.
+3. **Update frequency:** Some services (Pi-hole) rarely need updating. Others (Vaultwarden) get security patches frequently. Stay on top of updates.
+
+> **🚀 Turbo:** Once you're comfortable with single-service deployments, check out Chapter 8 where we combine everything into a single Docker Compose stack with clean URLs, SSL, and monitoring.
 
 ---
 
@@ -266,7 +305,11 @@ You've deployed your first real service. It's running, it's useful, and it's you
 1. Configure your chosen service with your real data
 2. Access it from at least 2 different devices
 3. Set up 2FA if available
-4. Take a screenshot of your service running — you'll want this for your portfolio (Chapter 14)
+4. Take a screenshot of your service running — you'll want this for your portfolio (Chapter 13)
+
+---
+
+> **💸 Lean Path:** Every service in this chapter is completely free. Vaultwarden, Nextcloud, Pi-hole, and Jellyfin are all open source with no paid tiers. You're replacing subscriptions that cost ₱24-₱349/month with services that cost ₱0. The only investment is your time — and that time pays for itself in the first month.
 
 ---
 

@@ -39,7 +39,7 @@ Just you, your hardware, and whatever software you want to run on it.
 | 10 | Automation — Work Less | Watchtower, cron, maintenance scripts |
 | 11 | Monitoring — Eyes on Everything | Prometheus, Grafana, node-exporter |
 | 12 | Security — Don't Get Hacked | SSH keys, UFW, fail2ban, container isolation |
-| 14 | Your Homelab Portfolio | CV translation, GitHub setup, career acceleration |
+| 13 | Your Homelab Portfolio | CV translation, GitHub setup, career acceleration |
 
 **Total time:** ~15-20 hours spread over 2-4 weeks.
 
@@ -69,7 +69,7 @@ Read in order. Each chapter builds on the previous one.
 1. Read Chapter 1 to understand what a homelab is and why you might want one
 2. Follow Chapter 2 to set up your first server (₱0 if you have an old laptop)
 3. Follow the chapters in order — each one builds on the last
-4. By Chapter 14, you'll have a portfolio to show employers
+4. By Chapter 13, you'll have a portfolio to show employers
 
 ## Filipino Context
 
@@ -113,14 +113,14 @@ book-homelab/
     │   ├── chapter-04-something-useful.md
     │   ├── chapter-05-keeping-it-alive.md
     │   └── chapter-06-your-first-network.md
-    └── part-ii-lumaki/        # Chapters 7-14 (Growing your lab)
+    └── part-ii-lumaki/        # Chapters 7-13 (Growing your lab)
         ├── chapter-07-reverse-proxy.md
         ├── chapter-08-multiple-services-one-system.md
         ├── chapter-09-your-data-safe.md
         ├── chapter-10-automation-work-less.md
         ├── chapter-11-monitoring-eyes-on-everything.md
         ├── chapter-12-security-dont-get-hacked.md
-        └── chapter-14-homelab-portfolio.md
+        └── chapter-13-homelab-portfolio.md
 ```
 
 ## License

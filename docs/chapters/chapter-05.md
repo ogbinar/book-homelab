@@ -294,6 +294,8 @@ Your services are running, they restart automatically, and you have health monit
 4. Do a manual backup of your service data (copy to ~/homelab-backup/)
 5. Reboot your server and verify everything comes back up
 
+> **🚀 Turbo:** Learn `docker compose ps` — it shows all services, their status, restart count, and uptime. Combined with `docker stats` (real-time CPU/memory), you'll know exactly what's happening in your homelab at any moment. Bonus: try `docker events` to see live Docker events as they happen.
+
 ---
 
 ## Go Deeper
@@ -303,3 +305,5 @@ Your services are running, they restart automatically, and you have health monit
 - [Docker System Prune](https://docs.docker.com/reference/cli/docker/system/prune/) — Disk cleanup reference
 - [apcupsd Documentation](https://apcupsd.github.io/apcupsd/) — UPS management
 - [Restic Documentation](https://restic.readthedocs.io/) — Advanced backup tool (Chapter 9)
+
+> **💸 Lean Path:** All the tools in this chapter are free: Docker restart policies (built in, free), Uptime Kuma (open source, free), `docker system prune` (built in, free), and basic rsync backups (built into Linux, free). Even the UPS recommendation is optional — your homelab will survive without one. The monitoring stack in Chapter 11 (Prometheus + Grafana) is also completely free. You're building enterprise-grade reliability with ₱0 in software costs.

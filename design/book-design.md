@@ -94,14 +94,14 @@ The book is organized as **two parts for MVP** (with a third planned for v2), fo
 MVP (v1):
   Part I:  "Bahay Bahayan" (Home)     →  Consumer → Tinkerer   (Chapters 1-6)
   Part II: "Lumaki" (Grow)     →  Tinkerer → Builder     (Chapters 7-12)
-         + Portfolio Ch 14 (capstone)
+          + Portfolio Ch 13 (capstone)
 
 Future (v2):
   Ch 13: Virtualization
   Part III: "Malaki" (Become)  →  Builder → Architect    (Chapters 15-22)
 ```
 
-**MVP = 13 chapters** (Ch 1-12 + Ch 14 capstone). Each chapter is self-contained with working projects. Chapter 13 (Virtualization) deferred to v2.
+**MVP = 13 chapters** (Ch 1-12 + Ch 13 capstone). Each chapter is self-contained with working projects. Remote Access merged into Ch 7.        Remote Access merged into Ch 7 (Section 7.5). Chapter 13 (Virtualization) deferred to v2.
 
 ---
 
@@ -351,7 +351,7 @@ Future (v2):
 - Hardware requirements (what second-hand server to get)
 - Power consumption comparison (server vs. NUC vs. Pi)
 
-#### Chapter 14: "Your Homelab Portfolio"
+#### Chapter 13: "Your Homelab Portfolio" (MVP Capstone)
 **Type:** Career / Documentation
 **Time to Complete:** 2 hours
 
@@ -371,9 +371,9 @@ Future (v2):
 
 ---
 
-**MVP = 12 chapters:** Ch 1-6 (Part I) + Ch 7-12 (Part II). Chapter 13 moved to v2. Chapter 14 is the MVP capstone.
+**MVP = 12 chapters:** Ch 1-6 (Part I) + Ch 7-12 (Part II). Chapter 13 (Virtualization) moved to v2. Chapter 14 (Portfolio) becomes Chapter 13 capstone. Remote Access merged into Ch 7.
 
-Total MVP chapters: **12** (Chapters 1-12 + Chapter 14 as capstone)
+Total MVP chapters: **13** (Chapters 1-13, with Remote Access as Section 7.5)
 
 ---
 
@@ -951,7 +951,7 @@ Every chapter follows this exact structure:
 ## 11. Success Metrics
 
 ### MVP Outcomes (Weeks 1-16):
-- 13 chapters written and published (Ch 1-12 + Ch 14 capstone)
+- 13 chapters written and published (Ch 1-12 + Ch 13 capstone, Remote Access merged into Ch 7)
 - 100+ GitHub stars
 - 50+ community members (Discord/Facebook)
 - 10+ community contributions (PRs, translations, stories)

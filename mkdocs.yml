@@ -144,13 +144,13 @@ nav:
       - "Ch 6: Your First Network": chapters/chapter-06.md
   - "Part II: Lumaki":
       - part-ii.md
-      - "Ch 7: The Reverse Proxy": chapters/chapter-07.md
+      - "Ch 7: The Reverse Proxy + Remote Access": chapters/chapter-07.md
       - "Ch 8: Multiple Services, One System": chapters/chapter-08.md
       - "Ch 9: Your Data, Safe": chapters/chapter-09.md
       - "Ch 10: Automation: Work Less": chapters/chapter-10.md
       - "Ch 11: Monitoring: Eyes on Everything": chapters/chapter-11.md
       - "Ch 12: Security: Don't Get Hacked": chapters/chapter-12.md
-      - "Ch 14: Your Homelab Portfolio": chapters/chapter-14.md
+      - "Ch 13: Your Homelab Portfolio": chapters/chapter-13.md
   - Appendices:
       - "A: About the Author": appendix/author.md
       - "B: Glossary": appendix/glossary.md

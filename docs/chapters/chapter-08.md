@@ -24,7 +24,7 @@ Adding a new service means:
 4. Updating your backup script
 5. Remembering all of this next time you rebuild
 
-What if you could manage your entire homelab from one file? One command to start everything. One command to back up everything. One command to rebuild from scratch?
+What if you could manage your entire homelab from one file? One command to start everything. One command to back up everything. One command to rebuild from scratch? *Imagine kung sa-isang command, lahat ng services mo ay nabubuhay ulit. No more hunting for config files sa iba't-ibang directories.*
 
 That's what a **Docker Compose stack** is — a single file that defines every service, every network, every volume, and every environment variable for your entire homelab.
 
@@ -465,6 +465,8 @@ As you add more services, your data directory grows:
 
 **Recommendation:** Start with a 256GB SSD (₱1,500-₱2,500). Upgrade to 1TB+ when you hit 70% capacity.
 
+> **💸 Lean Path:** GitHub public repositories are free. Private repositories are also free (unlimited repos, up to 2 collaborators on free plan). Your homelab config doesn't need to be secret — it's just Docker configs. Use a public repo for your portfolio and a private one if you store `.env` with real passwords.
+
 ### Git for Configuration
 
 Store your `docker-compose.yml` and `.env` in a private Git repository:
@@ -477,9 +479,9 @@ git commit -m "Initial homelab stack configuration"
 ```
 
 This gives you:
-- Version history (what changed and when)
+- Version history (what changed and when) — *kasi next month, hindi mo na naalala kung ano ang ginawa mo kanina*
 - Easy migration to new hardware
-- A portfolio piece for your CV (Chapter 14)
+- A portfolio piece for your CV (Chapter 13)
 
 > **⚠️ Security reminder:** NEVER commit your `.env` file. Use `.gitignore`.
 
@@ -507,6 +509,10 @@ Your homelab is now a single, organized system. In Chapter 9, we'll make sure al
 2. Test that every service works through the stack
 3. Set up Git version control for your configuration
 4. Practice a full stack restart: `docker compose down && docker compose up -d`
+
+---
+
+> **🚀 Turbo:** Want to manage multiple environments? Use Docker Compose profiles: add `profiles: ["development"]` to a service, then run `docker compose --profile development up -d` to selectively start services. You can also override your compose file with environment-specific configs: create `docker-compose.override.yml` for local tweaks that aren't committed to Git. Run `docker compose -f docker-compose.yml -f docker-compose.override.yml up -d` to merge both files.
 
 ---
 

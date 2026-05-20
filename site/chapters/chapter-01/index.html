@@ -1,0 +1,2351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+">
+      
+      
+      
+        <link rel="canonical" href="https://book-homelab.pages.dev/chapters/chapter-01/">
+      
+      
+        <link rel="prev" href="../../part-i/">
+      
+      
+        <link rel="next" href="../chapter-02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Ch 1: Ano ba ang Homelab? - Bahay Bahayan: Build Your First Homelab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m19%202-5%204.5v11l5-4.5zM6.5%205C4.55%205%202.45%205.4%201%206.5v14.66c0%20.25.25.5.5.5.1%200%20.15-.07.25-.07%201.35-.65%203.3-1.09%204.75-1.09%201.95%200%204.05.4%205.5%201.5%201.35-.85%203.8-1.5%205.5-1.5%201.65%200%203.35.31%204.75%201.06.1.05.15.03.25.03.25%200%20.5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7%200-4.15.65-5.5%201.5V6.5C10.55%205.4%208.45%205%206.5%205%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ch 1: Ano ba ang Homelab? - Bahay Bahayan: Build Your First Homelab" />
+<meta property="og:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="og:image" content="https://book-homelab.pages.dev/assets/images/social/chapters/chapter-01.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://book-homelab.pages.dev/chapters/chapter-01/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Ch 1: Ano ba ang Homelab? - Bahay Bahayan: Build Your First Homelab" />
+<meta property="twitter:description" content="Start Small. Learn Fast. Build What's Yours. A Filipino-first guide to building your homelab.
+" />
+<meta property="twitter:image" content="https://book-homelab.pages.dev/assets/images/social/chapters/chapter-01.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-1-what-even-is-a-homelab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bahay Bahayan: Build Your First Homelab" class="md-header__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bahay Bahayan: Build Your First Homelab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch 1: Ano ba ang Homelab?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to Cyberpunk mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Cyberpunk mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="cyberpunk" data-md-color-primary="pink" data-md-color-accent="cyan"  aria-label="Switch to Matrix mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Matrix mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="matrix" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to Synthwave mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to Synthwave mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="synthwave" data-md-color-primary="purple" data-md-color-accent="orange"  aria-label="Switch to Ocean mode"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to Ocean mode" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 12a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 17.5 9a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-3-4A1.5 1.5 0 0 1 13 6.5 1.5 1.5 0 0 1 14.5 5 1.5 1.5 0 0 1 16 6.5 1.5 1.5 0 0 1 14.5 8m-5 0A1.5 1.5 0 0 1 8 6.5 1.5 1.5 0 0 1 9.5 5 1.5 1.5 0 0 1 11 6.5 1.5 1.5 0 0 1 9.5 8m-3 4A1.5 1.5 0 0 1 5 10.5 1.5 1.5 0 0 1 6.5 9 1.5 1.5 0 0 1 8 10.5 1.5 1.5 0 0 1 6.5 12M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9 1.5 1.5 0 0 0 1.5-1.5c0-.39-.15-.74-.39-1-.23-.27-.38-.62-.38-1a1.5 1.5 0 0 1 1.5-1.5H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="ocean" data-md-color-primary="blue" data-md-color-accent="cyan"  aria-label="Switch to Bahay Bahayan mode"  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="Switch to Bahay Bahayan mode" for="__palette_5" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33m0-6h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2V6h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0C17.22 5.53 18.61 6 20 6m0 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_5">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bahay Bahayan: Build Your First Homelab" class="md-nav__button md-logo" aria-label="Bahay Bahayan: Build Your First Homelab" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bahay Bahayan: Build Your First Homelab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ogbinar/book-homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ogbinar/book-homelab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I: Bahay Bahayan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part-i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I: Bahay Bahayan — Your First Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Ano ba ang Homelab?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Ano ba ang Homelab?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You'll Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-long-it-takes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Long It Takes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Story
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-fears-and-why-theyre-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fears (And Why They're Wrong
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Fears (And Why They&#39;re Wrong">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-not-technical-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'm not technical enough."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-too-expensive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "It's too expensive."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ill-break-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'll break something."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dont-have-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I don't have space."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dont-have-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I don't have time."
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-actually-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Actually Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-values-behind-homelabbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Values Behind Homelabbing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Values Behind Homelabbing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-learning-by-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Learning by Doing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-source-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Open Source First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-privacy-as-a-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Privacy as a Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-no-gatekeeping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. No Gatekeeping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Community
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-why-the-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your "Why" — The Activity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stress-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stress Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ph-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇵🇭 PH Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🇵🇭 PH Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-homelab-matters-in-the-philippines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Homelab Matters in the Philippines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-comparison-cloud-vs-homelab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Comparison: Cloud vs. Homelab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-cost-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Cost Awareness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-community-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Community Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-deeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go Deeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Your First Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Hello, Container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Something Useful
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Keeping It Alive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Your First Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II: Lumaki
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part-ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II: Lumaki — Growing Your Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: The Reverse Proxy + Remote Access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Multiple Services, One System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Your Data, Safe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Automation: Work Less
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Monitoring: Eyes on Everything
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Security: Don't Get Hacked
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Your Homelab Portfolio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Appendices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/author/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A: About the Author
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B: Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C: Hardware Buying Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D: Common Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E: Service Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F: Community
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G: Commands Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You'll Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-long-it-takes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Long It Takes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Story
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-fears-and-why-theyre-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fears (And Why They're Wrong
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Fears (And Why They&#39;re Wrong">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-not-technical-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'm not technical enough."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#its-too-expensive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "It's too expensive."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ill-break-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'll break something."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dont-have-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I don't have space."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dont-have-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I don't have time."
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-actually-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Actually Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-values-behind-homelabbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Values Behind Homelabbing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Values Behind Homelabbing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-learning-by-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Learning by Doing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-source-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Open Source First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-privacy-as-a-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Privacy as a Right
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-no-gatekeeping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. No Gatekeeping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Community
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-why-the-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your "Why" — The Activity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stress-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stress Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ph-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇵🇭 PH Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🇵🇭 PH Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-homelab-matters-in-the-philippines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Homelab Matters in the Philippines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-comparison-cloud-vs-homelab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Comparison: Cloud vs. Homelab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-cost-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Cost Awareness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-community-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Community Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-deeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go Deeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-1-what-even-is-a-homelab">Chapter 1: What Even Is a Homelab?<a class="headerlink" href="#chapter-1-what-even-is-a-homelab" title="Permanent link">#</a></h1>
+<h2 id="what-youll-build">What You'll Build<a class="headerlink" href="#what-youll-build" title="Permanent link">#</a></h2>
+<p>Nothing technical — just clarity. By the end of this chapter, you'll know exactly what a homelab is, why people build them, and whether it's something you'd actually enjoy doing. You'll also pick your "why" — the personal reason that'll keep you going when things break (and they will).</p>
+<h2 id="how-long-it-takes">How Long It Takes<a class="headerlink" href="#how-long-it-takes" title="Permanent link">#</a></h2>
+<p>30 minutes reading + 10 minutes for the activity. No tools needed.</p>
+<h2 id="what-you-need">What You Need<a class="headerlink" href="#what-you-need" title="Permanent link">#</a></h2>
+<ul>
+<li>A curious mind</li>
+<li>Zero technical experience (seriously)</li>
+<li>About 40 minutes of uninterrupted time</li>
+</ul>
+<hr />
+<h2 id="the-story">The Story<a class="headerlink" href="#the-story" title="Permanent link">#</a></h2>
+<p>Imagine this: You're at home, sitting in front of your laptop. You open Netflix, and it buffers. Again. You check your Google Drive, and it says "Storage full — upgrade to ₱59/month." You open your email, and there's yet another "We've updated our Privacy Policy" notification from some company you've never heard of.</p>
+<p>So you do something. You think: <em>Bakit kailangan ko talaga magbayad para sa mga bagay na 'to? Why can't I just... own this?</em></p>
+<p>That thought — that tiny itch of frustration — is where every homelab starts.</p>
+<p>A <strong>homelab</strong> is simply: computers you own, in your home, that you control completely. No subscriptions. No terms of service. No "we've decided to change our pricing." Just you, your hardware, and whatever software you want to run on it.</p>
+<p>It could be a Raspberry Pi sitting on your desk running ad-blocker for your whole house. It could be a rack of servers in your garage running your own cloud storage, media library, and development environments. It could be anything from one old laptop to three machines humming away.</p>
+<p><strong>The size doesn't matter. The control does.</strong></p>
+<p>Here's what real Filipino homelabs look like:</p>
+<blockquote>
+<p><strong>Maria, 28, BPO night shift worker from Manila</strong>
+<em>"I started with a ₱5,000 Raspberry Pi because I wanted something to do after my shift. Now I have 5 services running — ad blocker, password manager, file storage, a personal wiki, and a media server. My total cost? ₱8,000 one-time. I cancelled Netflix (₱199/mo), Google One (₱59/mo), and LastPass (₱24/mo). The Pi paid for itself in 5 months."</em></p>
+<p>Setup: Raspberry Pi 4 (8GB), 128GB microSD, ₱8,000 total</p>
+<p><strong>Carlos, 45, retired engineer from Cebu</strong>
+<em>"I have a second-hand Dell PowerEdge server in my garage. It sounds like a jet engine, yes, but it runs my family's photo backup, a media server for my grandkids, and I'm learning Kubernetes. Someone from a local company saw my homelab on LinkedIn and offered me a consulting gig. Hindi ko in-expect 'yan."</em></p>
+<p>Setup: Dell PowerEdge R720, 64GB RAM, 8 drives, ₱25,000 (used)</p>
+<p><strong>Jasmine, 20, college student from Davao</strong>
+<em>"I use my old laptop from high school — 2016 model, 4GB RAM. It runs Docker with 3 containers: a personal blog, a password manager, and Pi-hole. My friends think it's cool. I'm putting 'self-hosted infrastructure' on my resume now. Next upgrade: second-hand mini PC from FB Marketplace for ₱5,000."</em></p>
+<p>Setup: Old laptop (4GB RAM, reused), ₱0 additional</p>
+</blockquote>
+<p>See the pattern? Different ages. Different budgets. Different goals. But the same core idea: <strong>my infrastructure, my rules.</strong></p>
+<hr />
+<h2 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">#</a></h2>
+<p>Most people will spend their entire digital lives as <strong>tenants</strong> — renting storage, renting computing power, renting access to their own data, always at someone else's terms. A homelab flips that. You become the <strong>owner</strong>.</p>
+<p>And beyond ownership, a homelab is the single fastest way to learn real technology skills. Not the kind you learn from watching YouTube tutorials. The kind you learn when something breaks at 2 AM and you have to figure out why. That's the learning that sticks. That's the learning that gets you hired.</p>
+<blockquote>
+<p><strong>💼 Career Boost:</strong> Employers value candidates who can talk about real infrastructure experience. "I built and maintain a homelab with X services" is infinitely more impressive than "I completed an online course on X."</p>
+</blockquote>
+<hr />
+<h2 id="common-fears-and-why-theyre-wrong">Common Fears (And Why They're Wrong<a class="headerlink" href="#common-fears-and-why-theyre-wrong" title="Permanent link">#</a></h2>
+<p>Let's address the elephant in the room. Before anyone starts a homelab, they usually have these fears:</p>
+<h3 id="im-not-technical-enough">"I'm not technical enough."<a class="headerlink" href="#im-not-technical-enough" title="Permanent link">#</a></h3>
+<p>You don't need to be. The best homelabbers aren't geniuses — they're just stubborn. They hit a wall, they Google it, they try again. That's it. If you can follow a recipe and watch something break without panicking, you're already qualified.</p>
+<h3 id="its-too-expensive">"It's too expensive."<a class="headerlink" href="#its-too-expensive" title="Permanent link">#</a></h3>
+<p>The cheapest possible homelab costs ₱0 — your old laptop or desktop already exists. The next step up is a Raspberry Pi for ₱5,000. Even the enterprise-grade setups people see on YouTube (₱100,000+) are the exception, not the rule. <strong>Most working homelabs cost less than ₱15,000.</strong></p>
+<h3 id="ill-break-something">"I'll break something."<a class="headerlink" href="#ill-break-something" title="Permanent link">#</a></h3>
+<p>You might. And that's fine. In a homelab, breaking things is how you learn. Your homelab isn't running a hospital or air traffic control. If something breaks, you fix it or reinstall it. That's the point.</p>
+<h3 id="i-dont-have-space">"I don't have space."<a class="headerlink" href="#i-dont-have-space" title="Permanent link">#</a></h3>
+<p>A Raspberry Pi fits in the palm of your hand. A mini PC is smaller than a book. You don't need a garage or a server room. If it plugs into a wall outlet and fits on your desk, it counts.</p>
+<h3 id="i-dont-have-time">"I don't have time."<a class="headerlink" href="#i-dont-have-time" title="Permanent link">#</a></h3>
+<p>Start with 30 minutes a week. Seriously. That's enough to run a few commands, read about a new tool, or deploy one service. The homelab grows at whatever pace works for your life.</p>
+<hr />
+<h2 id="what-you-can-actually-build">What You Can Actually Build<a class="headerlink" href="#what-you-can-actually-build" title="Permanent link">#</a></h2>
+<p>Here's a taste of what's possible. Don't worry about building all of these — that would take years. Just look around and see what sparks your interest:</p>
+<table>
+<thead>
+<tr>
+<th>What It Does</th>
+<th>Example Service</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block ads on your entire network</td>
+<td>Pi-hole, AdGuard Home</td>
+<td>⭐ Easy</td>
+</tr>
+<tr>
+<td>Store your files privately</td>
+<td>Nextcloud</td>
+<td>⭐ Easy</td>
+</tr>
+<tr>
+<td>Manage passwords securely</td>
+<td>Vaultwarden</td>
+<td>⭐ Easy</td>
+</tr>
+<tr>
+<td>Stream your movies/TV</td>
+<td>Jellyfin</td>
+<td>⭐ Easy</td>
+</tr>
+<tr>
+<td>Monitor if your services are running</td>
+<td>Uptime Kuma</td>
+<td>⭐ Easy</td>
+</tr>
+<tr>
+<td>Run a personal website/blog</td>
+<td>Ghost, WordPress</td>
+<td>⭐⭐ Medium</td>
+</tr>
+<tr>
+<td>Build a CI/CD pipeline</td>
+<td>Jenkins, Gitea Actions</td>
+<td>⭐⭐⭐ Hard</td>
+</tr>
+<tr>
+<td>Run a Kubernetes cluster</td>
+<td>k3s</td>
+<td>⭐⭐⭐ Hard</td>
+</tr>
+<tr>
+<td>Chat with your documents using AI</td>
+<td>Ollama + RAG</td>
+<td>⭐⭐⭐ Hard</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notice:</strong> Everything starts simple. Even the hard stuff has an easy starting point.</p>
+<hr />
+<h2 id="the-values-behind-homelabbing">The Values Behind Homelabbing<a class="headerlink" href="#the-values-behind-homelabbing" title="Permanent link">#</a></h2>
+<p>A homelab isn't just hardware and software. It's built on a few core values:</p>
+<h3 id="1-learning-by-doing">1. Learning by Doing<a class="headerlink" href="#1-learning-by-doing" title="Permanent link">#</a></h3>
+<p>We don't watch tutorials passively. We build, we break, we rebuild. Every error message is a lesson. Every "it works!" moment is a victory.</p>
+<h3 id="2-open-source-first">2. Open Source First<a class="headerlink" href="#2-open-source-first" title="Permanent link">#</a></h3>
+<p>We prefer software we can inspect, modify, and share. If something isn't open source, we ask: <em>What am I giving up by using this?</em></p>
+<h3 id="3-privacy-as-a-right">3. Privacy as a Right<a class="headerlink" href="#3-privacy-as-a-right" title="Permanent link">#</a></h3>
+<p>Your data stays on your machine. Not a server in Silicon Valley, not a datacenter in Singapore. Yours.</p>
+<h3 id="4-no-gatekeeping">4. No Gatekeeping<a class="headerlink" href="#4-no-gatekeeping" title="Permanent link">#</a></h3>
+<p>If you're reading this and thinking you don't belong here — you do. Every expert was once a beginner. We answer questions patiently. We document the "obvious" things because they're only obvious after you've learned them.</p>
+<h3 id="5-community">5. Community<a class="headerlink" href="#5-community" title="Permanent link">#</a></h3>
+<p>Homelabbing is better together. Share what you build. Help someone who's stuck. Contribute back to the projects you use.</p>
+<hr />
+<h2 id="your-why-the-activity">Your "Why" — The Activity<a class="headerlink" href="#your-why-the-activity" title="Permanent link">#</a></h2>
+<p>Here's your first homelab activity. It takes 10 minutes.</p>
+<p><strong>Grab a piece of paper or open a notes app. Answer these questions:</strong></p>
+<ol>
+<li>
+<p><strong>What frustrates me about my current tech setup?</strong> (e.g., "I pay for 5 different subscriptions," "I want more control over my data," "I want to learn skills that'll help me get a better job")</p>
+</li>
+<li>
+<p><strong>What would I love to have?</strong> (e.g., "My own cloud storage," "A way to block ads on my network," "A personal website," "Something to put on my CV")</p>
+</li>
+<li>
+<p><strong>How much am I willing to invest?</strong> (Money: ₱0? ₱5,000? ₱15,000? Time: 30 min/week? 5 hours/week?)</p>
+</li>
+<li>
+<p><strong>What's my biggest fear about starting?</strong> (Write it down. We'll address each one in this book.)</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>🧠 The Deep Dive:</strong> This exercise isn't fluffy. Research shows that people who write down specific, personal goals are 42% more likely to follow through. Your "why" is your anchor — when things get hard (and they will), you'll come back to it.</p>
+</blockquote>
+<p><strong>Example answers:</strong>
+- <em>Frustration:</em> "I'm paying ₱300/month for subscriptions I barely use."
+- <em>What I want:</em> "To learn DevOps skills that'll help me land a remote job."
+- <em>Investment:</em> "₱10,000 and 5 hours a week."
+- <em>Fear:</em> "I have no idea where to start and I'll waste my money."</p>
+<p>Your answers will be different. That's perfect. This is <em>your</em> homelab journey.</p>
+<hr />
+<h2 id="stress-test">Stress Test<a class="headerlink" href="#stress-test" title="Permanent link">#</a></h2>
+<p>Before you move on, prove your "why" is real:</p>
+<ol>
+<li><strong>Tell someone about your homelab idea.</strong> A friend, a colleague, a family member. If you can't explain it in 30 seconds, you don't understand it yet.</li>
+<li><strong>Write down what frustrates you about your current tech setup.</strong> Be specific. "I pay ₱300/month for stuff I don't use" is specific. "Tech is expensive" is not.</li>
+<li><strong>Look at your computer right now.</strong> Is there an old laptop, desktop, or device that could be a server? Take a photo of it. That's your starting point.</li>
+</ol>
+<blockquote>
+<p><strong>🔥 The Chaos Champion:</strong> Share your "why" on social media or in a Filipino tech group. When you commit publicly, you're 3x more likely to follow through. Someone from the community might even offer to help.</p>
+</blockquote>
+<hr />
+<h2 id="ph-context">🇵🇭 PH Context<a class="headerlink" href="#ph-context" title="Permanent link">#</a></h2>
+<h3 id="why-homelab-matters-in-the-philippines">Why Homelab Matters in the Philippines<a class="headerlink" href="#why-homelab-matters-in-the-philippines" title="Permanent link">#</a></h3>
+<p>The Philippines presents unique challenges that make homelabbing especially valuable:</p>
+<ul>
+<li><strong>Expensive cloud services:</strong> AWS, GCP, and Azure pricing is in USD with no PH-specific discounts. A basic VPS costs ~$5-10/month (₱280-₱560/month) — that's money going overseas instead of staying local.</li>
+<li><strong>Local ISP quirks:</strong> Most Philippine ISPs (PLDT, Globe, Converge, DITO) assign dynamic IPs and use CGNAT, which means you can't easily point a domain to your home. Homelabbing teaches you to work around these limitations with reverse proxies, DNS, and tunneling tools.</li>
+<li><strong>Unreliable power:</strong> Brownouts and brownouts are real. A homelab forces you to think about UPS, graceful shutdowns, and data resilience — skills that are directly relevant in the PH context.</li>
+<li><strong>Limited local cloud infrastructure:</strong> Unlike the US or Singapore, the PH doesn't have many local cloud datacenters. Your data goes overseas either way, so you might as well control where it is.</li>
+</ul>
+<h3 id="cost-comparison-cloud-vs-homelab">Cost Comparison: Cloud vs. Homelab<a class="headerlink" href="#cost-comparison-cloud-vs-homelab" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Cloud Cost (Monthly)</th>
+<th>Homelab Cost (Monthly)</th>
+<th>Annual Savings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud VPS (1 CPU, 1GB RAM)</td>
+<td>₱280-₱560</td>
+<td>₱70-₱175 (electricity)</td>
+<td>₱1,680-₱5,040</td>
+</tr>
+<tr>
+<td>Google One 100GB</td>
+<td>₱59</td>
+<td>₱0 (external drive)</td>
+<td>₱708</td>
+</tr>
+<tr>
+<td>LastPass/1Password</td>
+<td>₱24-₱167</td>
+<td>₱0 (Vaultwarden)</td>
+<td>₱288-₱2,004</td>
+</tr>
+<tr>
+<td>Uptime monitoring (UptimeRobot)</td>
+<td>₱0-₱420</td>
+<td>₱0 (Uptime Kuma)</td>
+<td>₱0-₱5,040</td>
+</tr>
+<tr>
+<td><strong>Total for basic stack</strong></td>
+<td><strong>₱363-₱1,187/mo</strong></td>
+<td><strong>₱70-₱175/mo</strong></td>
+<td><strong>₱3,276-₱12,168/yr</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>One-time hardware cost:</strong> ₱0 (old laptop) to ₱15,000 (mini PC) — and it lasts 3-5 years.</p>
+<h3 id="power-cost-awareness">Power Cost Awareness<a class="headerlink" href="#power-cost-awareness" title="Permanent link">#</a></h3>
+<p>Meralco's average rate (2024) is ~₱10-₱12/kWh. Here's what common homelab hardware costs to run 24/7:</p>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Power (W)</th>
+<th>Monthly Cost (Meralco ₱12/kWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raspberry Pi 4 (8GB)</td>
+<td>5W</td>
+<td>~₱175</td>
+</tr>
+<tr>
+<td>Intel N3450 mini PC</td>
+<td>15W</td>
+<td>~₱520</td>
+</tr>
+<tr>
+<td>Dell OptiPlex Micro (i5-6500)</td>
+<td>30W</td>
+<td>~₱1,050</td>
+</tr>
+<tr>
+<td>Desktop (reused, idle)</td>
+<td>60W</td>
+<td>~₱2,100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tip:</strong> Older hardware isn't just cheaper to buy — it's cheaper to run. A 6-year-old business mini PC uses less power than a modern gaming laptop doing nothing.</p>
+<h3 id="local-community-resources">Local Community Resources<a class="headerlink" href="#local-community-resources" title="Permanent link">#</a></h3>
+<p>The Filipino tech community is one of the best resources for homelabbers:</p>
+<ul>
+<li><strong>Data Engineering Pilipinas (DEP):</strong> <a href="https://dataengineering.ph/">dataengineering.ph</a> — The community behind this book. Great Discord, regular meetups.</li>
+<li><strong>Facebook Groups:</strong> "Homelab Philippines," "Self-Hosted Philippines," "Pinoy Homelabbers" — Active communities sharing setups and advice</li>
+<li><strong>Discord Servers:</strong> Many Filipino tech Discord servers have homelab channels — ask in DEP's Discord</li>
+<li><strong>Local hardware markets:</strong> Computer City (Taft, Manila), Facebook Marketplace, Shopee/Lazada for deals</li>
+</ul>
+<hr />
+<h2 id="whats-next">What's Next<a class="headerlink" href="#whats-next" title="Permanent link">#</a></h2>
+<p>Now that you know what a homelab is and why you might want one, it's time to get practical. In <strong><a href="chapters/chapter-02.md">Chapter 2: Your First Server</a></strong>, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.</p>
+<p><strong>Homework:</strong> Write down your "why." Keep it somewhere you'll see it. We'll come back to it.</p>
+<blockquote>
+<p><strong>🚀 Turbo:</strong> If you want to skip the theory and start building right now, go to <a href="https://awesome-selfhosted.net/">awesome-selfhosted.net</a> and pick one service to research. Write down what problem it solves for you. You'll have a much clearer direction when you reach Chapter 2.</p>
+</blockquote>
+<hr />
+<h2 id="go-deeper">Go Deeper<a class="headerlink" href="#go-deeper" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://www.reddit.com/r/homelab/">r/homelab on Reddit</a> — Community of homelab enthusiasts sharing setups</li>
+<li><a href="https://awesome-selfhosted.net/">Awesome Selfhosted</a> — Massive list of self-hosted alternatives to commercial services</li>
+<li><a href="https://www.youtube.com/@TechnoTim">Techno Tim (YouTube)</a> — Homelab setup videos, beginner-friendly</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>💸 Lean Path:</strong> You don't need to buy anything. That old laptop gathering dust under your bed? That's your first server. The free trials from AWS, Google Cloud, and Azure are great for learning — but they expire. Your old laptop doesn't. Start with what you have.</p>
+<p><strong>📢 Remember:</strong> Your homelab doesn't need to be impressive. It needs to be yours. Start small. Be stubborn. Have fun.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2026-05-17
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../part-i/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Part I: Bahay Bahayan — Your First Steps">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Part I: Bahay Bahayan — Your First Steps
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter-02/" class="md-footer__link md-footer__link--next" aria-label="Next: Ch 2: Your First Server">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Ch 2: Your First Server
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Bahay Bahayan is released under CC BY-SA 4.0. Free forever.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ogbinar/book-homelab" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/bahay-bahayan" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.footer", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

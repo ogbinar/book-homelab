@@ -16,14 +16,14 @@ A professional monitoring dashboard using Prometheus and Grafana that tracks you
 
 You have 7 services running on your server. But here's the question: **how do you know they're all working right now?**
 
-You could check each one manually — open 7 browser tabs, verify each one loads. That's... not sustainable.
+You could check each one manually — open 7 browser tabs, verify each one loads. That's... not sustainable. *Parang mag-check ng bawat light sa bahay kung naka-on o hindi. May mas maganda 'yan.*
 
 Or you could have a single dashboard that shows you everything at a glance:
 - Is the server online?
 - Are all containers running?
 - How much disk space is left?
 - How much memory is being used?
-- Is the internet connection stable?
+- Is the internet connection stable? *(In the PH context, this is a fair question — PLDT, Globe, and Converge fiber cuts happen regularly, especially during typhoon season. Your monitoring should distinguish between "service is down" and "internet is down.")*
 - How many requests is each service handling?
 
 This chapter builds that dashboard.
@@ -41,7 +41,7 @@ Monitoring tells you:
 - **Recently:** What happened yesterday? (metrics history)
 - **Soon:** What's going to break? (trends and alerts)
 
-Without monitoring, you're flying blind. With it, you're in control.
+Without monitoring, you're flying blind. *Kung may magpa-message na "down ang service mo" at hindi mo alam — that's the difference between being in control and being surprised.* With monitoring, you're in control.
 
 ---
 
@@ -292,6 +292,8 @@ If Prometheus+Grafana feels overwhelming, Uptime Kuma (which you already have) i
 
 ## 🇵🇭 PH Context
 
+> **💸 Lean Path:** Grafana OSS (open source) and Prometheus are completely free. No paid tiers, no per-metric charges. Unlike Datadog ($15+/node/month) or New Relic ($0.40/GB ingested), your monitoring stack costs exactly ₱0 to run. The only cost is the ~400-800MB RAM they consume.
+
 ### Resource Considerations
 
 | Service | RAM Usage | CPU Usage |
@@ -332,11 +334,17 @@ Now let's prove your monitoring works:
 
 You can now see everything happening in your homelab. In Chapter 12, we'll secure it — because a monitored but unprotected homelab is just a vulnerable one.
 
+> **🇵🇭 PH Context — Monitoring During Typhoon Season:** When typhoons hit the Philippines, internet outages are common. Configure your monitoring to distinguish between "service is down" and "internet is down." This saves you from panic-calling yourself at 2 AM because a power outage took down your home WiFi, and your monitoring sent you a false alarm.
+
 **Homework:**
 1. Deploy Prometheus, Grafana, node-exporter, and cAdvisor
 2. Import a monitoring dashboard
 3. Set up at least one alert rule
 4. Access your dashboard from your phone
+
+---
+
+> **🚀 Turbo:** Want to track network-level metrics too? Add `netdata` as a container — it provides real-time, per-second metrics with a built-in dashboard. Run `docker run -d --name netdata -p 19999:19999 -v /proc:/host/proc:ro -v /sys:/host/sys:ro netdata/netdata`. It auto-discovers everything on your system and starts collecting metrics instantly. Pair it with Grafana's Netdata plugin for unified dashboards.
 
 ---
 

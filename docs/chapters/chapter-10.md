@@ -16,13 +16,13 @@ Automated systems that keep your homelab running: automatic container updates, s
 
 Right now, your homelab works. But working isn't the same as maintained.
 
-Every few weeks, new Docker images come out with security fixes. Every month, you need to check your backup logs. Every day, your disk fills up a little more. If you're manually doing all of this, you're not building a homelab — you're working a second job.
+Every few weeks, new Docker images come out with security fixes. Every month, you need to check your backup logs. Every day, your disk fills up a little more. If you're manually doing all of this, you're not building a homelab — you're working a second job. *Gusto mo ba ng second job na walang bayad? Exactly. That's why we automate.*
 
 **Automation is the difference between a hobby and an infrastructure.**
 
 Think of automation like a dishwasher. You could wash every dish by hand. It works. But why would you, when a machine can do it while you do something else?
 
-We're going to set up the homelab equivalent of a dishwasher.
+We're going to set up the homelab equivalent of a dishwasher. *Hindi ka nagluluto ng pagkain para maghugas ng plato, right? So why spend your time on repetitive tasks na pwedeng gawin ng machine?*
 
 ---
 
@@ -318,6 +318,8 @@ This prevents Watchtower from updating services on pinned versions that you don'
 
 ## 🇵🇭 PH Context
 
+> **💸 Lean Path:** All the automation tools in this chapter are free: Watchtower (open source), cron (built into Linux), bash scripts (free), Telegram bot (free with @BotFather). You're not paying for any monitoring or automation software — just your time to set it up once and it runs forever.
+
 ### When Power Goes Out
 
 Automation scripts won't run if the power is out. When power returns:
@@ -349,9 +351,12 @@ sudo systemctl enable homelab-boot-backup.service
 
 ### Internet Dependency
 
-Watchtower and Telegram notifications require internet. If your internet is down:
-- Watchtower can't pull new images (harmless — it tries again next day)
+Watchtower and Telegram notifications require internet. If your internet is down (PLDT fiber cut, Globe line maintenance, or typhoon season — we've all experienced it):
+
 - Telegram notifications can't send (harmless — you'll see them when internet returns)
+- Watchtower can't check for updates (harmless — your services keep running)
+- Automated scripts that rely on external APIs will fail (check your error logs)
+**The key insight:** Your homelab services themselves should work locally even when the internet is down. Watchtower and Telegram are convenience features — not core services.
 - Local automation (cleanup, restart) works fine
 
 ---
@@ -378,6 +383,10 @@ Your homelab is now largely automated. It updates itself, backs up itself, and m
 2. Create and schedule the health monitoring script
 3. Set up the monthly cleanup script
 4. Add Telegram or email notifications for alerts
+
+---
+
+> **🚀 Turbo:** Want even more automation? Create a maintenance script that combines your health checks, cleanup, and backups into one daily routine. Schedule it with cron at 4 AM: clean Docker, verify backups, check disk space, update containers with Watchtower, and send a morning summary to Telegram. One script, zero daily maintenance. You wake up to a report, not an alert.
 
 ---
 

@@ -22,7 +22,7 @@ You can reinstall everything. But your **data**? The photos you took? The docume
 
 **Data loss is the one failure you cannot recover from.**
 
-If you set up a quick manual backup in Chapter 5, you have a safety net. But a manual copy is not a strategy. This chapter upgrades you from "I hope I backed up" to "I know my backups work" — with the full 3-2-1 strategy, automation, and tested restore drills.
+If you set up a quick manual backup in Chapter 5, you have a safety net. But a manual copy is not a strategy. *Ang manual backup parang nag-iipon ng pera sa ilalim ng kutson — may nakaipon ka, pero kailangan mong i-check kung nandoon pa rin.'* This chapter upgrades you from "I hope I backed up" to "I know my backups work" — with the full 3-2-1 strategy, automation, and tested restore drills.
 
 ---
 
@@ -222,6 +222,8 @@ du -sh /tmp/restore-test
 | **Google Drive** | 15GB free | Low | Small backups |
 | **rsync to remote server** | Cost of remote server | High | Advanced users |
 
+> **💸 Lean Path:** You don't need a cloud backup service. A ₱2,000 external drive (1TB on Shopee) gives you the "3-2-1" rule locally: 3 copies (live + external + friend's house), 2 media types (internal + external drive), 1 offsite (friend's house or a USB drive in a safety deposit box). Cloud services add recurring cost — local backups are one-time.
+
 ### Using Restic for Advanced Backups
 
 Once you're comfortable with basic backups, try [Restic](https://restic.net/) — an encrypted, deduplicated backup tool that supports cloud storage:
@@ -352,6 +354,29 @@ If your backup runs during a power outage:
 - The backup will fail silently
 - Check your backup logs regularly: `cat /media/backup/backup.log`
 
+### Internet Outages and Cloud Backups
+
+When your ISP goes down (PLDT fiber cuts, Globe maintenance, typhoon damage to lines — we've all seen it happen), cloud-based backups will fail. This is why the 3-2-1 rule matters: local backups work even when the internet is dead.
+
+**If you use cloud backups (Backblaze B2, Google Drive, etc.):**
+- Set your backup schedule to run during off-peak hours (when internet is more likely to be up)
+- Configure retry logic — Restic and BorgBackup both handle this automatically
+- Don't panic if a backup misses — the next scheduled run will catch up
+- Keep at least one local backup as your primary recovery path
+
+---
+
+## Stress Test
+
+Now let's prove your backups actually work:
+
+1. **Pick a file, delete it, restore from backup** — Choose a non-critical file in `~/homelab/data/`, note its name, then delete it. Restore it from your latest backup: `tar xzf $(ls -td /media/backup/homelab-backup/*/ | head -1)kuma.tar.gz -C /tmp/restore-verify && ls /tmp/restore-verify`. Verify the file is there.
+2. **Verify the 3-2-1 rule** — Do you have 3 copies of your data? (live + external drive + offsite). Are they on 2 different media types? (internal drive + external USB). Is 1 copy offsite? (friend's house, cloud, or USB in a safety deposit box). If any answer is no, fix it now.
+3. **Schedule a monthly restore drill** — Add a calendar reminder: "Homelab Backup Test" on the first Sunday of each month. Pick a service, delete its data directory, and restore from backup. Time yourself. Your goal: under 30 minutes.
+4. **Test with the external drive disconnected** — Unplug your backup drive. Run your backup script. Does it fail gracefully? Check the log. A backup that silently fails is worse than no backup at all.
+
+> **🔥 The Chaos Champion:** Do a full restore drill now. Stop all services, delete `~/homelab/data/*`, restore from your latest backup, restart everything, and verify in the browser. It takes 20 minutes. It will feel unnecessary. But trust me — when your disk fails (and it will), you will be incredibly grateful you did this today.
+
 ---
 
 ## What's Next
@@ -363,6 +388,10 @@ Your data is backed up and verified. In Chapter 10, we'll automate the boring st
 2. Test a full restore from backup
 3. Schedule monthly backup verification
 4. Set up one offsite backup (friend's house or cloud)
+
+---
+
+> **🚀 Turbo:** Want encrypted backups without manual key management? Set up Restic with a key file: `export RESTIC_PASSWORD_FILE=~/.restic-key` (store your password in a file, not the shell). Then configure Restic to back up to multiple destinations simultaneously — local drive AND cloud — using `restic repo add`. This gives you true 3-2-1 automation: one command, multiple destinations, all encrypted.
 
 ---
 

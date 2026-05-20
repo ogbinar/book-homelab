@@ -20,7 +20,7 @@ Every homelab starts with a server. But "server" sounds intimidating — like so
 
 Your first server doesn't need to be that.
 
-It could be your old laptop from college. It could be a Raspberry Pi that fits on your desk. It could be a second-hand mini PC you found on Facebook Marketplace for ₱5,000. It could even be a desktop you were going to throw away.
+It could be your old laptop from college. It could be a Raspberry Pi that fits on your desk. It could be a second-hand mini PC you found on Facebook Marketplace for ₱5,000. It could even be a desktop you were going to throw away. *Bakit bawasan pa ang bayad sa cloud kapag may existing na hardware na walang ginagawa?*
 
 **A server is just a computer that stays on and serves something.** That's it. The word makes it sound bigger than it is.
 
@@ -28,9 +28,15 @@ Think of it like this: your laptop IS a server right now. It's serving you. If y
 
 ---
 
-## Choose Your Path
+## Why This Matters
 
-Pick the path that matches your budget and situation. There's no "wrong" choice — only the one that works for you.
+Your server is the foundation of everything in your homelab. Choose it wisely, but don't overthink it. The hardware doesn't need to be impressive — it needs to be **yours**, and it needs to stay on.
+
+Every homelab starts with a single server. That's it. Everything else — Docker, services, monitoring, backups — builds on top of this one decision: picking a machine and installing an OS.
+
+---
+
+## 🟢 Quick Start
 
 ### Path A: ₱0 — Use What You Have
 
@@ -105,7 +111,7 @@ A refurbished Dell PowerEdge R730 (₱25,000-₱40,000 on FB Marketplace) gives 
 
 ---
 
-## Install Ubuntu Server
+## 🔵 The Why
 
 Ubuntu Server is the most popular Linux distribution for homelabs. It's free, well-documented, and has the largest community. We're choosing it because:
 
@@ -306,11 +312,7 @@ You now have a working server that you can access from anywhere on your network.
 
 ---
 
-## Go Deeper
-
-- [Ubuntu Server Documentation](https://ubuntu.com/server/docs) — Official docs
-- [DigitalOcean's Ubuntu 24.04 Initial Server Setup Guide](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-24-04) — Great walkthrough
-- [Raspberry Pi Ubuntu Installation Guide](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi) — Pi-specific instructions
+## 🟣 Deep Dive
 
 ### Setting Up SSH Keys (Recommended)
 

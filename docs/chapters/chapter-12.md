@@ -16,6 +16,8 @@ A hardened homelab with firewall rules, SSH key authentication, fail2ban, and se
 
 Here's what happens when you expose anything to the internet: **bots find it.** Within minutes of connecting to the internet, your server is being scanned by automated bots looking for:
 
+> **🇵🇭 PH Context — ISP-Related Security Risks:** In the Philippines, your ISP's router is often also your DNS resolver and DHCP server. PLDT, Globe, and Converge routers sometimes have known vulnerabilities. **Always change the default admin password on your ISP router.** Many Filipino users never do, and that's the easiest way for attackers to get into your network.
+
 - Open SSH ports with password login
 - Unprotected web interfaces
 - Outdated software with known vulnerabilities
@@ -24,6 +26,8 @@ Here's what happens when you expose anything to the internet: **bots find it.** 
 > ⚠️ **The Pitfall:** Your homelab is not "just a hobby." To a bot, it's just another server with an IP address. Bots don't care that you're learning — they'll try to exploit your server just like they'd try to exploit a production server.
 
 This chapter isn't about fear. It's about **knowing what you're doing.** Every step here has a reason. Skip them at your own risk.
+
+> **🇵🇭 PH Context — Power Cycles and Security:** In areas with brownouts or frequent power cuts (common during typhoon season in the PH), your server might reboot unexpectedly. Make sure your firewall rules, SSH keys, and fail2ban settings survive reboots. After a power outage, your server should come up secure — not vulnerable. *Hindi naman natin 'to ginagawa para matakot ka. Ginagawa natin 'to para alam mo na pinagmumulan ng security ang mga settings na 'to.*
 
 ---
 
@@ -365,6 +369,8 @@ Then assign services to appropriate networks based on their exposure requirement
 
 ## 🇵🇭 PH Context
 
+> **💸 Lean Path:** Every security tool in this chapter is free: UFW (built into Ubuntu), fail2ban (open source, free), SSH keys (free), Docker security features (free). You're building enterprise-grade security with ₱0 in software costs. The only investment is learning time — and that's the kind of time that pays dividends in your career.
+
 ### Philippine-Specific Threats
 
 | Threat | Likelihood | Mitigation |
@@ -401,7 +407,7 @@ Now let's prove your security works:
 
 ## What's Next
 
-Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. In Chapter 13, we'll set up remote access so you can reach your lab from anywhere. Then in Chapter 14, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.**
+Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. Remote access patterns are covered in Chapter 7 alongside the reverse proxy — check back there if you haven't set up Tailscale or Cloudflare Tunnel yet. In Chapter 13, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.**
 
 **Homework:**
 1. Set up SSH key authentication and disable password login
@@ -409,6 +415,10 @@ Your homelab is now secure. You've gone from a curious beginner to someone who c
 3. Install and configure fail2ban
 4. Run the security audit checklist
 5. Document your security configuration
+
+---
+
+> **🚀 Turbo:** Want enterprise-grade intrusion detection? Set up [Wazuh](https://wazuh.com/) — an open-source SIEM (Security Information and Event Management) system. It monitors file integrity, detects malware, analyzes logs in real time, and correlates security events across your entire homelab. Start with the Wazuh manager + agent on your server, then add agents to other machines. It's complex, but the skills transfer directly to professional SOC roles.
 
 ---
 

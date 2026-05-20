@@ -21,7 +21,7 @@ Now imagine your house has 10 rooms, but the doors have no numbers. You have to 
 
 **Networking is just plumbing for the internet.** You're the plumber now. And like any plumber, you need to understand: where do pipes go? Where are the valves? What happens when something leaks?
 
-Your home network probably works right now — your phone gets internet, your laptop streams Netflix, your smart TV plays YouTube. But do you know how? Do you know what happens when you type a URL and hit Enter?
+Your home network probably works right now — your phone gets internet, your laptop streams Netflix, your smart TV plays YouTube. But do you know how? Do you know what happens when you type a URL and hit Enter? *Kung naka-dependé ka sa internet every day, worth it 'yang effort na ma-intindihan mo kung paano ito gumagana.*
 
 Let's find out.
 
@@ -36,7 +36,7 @@ Networking is the #1 skill that separates beginners from intermediate homelabber
 - Secure your network properly
 - Connect multiple servers and devices
 
-Without networking knowledge, you're just running containers in the dark. With it, you're an architect.
+Without networking knowledge, you're just running containers in the dark. With it, you're an architect. *Hindi ka na lang "yung tipong nagse-setup ng Docker pero hindi alam kung bakit hindi connected ang services."*
 
 ---
 
@@ -177,7 +177,7 @@ http://192.168.1.100:3001
 
 **You should see your service.**
 
-If you see it: congratulations, your network is working.
+If you see it: congratulations, your network is working. *Nagaling tayo — you just proved that your server and your phone can talk to each other.*
 If you don't see it: don't panic. Let's troubleshoot.
 
 **Troubleshooting checklist:**
@@ -398,6 +398,8 @@ Many Philippine ISPs now use **CGNAT** (Carrier-Grade NAT), meaning you don't ha
 
 **Recommendation:** Always use Ethernet for your server. WiFi is fine for client devices (phones, laptops) but not for a server that needs to be always-on and always-connected.
 
+> **💸 Lean Path:** You don't need a managed switch for a homelab. A ₱500-₱1,000 unmanaged switch from Shopee or Lazada (TP-Link, D-Link) handles everything a beginner needs. Managed switches (₱3,000+) add VLAN support — useful later, not now.
+
 ---
 
 ## Stress Test
@@ -423,6 +425,8 @@ You understand your network. Your server has a static IP. You can access your se
 3. Access your services from at least 2 different devices
 4. Add custom hostnames in `/etc/hosts`
 5. Write down your network diagram (even a simple one)
+
+> **🚀 Turbo:** Run `nmap -sn 192.168.1.0/24` (adjust your subnet) to discover every device on your network. Then try `nmap -A 192.168.1.1` to see what your router is running. Understanding your network topology is half the battle — nmap makes it visible.
 
 ---
 
