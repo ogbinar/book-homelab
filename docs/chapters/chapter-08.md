@@ -28,6 +28,8 @@ What if you could manage your entire homelab from one file? One command to start
 
 That matters even more when you are juggling work, family, and a setup that's growing in spare time. Less hunting, less kalat, less stress.
 
+This is also the chapter where the homelab starts to feel like a small operations desk. Once you have enough services, the question stops being "can I run it?" and becomes "who manages it, how do I deploy it, and how do I recover it?"
+
 That's what a **Docker Compose stack** is — a single file that defines every service, every network, every volume, and every environment variable for your entire homelab. Isang source of truth lang. Less kalat, less guesswork.
 
 ---
@@ -41,6 +43,8 @@ Infrastructure as Code (IaC) starts with Docker Compose. If you can define your 
 3. **Version control** your configuration with Git
 4. **Understand your architecture** at a glance
 5. **Scale systematically** as you add more services
+
+Later, a tool like Dokploy can sit on top of this chapter's ideas and make service management feel more like an operations desk than a pile of shell commands. But Compose is still the base skill.
 
 > **📢 Jargon Alert:** "Infrastructure as Code" — Managing and provisioning computing infrastructure through machine-readable definition files, instead of manual configuration. Docker Compose is your first step into IaC.
 
@@ -447,7 +451,7 @@ docker compose exec caddy caddy version
 - Service dependency management
 
 **Interview talking point:**
-> *"I designed a multi-service Docker Compose stack managing 7+ containers with network segmentation, volume-based persistence, and environment-variable-based configuration. The stack includes service dependencies, internal-only database networks, and automated health checks — demonstrating production-grade container orchestration patterns."*
+> *"I designed a multi-service Docker Compose stack managing several containers with network segmentation, volume-based persistence, and environment-variable-based configuration. The stack includes service dependencies, internal-only database networks, and automated health checks — demonstrating practical container orchestration patterns for a home setup."*
 
 ---
 
@@ -483,7 +487,7 @@ git commit -m "Initial homelab stack configuration"
 This gives you:
 - Version history (what changed and when) — *kasi next month, hindi mo na naalala kung ano ang ginawa mo kanina*
 - Easy migration to new hardware
-- A portfolio piece for your CV (Chapter 13)
+- A portfolio piece for your documentation or portfolio (Chapter 13)
 
 > **⚠️ Security reminder:** NEVER commit your `.env` file. Use `.gitignore`.
 

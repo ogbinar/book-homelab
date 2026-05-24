@@ -108,7 +108,7 @@ This appendix is intentionally PH-practical: it assumes budget pressure, second-
   - NIC: Intel i350-T4 (4-port 1GbE) (₱2,000-₱3,000)
   - **Total: ~₱37,000-₱54,000**
 - **Where to buy:** Computer City, FB Marketplace (used enterprise gear), Shopee/Lazada for new parts
-- **Pros:** Massive storage, ECC RAM for data integrity, expandable, professional-grade
+- **Pros:** Massive storage, ECC RAM for data integrity, expandable, reliable
 - **Cons:** More power (80-150W idle), louder (more fans/drives), complex setup
 - **Best for:** NAS-first approach, media libraries, backup target, data hoarders
 - **Power:** ~60-120W idle (depends on drives) → ~₱700-₱1,400/month

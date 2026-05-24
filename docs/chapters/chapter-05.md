@@ -26,6 +26,8 @@ That promise is what this chapter is about. The difference between a toy and a t
 
 Because they will.
 
+This is also where the house starts to feel real: the power outlet matters, the backups matter, and the family notices when the lab stays up without drama.
+
 ---
 
 ## Why This Matters
@@ -159,6 +161,10 @@ Build Cache     0         0         0B        0B
 
 Running `docker system prune` reclaimed 1.3GB. That's free space you didn't know you had.
 
+### What This Means for the House
+
+If the service is just for you, you can tolerate a little more friction. If the family depends on it, you need a better restart story. If it ever becomes public-facing, reliability becomes part of your reputation, not just your hobby.
+
 ---
 
 ## 🟣 Deep Dive
@@ -215,7 +221,7 @@ This is a basic safety net. In **Chapter 9**, you'll set up the full automated b
 
 **What you learned that employers care about:**
 - Container restart policies and reliability engineering
-- Health monitoring and observability
+- Health monitoring and alerts
 - System maintenance and resource management
 - Testing and validation procedures
 
@@ -312,4 +318,4 @@ Your services are running, they restart automatically, and you have health monit
 - [apcupsd Documentation](https://apcupsd.github.io/apcupsd/) — UPS management
 - [Restic Documentation](https://restic.readthedocs.io/) — Advanced backup tool (Chapter 9)
 
-> **💸 Lean Path:** All the tools in this chapter are free: Docker restart policies (built in, free), Uptime Kuma (open source, free), `docker system prune` (built in, free), and basic rsync backups (built into Linux, free). Even the UPS recommendation is optional — your homelab will survive without one. The monitoring stack in Chapter 11 (Prometheus + Grafana) is also completely free. You're building enterprise-grade reliability with ₱0 in software costs.
+> **💸 Lean Path:** All the tools in this chapter are free: Docker restart policies (built in, free), Uptime Kuma (open source, free), `docker system prune` (built in, free), and basic rsync backups (built into Linux, free). Even the UPS recommendation is optional — your homelab will survive without one. The monitoring stack in Chapter 11 (Prometheus + Grafana) is also completely free. You're building home reliability with ₱0 in software costs.

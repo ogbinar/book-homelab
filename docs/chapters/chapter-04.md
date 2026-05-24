@@ -1,7 +1,7 @@
 # Chapter 4: Something Useful
 
 ## What You'll Build
-A self-hosted service you'll actually use — chosen from password manager, file storage, ad blocker, or media server. By the end, you'll have a real tool running on your homelab that replaces a subscription or improves your daily life.
+A self-hosted service you'll actually use — chosen from password manager, file storage, ad blocker, or media server. By the end, you'll have a real tool running on your homelab that replaces a subscription or improves your daily life. You will also start thinking about who the service is for: self, family, or, later, something public-facing.
 
 ## How Long It Takes
 2 hours (including reading, deployment, and first-use configuration)
@@ -35,6 +35,8 @@ Choosing your first service is about choosing your first win. You want something
 The service you pick becomes the proof that self-hosting isn't just a hobby — it's a better way to manage your digital life.
 
 If it saves you money, time, or frustration in a Philippine setup, that's not a side benefit. That's the whole point.
+
+This is also where the house metaphor starts to matter: some services are for your own room, some are for the living room, and some might one day need a front gate. Keep that in mind as you choose.
 
 ---
 
@@ -202,6 +204,8 @@ Whichever service you chose, take 30 minutes to configure it properly:
 3. **Add some data** — a few files, some passwords, a couple of monitors
 4. **Access it from your phone** — most services have mobile apps
 5. **Bookmark it** — make it easy to find
+
+> **💡 Quick Win:** Ask one simple question about the service you picked: is this just for me, for my family, or something I might ever expose outside the house? The answer changes how you configure it.
 
 > **🧠 The Deep Dive:** The configuration step is where you go from "deployed" to "using." Don't skip it. The effort you put in now determines whether this service becomes part of your daily life or just another container collecting digital dust.
 

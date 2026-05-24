@@ -8,7 +8,7 @@
 
 **README:** https://github.com/ogbinar/book-homelab/blob/main/README.md
 
-**Book license:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+**Book license:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 **Code license:** [MIT](https://opensource.org/license/mit)
 
@@ -17,6 +17,8 @@
 ## What Is This?
 
 This is a step-by-step book for Filipino tech professionals and beginners who want to build their own homelab — a personal infrastructure that runs on hardware you own, in your home, with full control.
+
+The book grows like a school ladder from `Prep` to `Postdoc`, but the real organizing idea stays home-shaped: power, water, locks, front desk, utility cabinet, game room, and study room.
 
 No cloud subscriptions. No terms of service. No "we've decided to change our pricing."
 
@@ -41,13 +43,13 @@ Just you, your hardware, and whatever software you want to run on it.
 | 4 | Something Useful | Deploy Vaultwarden, Nextcloud, Pi-hole, or Jellyfin |
 | 5 | Keeping It Alive | Auto-restart, backups, restore procedures |
 | 6 | Your First Network | Static IPs, DNS, ports, routers |
-| 7 | The Reverse Proxy | Caddy, SSL, clean URLs |
+| 7 | The Reverse Proxy + Remote Access | Caddy, SSL, clean URLs |
 | 8 | Multiple Services, One System | Docker Compose stack, IaC basics |
 | 9 | Your Data, Safe | 3-2-1 backup strategy, Restic |
 | 10 | Automation — Work Less | Watchtower, cron, maintenance scripts |
 | 11 | Monitoring — Eyes on Everything | Prometheus, Grafana, node-exporter |
 | 12 | Security — Don't Get Hacked | SSH keys, UFW, fail2ban, container isolation |
-| 13 | Your Homelab Portfolio | CV translation, GitHub setup, career acceleration |
+| 13 | Your Homelab Portfolio | Documentation, GitHub setup, optional career translation |
 
 **Total time:** ~15-20 hours spread over 2-4 weeks.
 
@@ -65,10 +67,14 @@ Just you, your hardware, and whatever software you want to run on it.
 
 Read in order. Each chapter builds on the previous one.
 
+- The early chapters are the `Prep` and `Kinder` wins.
+- The middle chapters move into `High School`, `College`, and `Masters` territory.
+- The advanced ideas like game hosting, local hosted LLMs, and Dokploy-style service management belong later or in future expansion.
+
 - **🟢 Quick Start** — The hands-on steps. Do these.
 - **🔵 The Why** — The concepts behind what you're doing.
 - **🟣 Deep Dive** — Advanced topics for those who want more.
-- **💼 Career Boost** — How this translates to career value.
+- **💼 Career Boost** — Optional career value when it helps the reader.
 - **🇵🇭 PH Context** — Filipino-specific considerations (costs, ISPs, hardware).
 - **📢 Jargon Alert** — Tech terms explained in plain language.
 
@@ -93,7 +99,7 @@ This book is written for Filipinos, by Filipinos (well, for Filipinos). We inclu
 
 Contributions are welcome!
 
-- Book prose, diagrams, and documentation are licensed under CC BY 4.0.
+- Book prose, diagrams, and documentation are licensed under CC BY-SA 4.0.
 - Code snippets, scripts, and reusable code artifacts are licensed under MIT.
 
 1. Fork and clone this repository
@@ -149,10 +155,9 @@ book-homelab/
 │       ├── hardware.md
 │       └── services.md
 ├── mkdocs.yml
-├── review-report.md
-├── plan-fix.md
-└── plan-fix-review.md
 ```
+
+Internal planning notes live in the workspace, but they are not part of the published book tree.
 
 ## License
 

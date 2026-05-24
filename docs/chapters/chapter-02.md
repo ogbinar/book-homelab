@@ -20,9 +20,13 @@ Every homelab starts with a server. But "server" sounds intimidating — like so
 
 Your first server doesn't need to be that.
 
+In this book, the smartest first server is usually the quiet, used, low-power thing you already have or can buy cheaply. A homelab should fit the house first, not the fantasy.
+
 It could be your old laptop from college. It could be a Raspberry Pi that fits on your desk. It could be a second-hand mini PC you found on Facebook Marketplace for ₱5,000. It could even be a desktop you were going to throw away. *Bakit bawasan pa ang bayad sa cloud kapag may existing na hardware na walang ginagawa?*
 
 Sa maraming bahay, the first server is just the machine nobody is using anymore. That's enough to start learning without spending extra.
+
+That is also why this book keeps pushing reused hardware, mini PCs, and low-power paths: they are usually the most honest way to start without adding heat, noise, or a big kuryente bill.
 
 **A server is just a computer that stays on and serves something.** That's it. The word makes it sound bigger than it is.
 
@@ -109,7 +113,7 @@ Look for:
 
 A modern Intel NUC (12th gen or newer) with 32GB RAM and 1TB NVMe gives you serious computing power for homelabbing. It's quiet, efficient, and can run 20+ containers comfortably.
 
-A refurbished Dell PowerEdge R730 (₱25,000-₱40,000 on FB Marketplace) gives you enterprise-grade hardware with 64GB+ RAM and 8 drive bays — but it's loud and power-hungry.
+A refurbished Dell PowerEdge R730 (₱25,000-₱40,000 on FB Marketplace) gives you serious hardware with 64GB+ RAM and 8 drive bays — but it's loud and power-hungry.
 
 ---
 

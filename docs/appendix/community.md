@@ -6,21 +6,21 @@ _How to connect with other homelabbers._
 
 ---
 
-## The Only Community You Need
+## Start With DEP, Then Branch Out
 
 ### Data Engineering Pilipinas (DEP)
 **[https://dataengineering.ph/](https://dataengineering.ph/)**
 
 If you want this hobby to stick, plug into people early. The right community makes homelabbing less lonely, less intimidating, and a lot more fun.
 
-This guide exists because of DEP. This guide is inspired by DEP. This guide is for DEP.
+DEP is the anchor community in this book. If you want one place to start in the Philippines, start there. It is not the only place to learn, but it is one of the strongest places to begin.
 
 DEP is built around:
 - **Learning openly**
 - **Sharing knowledge freely**
 - **Helping people grow without gatekeeping**
 
-Join their Discord. Attend their meetups. Connect with other Filipino tech enthusiasts. That's it. That's the community.
+Join their Discord. Attend their meetups. Connect with other Filipino tech enthusiasts. Then branch out to the wider homelab and self-hosted spaces as you grow.
 
 > **"The best community is the one that lifts you up without asking for anything in return."** — DEP
 

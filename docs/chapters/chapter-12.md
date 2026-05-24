@@ -31,6 +31,8 @@ This chapter isn't about fear. It's about **knowing what you're doing.** Every s
 
 Sa bahay, people often think the router password or the default admin page is "good enough." That habit is exactly what makes small home setups easy to poke at.
 
+Keep one simple question in mind while you secure things: is this for self, family, or public? The answer changes how exposed it should be, and who should ever be allowed to touch it.
+
 ---
 
 ## Why This Matters
@@ -46,6 +48,15 @@ Securing your homelab protects:
 2. **Your network** — from lateral attacks
 3. **Your reputation** — from being part of a botnet
 4. **Your wallet** — from crypto mining and electricity costs
+
+### Who Gets Access?
+
+| Stakeholder | What They Need |
+|---|---|
+| **Self** | SSH, logs, backups, recovery, direct control |
+| **Family** | Simple access, stable URLs, low confusion, no scary prompts |
+| **Public** | Authentication, rate limiting, clear boundaries, minimal exposure |
+| **Service management** | Updates, alerts, rollback, and a way to recover when something breaks |
 
 ---
 
@@ -365,13 +376,13 @@ Then assign services to appropriate networks based on their exposure requirement
 - Defense in depth principles
 
 **Interview talking point:**
-> *"I implemented a defense-in-depth security strategy for my homelab infrastructure: UFW firewall with least-privilege port rules, SSH key-only authentication with root login disabled, fail2ban for intrusion prevention, Docker network segmentation, and monthly security audit procedures. This reduced the attack surface by 90% and achieved zero unauthorized access attempts in 6 months."*
+> *"I implemented a layered security setup for my homelab: UFW firewall rules, SSH key-only authentication with root login disabled, fail2ban for intrusion prevention, Docker network segmentation, and monthly security checks. This reduced unnecessary exposure and kept the home system easier to trust and maintain."*
 
 ---
 
 ## 🇵🇭 PH Context
 
-> **💸 Lean Path:** Every security tool in this chapter is free: UFW (built into Ubuntu), fail2ban (open source, free), SSH keys (free), Docker security features (free). You're building enterprise-grade security with ₱0 in software costs. The only investment is learning time — and that's the kind of time that pays dividends in your career. Walang dagdag bayad, pero malaking bawas risk.
+> **💸 Lean Path:** Every security tool in this chapter is free: UFW (built into Ubuntu), fail2ban (open source, free), SSH keys (free), Docker security features (free). You're building strong home security with ₱0 in software costs. The only investment is learning time — and that's the kind of time that pays dividends in keeping the house safe.
 
 ### Philippine-Specific Threats
 
@@ -409,7 +420,7 @@ Now let's prove your security works:
 
 ## What's Next
 
-Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. Remote access patterns are covered in Chapter 7 alongside the reverse proxy — check back there if you haven't set up Tailscale or Cloudflare Tunnel yet. In Chapter 13, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.** Hindi lang ito setup; may story na rin ang work mo.
+Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a real system at home. Remote access patterns are covered in Chapter 7 alongside the reverse proxy — check back there if you haven't set up Tailscale or Cloudflare Tunnel yet. In Chapter 13, we'll document everything you've built and turn it into a portfolio that shows your work clearly. Hindi lang ito setup; may story na rin ang work mo.
 
 **Homework:**
 1. Set up SSH key authentication and disable password login
@@ -420,7 +431,7 @@ Your homelab is now secure. You've gone from a curious beginner to someone who c
 
 ---
 
-> **🚀 Turbo:** Want enterprise-grade intrusion detection? Set up [Wazuh](https://wazuh.com/) — an open-source SIEM (Security Information and Event Management) system. It monitors file integrity, detects malware, analyzes logs in real time, and correlates security events across your entire homelab. Start with the Wazuh manager + agent on your server, then add agents to other machines. It's complex, but the skills transfer directly to professional SOC roles.
+> **🚀 Turbo:** Want deeper intrusion detection? Set up [Wazuh](https://wazuh.com/) — an open-source SIEM (Security Information and Event Management) system. It monitors file integrity, detects malware, analyzes logs in real time, and correlates security events across your entire homelab. Start with the Wazuh manager + agent on your server, then add agents to other machines. It's complex, but the skills transfer directly to serious security work.
 
 ---
 

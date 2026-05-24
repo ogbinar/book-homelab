@@ -1,325 +1,244 @@
-# Homelab Manuscript MVP v1.0 - Execution Plan
+# Bahay Bahayan Incorporation Plan
 
-**Target:** Transform current manuscript (14 chapters, 2 appendices) → MVP v1.0 (12 chapters + 6 appendices)  
-**Estimated Effort:** 32-44 hours  
-**Pareto Focus:** 20% of work delivering 80% of structural integrity
+**Purpose:** turn the current manuscript into a coherent homelab book that keeps the existing Filipino-first identity, but gains a clearer maturity ladder, a home-shaped metaphor system, and a cleaner path for advanced topics like game hosting, Dokploy-style operations, and local hosted LLMs.
 
----
+**Working rule:** keep the voice simple, slightly formal, practical, and Taglish where it feels natural. Do not turn the book into enterprise DevOps. Do not turn it into a generic self-hosting catalog. Everything should still feel like it belongs in a real Filipino home.
 
-## 🎯 Executive Summary
+**Companion map:** see [chapter-map.md](/projects/book-homelab/chapter-map.md) for the chapter-by-chapter revision plan.
 
-### Current State
-- ✅ 14 chapters (2 beyond MVP scope)
-- ✅ 2 appendices (Glossary, Commands)
-- ⚠️ Structural drift from design blueprint
-- ⚠️ Chapter 13 orphaned content
-- ❌ 4 missing appendices (Hardware, Errors, Services, Community)
-
-### Target State (MVP v1.0)
-- ✅ 12 core chapters + 1 bonus chapter
-- ✅ 6 appendices (complete reference suite)
-- ✅ Zero structural drift
-- ✅ 100% template compliance
-- ✅ Reader can complete first homelab setup
+**Status:** the core manuscript integration is implemented, but a final publication cleanup pass is still needed. The checklist below now serves as the living backlog for that cleanup work and any future expansion.
 
 ---
 
-## 📋 Phase Breakdown
+## 1. Lock the new organizing model
 
-### Phase 1: Chapter 13 Resolution
-**Effort:** 6-8 hours | **Priority:** Critical | **Impact:** Structural Integrity
+- [ ] Confirm the primary progression model in the design docs as `Prep -> Kinder -> Elementary -> High School -> College -> Masters -> PhD -> Postdoc`.
+- [ ] Keep the school ladder as a maturity signal, not a status hierarchy.
+- [ ] Use the ladder to decide what belongs in the core manuscript, what belongs in deep dives, and what belongs in future expansion.
+- [ ] Keep `Part I` as first wins, `Part II` as connected systems, and `Part III` as advanced architecture and experimentation.
+- [ ] Preserve the current identity: warm, Filipino-first, slightly formal, anti-gatekeeping, practical, and budget-aware.
 
-#### Problem Statement
-Chapter 13 "Remote Access & Security" is orphaned content not in MVP design, creating:
-- Structural drift from blueprint
-- Narrative discontinuity
-- Chapter count inflation (14 vs. 12 target)
+## 2. Keep the house metaphor consistent
 
-#### Solution
-Merge remote access content into Chapter 7 (Networking Fundamentals) as dedicated Section 7.5.
+- [ ] Treat homelab concepts as household services instead of abstract infrastructure whenever possible.
+- [ ] Use `power`, `water`, `front desk`, `utility cabinet`, `smoke detector`, `locks`, `game room`, and `study room` as recurring metaphors.
+- [ ] Keep the metaphor light and helpful, not forced or childish.
+- [ ] Use the metaphor to help readers remember what each service is for and where it belongs in the house.
+- [ ] Make sure the metaphor supports the technical explanation instead of replacing it.
 
-#### Tasks
-- [ ] **1.1** Read Chapter 13 and identify extractable content
-  - Port forwarding concepts
-  - VPN setup (WireGuard/OpenVPN)
-  - Tailscale/ZeroTier alternatives
-  - Remote desktop protocols
-- [ ] **1.2** Read Chapter 7 to identify integration point
-- [ ] **1.3** Draft Section 7.5: "Remote Access Patterns" (3-4 pages)
-  - Include PH ISP context (PLDT/Globe fiber port forwarding)
-  - Add security warnings specific to Filipino home networks
-  - Maintain Taglish tone and chapter template
-- [ ] **1.4** Integrate Section 7.5 into Chapter 7
-  - Ensure smooth narrative transition from local to remote networking
-  - Verify Chapter 7 stays within 25-page limit
-- [ ] **1.5** Delete Chapter 13 file
-- [ ] **1.6** Update table of contents
-- [ ] **1.7** Adjust chapter numbering (Ch 14 → Ch 13)
-- [ ] **1.8** Update all cross-references to Ch 13/14
+## 3. Add a light stakeholder lens
 
-#### Success Criteria
-- [ ] Ch 7 includes remote access without bloating beyond 25 pages
-- [ ] No content loss from original Ch 13
-- [ ] Smooth narrative transition from local to remote networking
-- [ ] Chapter count reduced to 13 (12 core + 1 bonus)
-- [ ] All cross-references updated
+- [ ] Add a small recurring lens for `self`, `family`, `public`, and `service management`.
+- [ ] Keep it brief, funny, and practical.
+- [ ] Use it as a check on trust, access, and maintenance, not as a full framework chapter.
+- [ ] Add the lens as a short callout in the preface or early chapters.
+- [ ] Reuse it sparingly in service examples where it clarifies access and responsibility.
+- [ ] Keep the question set simple: who uses it, who manages it, who can see it, and who must never see it.
 
----
+## 4. Update the design documents first
 
-### Phase 2: Hardware Buying Guide Appendix
-**Effort:** 8-10 hours | **Priority:** High | **Impact:** Reader Value
+- [ ] Update [design/book-design.md](/projects/book-homelab/design/book-design.md) to reflect the school ladder and household-service mapping as core design principles.
+- [ ] Add explicit guidance that advanced topics must stay home-shaped, not enterprise-generic.
+- [ ] Keep the current chapter identity and Part I / Part II structure intact.
+- [ ] Make Part III the place for deeper, optional material rather than a new book.
+- [ ] Update [agents.md](/projects/book-homelab/agents.md) so future contributions follow the same framing.
+- [ ] Keep the existing chapter template, Taglish guidance, and callout system unchanged unless the new hierarchy requires a small adjustment.
 
-#### Problem Statement
-Readers have no PH-specific hardware guidance despite hardware being mentioned throughout chapters. No budget tiers, vendor directory, or compatibility matrices exist.
+## 5. Reframe the current chapters without rewriting their soul
 
-#### Solution
-Create comprehensive appendix with budget tiers, vendor recommendations, and compatibility matrices tailored to Filipino market.
+- [ ] Chapter 1: add a small note that the book will grow from `Prep` wins to higher maturity levels, while staying home-shaped.
+- [ ] Chapter 2: keep the hardware buying path, but make low-power and reused hardware feel like the first sensible path, not a compromise.
+- [ ] Chapter 3: keep Docker as the toolbox entry point, and make it clear that everything later depends on this basic container mental model.
+- [ ] Chapter 4: use the first real service chapter to introduce the household-service idea and set up the future path for game hosting, media, and local AI.
+- [ ] Chapter 5: keep reliability and brownout survival as core themes; this is where power and household continuity should start to matter more.
+- [ ] Chapter 6: strengthen the network-as-plumbing analogy and keep the home network viewpoint concrete.
+- [ ] Chapter 7: keep reverse proxy and remote access as a signature chapter; this is where CGNAT reality and direct vs tunneled access should stay obvious.
+- [ ] Chapter 8: use this as the natural place to talk about service organization, operational control, and the difference between raw Compose and a more managed service layer.
+- [ ] Chapter 9: keep backups central, but connect them to restore drills, storage planning, and the household “water tank / pantry reserve” metaphor.
+- [ ] Chapter 10: keep automation grounded in household maintenance, not clever scripting for its own sake.
+- [ ] Chapter 11: keep monitoring as a household alert system, not just dashboards.
+- [ ] Chapter 12: keep security as “locks, gates, and house rules,” and make public exposure feel like a deliberate choice, not default behavior.
+- [ ] Chapter 13: keep the portfolio capstone, but make the story read like “I built a home system I can explain and maintain,” not “I installed random tools.”
 
-#### Tasks
-- [ ] **2.1** Research PH hardware market (Q1 2026 prices)
-  - PC Express, Silicon, V-Store, Octagon Micro
-  - Lazada/Shopee trusted sellers
-  - Second-hand markets (Facebook Marketplace)
-- [ ] **2.2** Draft Budget Tiers section
-  - **Entry (₱5,000-15,000):** Raspberry Pi 4/5, old laptops
-  - **Mid-range (₱15,000-40,000):** Used enterprise mini PCs, N100 boards
-  - **Advanced (₱40,000-100,000):** TrueNAS builds, 10GbE setups
-- [ ] **2.3** Draft PH Vendor Directory
-  - Physical stores (location, specialties)
-  - Online sellers (ratings, trust indicators)
-  - Second-hand buying tips (scam avoidance, inspection checklist)
-- [ ] **2.4** Draft Compatibility Matrix
-  - Power consumption vs. performance chart
-  - Noise levels for apartment living
-  - Heat management in tropical climate
-- [ ] **2.5** Draft Shopping Lists
-  - "Starter Homelab" complete build (BOM with prices)
-  - "Proxmox Home Server" build
-  - "NAS-First" build
-- [ ] **2.6** Add Meralco cost calculations
-  - Power consumption → monthly ₱ cost estimates
-  - ROI comparisons for energy-efficient hardware
-- [ ] **2.7** Add tropical climate considerations
-  - Cooling requirements
-  - Humidity protection
-  - Brownout protection (UPS recommendations)
-- [ ] **2.8** Format with tables, comparison charts
-- [ ] **2.9** Add disclaimer: "prices as of Q1 2026"
+## 6. Incorporate game hosting in a home-shaped way
 
-#### Success Criteria
-- [ ] All price points in ₱ with current (2026) market rates
-- [ ] Includes power consumption estimates (Meralco cost calculations)
-- [ ] Addresses tropical climate considerations (cooling, humidity)
-- [ ] 8-12 pages with tables, comparison charts
-- [ ] At least 3 complete shopping lists with BOMs
+- [ ] Add game hosting as a legitimate homelab use case, not a novelty aside.
+- [ ] Keep it tied to household use, friends, or family play, not public server management.
+- [ ] Place the main reference in Part III or as a late-stage sidebar, since it needs direct access, latency awareness, and recovery thinking.
+- [ ] Use it to teach why some services need direct TCP/UDP access instead of tunnels.
+- [ ] Explain the real tradeoffs: CPU, RAM, storage, latency, update risk, and recovery after crashes.
+- [ ] Frame the server as the `game room` or `arcade` of the house.
+- [ ] Make it clear when game hosting is a good fit and when it is a distraction.
 
----
+## 7. Incorporate Dokploy-style operations carefully
 
-### Phase 3: Common Errors Reference
-**Effort:** 6-8 hours | **Priority:** High | **Impact:** Retention
+- [ ] Treat Dokploy as the `operations desk`, not as a new enterprise platform chapter.
+- [ ] Use it to show the move from hand-run containers to managed deployment flows.
+- [ ] Keep the comparison practical: raw Docker Compose, UI-first management, and deploy/rollback/log workflows.
+- [ ] Place it in the later architecture part of the book or as a deep-dive sidebar under service management.
+- [ ] Explain why it matters for readers who want less manual overhead once their stack grows.
+- [ ] Keep the language grounded in home operations, not platform engineering buzzwords.
+- [ ] Make sure Dokploy does not become the main story; it should support the story of a more organized homelab.
 
-#### Problem Statement
-Readers encounter errors with no centralized troubleshooting resource, causing abandonment. Errors are scattered across chapters with no searchable reference.
+## 8. Incorporate local hosted LLMs as a household utility
 
-#### Solution
-Create searchable error reference with causes, solutions, and PH-specific context. Top 50 errors prioritized by frequency.
+- [ ] Keep the local LLM story private-first and home-first.
+- [ ] Frame it as a study room or private assistant desk, not as cloud AI replacement hype.
+- [ ] Place the core mention in the “something useful” and future-expansion sections, then deepen it in Part III.
+- [ ] Explain why local hosted LLMs matter in a homelab: privacy, control, experimentation, and local utility.
+- [ ] Keep hardware guidance honest: CPU-only, small models, iGPU, or GPU-based inference depending on budget.
+- [ ] Tie local AI to the existing identity of useful systems, not novelty.
+- [ ] Keep the discussion practical: document chat, private assistant, retrieval over personal knowledge, and local experimentation.
 
-#### Tasks
-- [ ] **3.1** Define error categories
-  - Docker errors (permission, networking, volume mounts)
-  - Proxmox errors (storage, VM boot, network bridge)
-  - Linux errors (permissions, services, DNS)
-  - Network errors (port forwarding, NAT, DHCP conflicts)
-- [ ] **3.2** Define per-entry template
-  ```
-  ERROR: [exact error message]
-  CAUSE: [plain English explanation]
-  SOLUTION: [step-by-step fix]
-  PH CONTEXT: [ISP-specific or local infrastructure note]
-  ```
-- [ ] **3.3** Compile Top 50 Errors
-  - Prioritize by frequency in community forums
-  - Include screenshots where helpful
-  - Link to relevant chapter sections
-- [ ] **3.4** Draft Docker Errors section (15 errors)
-- [ ] **3.5** Draft Proxmox Errors section (12 errors)
-- [ ] **3.6** Draft Linux Errors section (13 errors)
-- [ ] **3.7** Draft Network Errors section (10 errors)
-- [ ] **3.8** Add "when to ask for help" guidance
-- [ ] **3.9** Verify all solutions are tested
-- [ ] **3.10** Format for searchability (table of contents, index)
+## 9. Keep stakeholder thinking light
 
-#### Success Criteria
-- [ ] Covers 80% of errors readers will encounter in first 6 months
-- [ ] Solutions tested and verified
-- [ ] Includes "when to ask for help" guidance
-- [ ] 10-15 pages, searchable format
-- [ ] At least 50 error entries with complete templates
+- [ ] Use stakeholder language lightly, not as a full framework chapter.
+- [ ] Repeat the question only when it improves clarity: who is this for, and who maintains it?
+- [ ] Use it to separate private admin surfaces from family-facing services and public-facing services.
+- [ ] Apply it in examples where it explains why a service should be private, shared, or exposed.
+- [ ] Avoid turning it into a formal model that slows the book down.
 
----
+## 10. Reorganize Part III as the advanced expansion zone
 
-### Phase 4: Service Directory Appendix
-**Effort:** 8-12 hours | **Priority:** Medium | **Impact:** Completeness
+- [ ] Keep Part III clearly out of the MVP core, but define it better so the future path feels intentional.
+- [ ] Use Part III for `PhD` and `Postdoc` material: game hosting, local hosted LLMs, Dokploy-style operations, higher-end automation, and deeper architecture.
+- [ ] Make Part III feel like optional ascent, not a requirement for readers who only need the core book.
+- [ ] Keep the `Choose Your Path` chapter as the start of specialization paths.
+- [ ] Add paths for `Games`, `AI`, and `Operations` alongside the existing DevOps, Security, Media, Privacy, and IoT tracks.
+- [ ] Keep Part III explicitly future-facing so it does not bloat the current manuscript.
 
-#### Problem Statement
-No centralized reference for homelab services, making it hard for readers to choose what to deploy. Service recommendations are scattered across chapters.
+## 11. Tighten the manuscript hierarchy
 
-#### Solution
-Create curated service catalog with complexity ratings, resource requirements, and use cases. Includes recommendation paths for different user profiles.
+- [ ] Make the opening chapters answer “What is this?” and “Why should I care?” with very little abstraction.
+- [ ] Make the middle chapters answer “How do I make this reliable and useful at home?”
+- [ ] Make the later chapters answer “How do I manage, share, protect, and expand this responsibly?”
+- [ ] Reserve the advanced architecture topics for the places where the reader already has enough context to benefit from them.
+- [ ] Avoid introducing too many new metaphors or side systems if they do not support the core spine.
+- [ ] Keep the chapter flow readable even if someone skips the optional sections.
 
-#### Tasks
-- [ ] **4.1** Define service categories
-  - Media (Plex, Jellyfin, Sonarr, Radarr)
-  - Productivity (Nextcloud, Vaultwarden, Paperless-ngx)
-  - Monitoring (Grafana, Prometheus, Uptime Kuma)
-  - Networking (Pi-hole, AdGuard, Tailscale)
-  - Development (GitLab, Jenkins, Portainer)
-- [ ] **4.2** Define per-service template
-  ```
-  SERVICE: [name]
-  COMPLEXITY: ⭐ to ⭐⭐⭐⭐⭐
-  RESOURCES: CPU, RAM, Storage minimum
-  USE CASE: [who benefits]
-  SETUP TIME: [estimated hours]
-  CHAP REF: [related chapter]
-  PH NOTES: [bandwidth/power considerations]
-  ```
-- [ ] **4.3** Draft Media Services section (8-10 services)
-- [ ] **4.4** Draft Productivity Services section (8-10 services)
-- [ ] **4.5** Draft Monitoring Services section (6-8 services)
-- [ ] **4.6** Draft Networking Services section (5-7 services)
-- [ ] **4.7** Draft Development Services section (5-7 services)
-- [ ] **4.8** Create Recommendation Paths
-  - "First 5 Services" for beginners
-  - "Family-Focused" stack
-  - "Developer-Focused" stack
-  - "Privacy-First" stack
-- [ ] **4.9** Add resource estimates for capacity planning
-- [ ] **4.10** Format with tables and quick-reference charts
+## 12. Update the sectioning and references
 
-#### Success Criteria
-- [ ] 30-40 services with complete metadata
-- [ ] Complexity ratings validated against chapter difficulty
-- [ ] Includes resource estimates for capacity planning
-- [ ] 12-18 pages with tables and quick-reference charts
-- [ ] At least 4 recommendation paths for different user profiles
+- [ ] Review chapter headings and section labels so they reflect the new hierarchy without losing the existing content.
+- [ ] Add small cross-references where a later chapter explains an idea that was introduced earlier as a simple win.
+- [ ] Ensure the preface explains the school ladder and household metaphor in one short, readable pass.
+- [ ] Ensure the index, glossary, and appendix references still point readers to the right places.
+- [ ] Keep the table of contents simple enough that a reader can see the journey at a glance.
 
----
+## 13. Add the right callouts in the right places
 
-### Phase 5: Final Integration
-**Effort:** 4-6 hours | **Priority:** Medium | **Impact:** Polish
+- [ ] Add one light stakeholder note where it clarifies trust and access.
+- [ ] Keep `💸 Lean Path` visible for budget-sensitive home setups.
+- [ ] Keep `📢 Jargon Alert` where the new concepts are introduced.
+- [ ] Use `⚠️ Watch Out` where power, exposure, or recovery can go wrong.
+- [ ] Use `💡 Quick Win` where a small household-level improvement is available.
+- [ ] Do not overuse `🚀 Turbo`; keep it for genuinely higher-end paths.
 
-#### Problem Statement
-After completing all phases, need to ensure consistency across entire manuscript and verify all changes integrate smoothly.
+## 14. Preserve the Filipino identity
 
-#### Solution
-Systematic integration check, cross-reference update, and final quality assurance.
+- [ ] Keep the book Filipino-first, not a translated import.
+- [ ] Keep Taglish natural, not evenly distributed by force.
+- [ ] Keep Philippine reality visible: brownouts, heat, noise, CGNAT, family sharing, budget pressure, reused hardware, and local stores.
+- [ ] Keep costs in `₱` and explanations grounded in local buying patterns.
+- [ ] Keep the tone slightly formal and complete where it matters, especially in preface, closing note, and structural docs.
+- [ ] Keep the humor subtle and helpful, not noisy.
 
-#### Tasks
-- [ ] **5.1** Update all cross-references
-  - Check chapter-to-chapter references
-  - Check chapter-to-appendix references
-  - Verify link targets exist
-- [ ] **5.2** Regenerate table of contents
-  - Update chapter numbering
-  - Update appendix listing
-  - Verify page numbers
-- [ ] **5.3** Update index/appendix references
-  - Ensure all appendices referenced in relevant chapters
-  - Check glossary term references
-- [ ] **5.4** Final consistency check across all chapters
-  - Verify Taglish tone consistency
-  - Verify chapter template compliance
-  - Check PH context integration
-- [ ] **5.5** Create revision changelog
-  - Document all changes made
-  - Note effort spent per phase
-  - Record decisions and rationales
-- [ ] **5.6** MVP v1.0 Definition of Done verification
-  - ✅ 12 core chapters + 1 bonus chapter
-  - ✅ 6 appendices
-  - ✅ Zero structural drift
-  - ✅ All chapters pass template compliance
-  - ✅ Reader can complete first homelab setup
+## 15. Update the appendices to support the new framing
 
-#### Success Criteria
-- [ ] Zero broken cross-references
-- [ ] Table of contents accurate and complete
-- [ ] All appendices properly referenced
-- [ ] Template compliance 100%
-- [ ] Changelog documents all changes
+- [ ] Hardware appendix: emphasize low-power compute, thermal/noise realities, brownout readiness, and home placement.
+- [ ] Services appendix: reorganize by household use and trust level where useful, not just by tech category.
+- [ ] Errors appendix: keep errors searchable and frame fixes in home-context terms when possible.
+- [ ] Community appendix: keep it useful as a reader support layer, not a marketing list.
+- [ ] Glossary: add terms that support the new house metaphor, service management, remote access, game hosting, and local AI.
 
----
+## 16. Make the advanced themes feel earned
 
-## 📊 Effort Summary
+- [ ] Do not move every advanced topic into the main line of the book.
+- [ ] Promote only the themes that feel distinctively homelab and clearly useful in a Filipino home.
+- [ ] Keep `power resilience`, `remote access`, `storage`, `low-power compute`, `home automation`, `thermals/noise`, and `network segmentation` as the strongest core advanced themes.
+- [ ] Keep `game hosting`, `Dokploy-style operations`, and `local hosted LLMs` visible, but placed later or deeper.
+- [ ] Demote anything that turns into generic enterprise practice unless it is tightly framed around the home.
 
-| Phase | Hours | Priority | Impact | Status |
-|-------|-------|----------|--------|--------|
-| Phase 1: Ch 13 Resolution | 6-8 | Critical | Structural Integrity | ⏳ Pending |
-| Phase 2: Hardware Guide | 8-10 | High | Reader Value | ⏳ Pending |
-| Phase 3: Common Errors | 6-8 | High | Retention | ⏳ Pending |
-| Phase 4: Service Directory | 8-12 | Medium | Completeness | ⏳ Pending |
-| Phase 5: Final Integration | 4-6 | Medium | Polish | ⏳ Pending |
-| **TOTAL** | **32-44** | | | |
+## 17. Validation checklist
 
----
+- [x] A first-time reader can still see a clear path from zero to useful homelab.
+- [x] The new hierarchy does not break the current manuscript tone.
+- [x] The house metaphor helps memory without feeling overdesigned.
+- [x] The stakeholder lens stays light and useful.
+- [x] The advanced topics feel like natural growth, not a separate book.
+- [x] Game hosting, Dokploy-style operations, and local hosted LLMs are incorporated without diluting the core story.
+- [x] The final book still feels like `Bahay Bahayan`: practical, home-shaped, Filipino, and worth maintaining.
 
-## ⚠️ Risk Mitigation
+## 18. Publication Cleanup Pass
 
-### Risk 1: Content Drift
-**Scenario:** Ch 7 becomes too long after merging Ch 13 content  
-**Mitigation:** Split into Ch 7A (Networking Fundamentals) and Ch 7B (Remote Access Patterns)  
-**Trigger:** Ch 7 exceeds 28 pages after merge
+This section captured the specific blockers identified in the end-to-end audit. The items below were completed in the current publication cleanup pass and are kept here as an audit trail.
 
-### Risk 2: Price Accuracy
-**Scenario:** Hardware prices change rapidly, making guide outdated  
-**Mitigation:** Add "prices as of Q1 2026" disclaimer; recommend readers verify before purchasing  
-**Trigger:** N/A (proactive mitigation)
+- [x] Fix the broken Chapter 13 asset reference in `docs/chapters/chapter-13.md`.
+  - Replace the missing `diagrams/architecture.png` reference with an actual asset path, or remove the image if the book should not depend on a diagram that does not exist yet.
+  - If a new diagram is added, make sure the file exists in the repo and the relative path matches the chapter location.
+  - Re-run a link/image validation after the change so Chapter 13 does not contain a dead asset reference.
 
-### Risk 3: Scope Creep
-**Scenario:** Temptation to add more appendices or expand beyond MVP scope  
-**Mitigation:** Strictly limit to 4 new appendices for MVP; defer Community guide to v1.1  
-**Trigger:** Any request to add >6 total appendices in MVP
+- [x] Resolve the public license mismatch.
+  - Choose one license and propagate it consistently across `README.md`, `docs/index.md`, `docs/appendix/author.md`, `docs/appendix/community.md`, `design/book-design.md`, and any other public-facing references.
+  - Keep the prose/docs license and code-snippet license clearly separated if both are meant to exist.
+  - Make sure the repository front door, appendix pages, and design docs all tell the same licensing story.
+  - If the book stays under `CC BY-SA 4.0`, update the README top matter and any stale `CC BY 4.0` references.
+  - If the book moves to `CC BY 4.0`, update the appendix/footer/license snippets that still say `CC BY-SA 4.0`.
 
-### Risk 4: Taglish Tone Inconsistency
-**Scenario:** New content drifts from established Taglish voice  
-**Mitigation:** Use existing chapters as style guide; maintain narrator persona throughout  
-**Trigger:** Any section that reads too formal or too English-heavy
+- [x] Fix the public GitHub repository link and related metadata.
+  - Update `docs/index.md` so the repo link points to the actual public repository.
+  - Scan other front-facing pages for stale repo URLs and make them consistent.
+  - Verify the author and site metadata do not point to different identities or old locations.
+  - Make the repo link in the book front door match the README exactly.
+  - Make sure the social/link metadata in the front door does not point at a placeholder or stale project fork.
 
----
+- [x] Normalize chapter naming and structure drift.
+  - Decide on one canonical title for Chapter 1 and use it consistently across the file, index, part pages, and navigation.
+  - Review chapter headings in Chapters 1, 2, 4, 11, and 13 so they better match the declared `agents.md` structure without forcing awkward template compliance.
+  - Remove duplicate structural markers such as repeated `What's Next` blocks or duplicated subheadings.
+  - Keep the chapter flow readable even when the book intentionally bends the template.
+  - Chapter 1 should use one consistent book-facing title everywhere, not a mix of `What Even Is a Homelab?` and `Ano ba ang Homelab?`
+  - Chapter 4 should remove any duplicated subsection heading text and preserve only one clear `Vaultwarden` heading.
+  - Chapter 13 should keep one `What's Next` section in the main chapter flow and avoid accidental repetition inside templates.
+  - Chapter 11 should either add a proper `Deep Dive` or clearly mark the current structure as intentional in the style guide.
 
-## 🎯 Success Metrics
+- [x] Clean up the Part I / Part II landing pages.
+  - Decide whether `docs/part-i.md` and `docs/part-ii.md` are true reading milestones or mostly summary pages.
+  - If they are summary pages, keep them concise and clearly secondary to the chapter flow.
+  - If they are meant to be part of the reading experience, make their transitions and references feel less like side doors.
+  - Keep the part pages useful for orientation, but do not let them feel like mandatory duplicate reading before the chapters.
+  - If the left-nav path stays dominant, simplify the part-page prose so it reads like a gentle bridge rather than a second introduction.
 
-### MVP v1.0 Definition of Done
-- [ ] **Structure:** 12 core chapters + 1 bonus chapter (Ch 13 merged)
-- [ ] **Appendices:** 6 appendices (Glossary, Commands, Hardware, Errors, Services, Community*)
-- [ ] **Alignment:** Zero structural drift from design blueprint
-- [ ] **Compliance:** All chapters pass template compliance check
-- [ ] **Usability:** Reader can complete first homelab setup using only MVP content
+- [x] Reduce stale or duplicated planning artifacts.
+  - Decide which of `todo.md`, `chapter-map.md`, `design/book-design.md`, and `agents.md` is the canonical place for ongoing structure decisions.
+  - Archive or collapse redundant planning language so the repo does not present four slightly different versions of the same plan.
+  - Keep one source of truth for future chapter restructuring, and make the other docs point back to it.
+  - If `todo.md` is the live backlog, keep it action-oriented and move completed plan language into the archive documents.
+  - If `chapter-map.md` is the live revision map, trim duplicated strategy language out of `todo.md` so the two files do not compete.
+  - Make sure `design/book-design.md` stays the canonical high-level rules doc, while `agents.md` stays the contribution/style guide.
 
-*Note: Community appendix can be minimal (1-2 pages) for MVP, expanded in v1.1
+- [x] Clean the community appendix so it serves the reader first.
+  - Soften any DEP-first framing that makes the page feel like a brand page instead of a reader resource.
+  - Keep the appendix broad enough to help a beginner find communities, meetups, and learning channels without implying a single community is the only path.
+  - Make sure the community appendix matches the anti-gatekeeping tone of the rest of the book.
+  - Reword the opening so the reader sees options, not a command to join one specific community first.
+  - Keep DEP as an important example, but not as the only door into the hobby.
 
----
+- [x] Tighten the glossary and appendix metadata.
+  - Confirm glossary ordering and naming consistency so the page feels like a deliberate reference, not a rolling scratchpad.
+  - Check appendix cross-references and chapter references so they point to the chapter readers actually use first.
+  - Remove or update any appendix labels that still sound like draft language.
+  - If a term appears in the book often, make sure the glossary has a clean definition and a stable cross-reference.
+  - If an appendix is archived or historical, label it clearly so it does not read like active reading material.
 
-## 🚀 Recommended Execution Order
+- [x] Perform a final tone pass on the remaining outliers.
+  - Re-read Chapter 7 and Chapter 13 for any overly dramatic, employer-first, or performance-oriented lines.
+  - Re-check Chapter 11 and Chapter 12 for security/monitoring language that still reads too enterprise-heavy.
+  - Keep the calm kuya voice, practical Taglish, and home-shaped framing intact all the way through the final pages.
+  - Make sure any “chaos/challenge” callouts still sound like helpful stress tests, not dare-based theater.
+  - Remove or soften lines that read like recruiter bait if they are not serving the home-first reading experience.
 
-1. **Phase 1** (Ch 13 resolution) - Highest structural impact, unblocks chapter numbering
-2. **Phase 2** (Hardware guide) - Highest reader value, most requested content
-3. **Phase 3** (Common Errors) - High retention impact, relatively quick wins
-4. **Phase 4** (Service Directory) - Completes reference suite
-5. **Phase 5** (Final Integration) - Polish and QA
-
----
-
-## 📝 Notes
-
-- All phases assume reader has basic Filipino context and Taglish fluency
-- Hardware prices should be verified against current market before publication
-- Error reference should be living document, updated based on reader feedback
-- Service directory should prioritize services with PH-relevant use cases
-
----
-
-**Last Updated:** 2026-05-18  
-**Plan Version:** 1.0  
-**Status:** Ready for Execution
+- [x] Clean up orphan and archive pages so the public front door feels intentional.
+  - Treat `docs/launch-readiness-report.md` as an archive page only, not a live part of the reading path.
+  - Decide whether `CHANGELOG.md`, `review-report.md`, `plan-fix.md`, and `plan-fix-review.md` should stay visible in the repo root or move into an archive/docs folder.
+  - Keep `chapter-map.md` visible only if it is still the active source of structure decisions; otherwise mark it as archival or fold it into `todo.md`.
+  - If the README directory tree keeps the planning artifacts, clearly label them as internal or archived so the public-facing book does not feel half-finished.

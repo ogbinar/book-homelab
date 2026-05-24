@@ -131,7 +131,7 @@ These service notes are written for Filipino beginners first: they call out loca
 | **CPU** | Low |
 | **RAM** | 200-500MB (grows with retention period) |
 | **Storage** | ~1GB+ (depends on metrics volume and retention) |
-| **Use Case** | Advanced monitoring and alerting — the backbone of observability |
+| **Use Case** | Advanced monitoring and alerting — the backbone of visibility |
 | **Setup Time** | 1 hour |
 | **CHAP REF** | Chapter 11 |
 | **PH Notes** | Minimal data usage (metrics are small). Set retention to 15 days on low-storage setups. |
@@ -369,6 +369,21 @@ All services that run on your existing laptop or a Raspberry Pi:
 | **Watchtower** | ~15MB | Runs occasionally, idle most of the time |
 
 **Total RAM:** ~200MB — fits on a Raspberry Pi 4 with 4GB easily.
+
+---
+
+### 🧪 "Advanced / Future" Stack
+
+These are not core MVP services, but they match the later `Postdoc` paths of the book:
+
+| Service | Purpose | Why It Belongs Later |
+|---|---|---|
+| **Home Assistant** | Home automation hub | Moves the homelab closer to household control |
+| **Ollama** | Local LLM runtime | Useful private AI, but hardware needs vary a lot |
+| **Game server** | Host a game for family or friends | Great homelab use case, but direct access and recovery matter |
+| **Dokploy** | Container deployment manager | Good once the stack is big enough to need an operations desk |
+
+**Rule of thumb:** if a service needs more structure than a single `docker run`, it probably belongs in the later part of the book or a deep-dive appendix.
 
 ---
 

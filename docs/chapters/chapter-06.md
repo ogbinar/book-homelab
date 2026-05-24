@@ -27,6 +27,8 @@ Sa maraming Filipino homes, one router feeds a lot of devices, and nobody thinks
 
 Let's find out.
 
+As you learn this, keep a light stakeholder lens in mind: some things are just for you, some are shared with the family, and some are never meant to leave the house at all.
+
 ---
 
 ## Why This Matters
@@ -39,6 +41,8 @@ Networking is the #1 skill that separates beginners from intermediate homelabber
 - Connect multiple servers and devices
 
 Without networking knowledge, you're just running containers in the dark. With it, you're an architect. *Hindi ka na lang "yung tipong nagse-setup ng Docker pero hindi alam kung bakit hindi connected ang services."*
+
+That same network thinking is what later helps you separate private services, family-friendly services, and anything that might eventually face the public internet.
 
 ---
 

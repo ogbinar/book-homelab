@@ -26,6 +26,8 @@ If you set up a quick manual backup in Chapter 5, you have a safety net. But a m
 
 That matters just as much in a Filipino home where the backup drive might live in a drawer, a closet, or a relative's place across town.
 
+Think of this chapter as the water tank and pantry of the house. You are not just storing things. You are making sure the house can keep going when the faucet stops or the fridge goes empty.
+
 ---
 
 ## Why This Matters
@@ -33,6 +35,8 @@ That matters just as much in a Filipino home where the backup drive might live i
 The most common backup mistake is: **setting up backups but never testing them.**
 
 A backup you haven't tested is not a backup. It's a prayer.
+
+That's why restore drills matter: the real goal is not to have files somewhere. The real goal is to bring the house back when something breaks.
 
 Testing restores is the difference between "I have a backup strategy" and "I have a working backup strategy."
 

@@ -24,7 +24,9 @@ The other way: use standard shipping containers. A container is the same size, s
 
 That's why Docker is the gateway drug of homelabbing. Once you understand containers, everything else becomes easier. *Parang nag-open ng bagong mundo — suddenly, you can run anything, anywhere, without breaking your system.*
 
-Hindi mo kailangan maging expert agad. Kapag na-get mo na ang idea ng container, mas less nakakatakot ang susunod na chapters.
+Hindi mo kailangan maging expert agad. Kapag na-get mo na ang idea ng container, mas madaling sundan ang susunod na chapters.
+
+Think of this chapter as your tool cabinet. Once the cabinet is in place, every later service has somewhere to live.
 
 ---
 
@@ -175,6 +177,8 @@ When you ran `docker run louislam/uptime-kuma:1`, Docker did several things:
 Imagine you want to install 5 different services on your server. Without containers, each one might need different versions of the same libraries, different configurations, and they might conflict with each other.
 
 With containers: each service runs in its own isolated box. Service A doesn't care what Service B is doing. They can use different versions of everything and never conflict.
+
+That matters for the whole house later: the container model is what lets you grow from one useful service into a real system without turning the server into a mess.
 
 ```
 Without Docker:                    With Docker:

@@ -63,7 +63,7 @@ Every chapter is required to have 13 sections per `agents.md`:
 | 4 | Something Useful | **9/13** | Why This Matters, Quick Start, The Why, Deep Dive | ⚠️ |
 | 5 | Keeping It Alive | **13/13** | — | ✅ |
 | 6 | Your First Network | **13/13** | — | ✅ |
-| 7 | The Reverse Proxy | **13/13** | — | ✅ |
+| 7 | The Reverse Proxy + Remote Access | **13/13** | — | ✅ |
 | 8 | Multiple Services, One System | **13/13** | — | ✅ |
 | 9 | Your Data, Safe | **12/13** | Stress Test | Low |
 | 10 | Automation: Work Less | **13/13** | — | ✅ |

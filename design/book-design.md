@@ -6,12 +6,25 @@
 > **Format:** Digital-first (web + PDF), progressive disclosure, modular chapters  
 > **Language:** **Taglish** (natural mix of Filipino + English, code/tech terms in English)  
 > **Scope:** **Current manuscript** — 13 chapters (Parts I + II plus capstone Chapter 13), Part III reserved for future expansion  
-> **Tone:** Friendly, opinionated, anti-gatekeeping, Taglish, Filipino-context-aware  
+> **Tone:** Friendly, opinionated, anti-gatekeeping, Taglish, Filipino-context-aware, home-shaped, slightly formal when needed
 > **License:** **Open source** — free forever, CC BY-SA 4.0, community contributions welcome
 
 ---
 
-## 1. Core Design Philosophy
+## 1. Core Principles
+
+- **Household first.** Every idea should map back to a real home, household need, or home constraint.
+- **Practical before impressive.** Useful beats flashy. Reliability beats novelty.
+- **Filipino reality first.** Brownouts, CGNAT, family sharing, heat, noise, reused hardware, and budget pressure are not edge cases here.
+- **One narrator.** The voice is a guiding kuya: calm, slightly formal, practical, and never shamey.
+- **Taglish should sound natural.** Use it where a real Filipino speaker would, not as decoration.
+- **Advanced topics must stay home-shaped.** Game hosting, Dokploy-style operations, and local hosted LLMs are valid only when they still feel like part of the house.
+- **Career value is a bonus, not the product.** The book may help with work, but it is not a career-coaching manual.
+- **Bahala Na, used carefully.** If named, it should mean brave action with preparation and responsibility, not reckless improvisation.
+
+---
+
+## 2. Core Design Philosophy
 
 ### 1.1 What This Book Is NOT
 
@@ -28,10 +41,60 @@ This book is:
 - **A guided exploration** — "Here's what's possible, here's how to start, here's where it goes"
 - **A confidence builder** — "You don't need to be a genius. You need curiosity and 30 minutes a week"
 - **A Filipino-first guide** — ₱ prices, local hardware markets, PH internet realities, Taglish narration
+- **A home-first systems book** — every advanced topic should still map to a real household need, constraint, or room
 - **A values-driven journey** — privacy, ownership, learning, community
 - **A project-based learning system** — every chapter produces something you can touch and use
+- **A home-shaped learning system** — the metaphor stays close to the house so the reader can remember and reuse it
 
-### 1.3 The "Bahay Bahayan" Name
+### 2.3 The Guiding Kuya Voice
+
+The narrator should sound like a practical older sibling who has already made the mistakes, cleaned up the mess, and now wants to save the reader time.
+
+- Be calm, not dramatic.
+- Be direct, not cold.
+- Be helpful, not preachy.
+- Explain the reason once, then move on.
+- Respect the reader's budget, time, and family situation.
+- Encourage progress under uncertainty without making a joke out of risk.
+
+When the book uses Filipino values explicitly, it should do so naturally. `Bahala Na` can appear as a grounded form of courage if the context calls for it, but it should never become a slogan.
+
+### 2.4 The Learning Ladder
+
+The book should progress like a school ladder, but the point is maturity, not status.
+
+| Level | Meaning in the Book | Typical Feel |
+|---|---|---|
+| Prep | One thing works | "I can make something run." |
+| Kinder | One thing is useful at home | "This helps the household." |
+| Elementary | Small, repeatable habits | "I can do this again." |
+| High School | Multiple services start to connect | "I can manage a small system." |
+| College | Tradeoffs, structure, and coordination | "I can design for other people too." |
+| Masters | Resilience, policy, and sustainability | "I can keep this running through real-life problems." |
+| PhD | Edge cases, deeper architecture, serious constraints | "I can reason about the weird stuff." |
+| Postdoc | Experimental, optional, future-facing | "I am exploring what comes next." |
+
+Use this ladder to decide what belongs in the core manuscript, what belongs in deep dives, and what should wait for Part III.
+
+### 2.5 The Household-Service Metaphor
+
+To keep *Bahay Bahayan* grounded, technical ideas should feel like parts of a house.
+
+| Homelab Concept | Household Analogy | Why It Helps |
+|---|---|---|
+| Power resilience | UPS, outlet, and backup light | Makes brownouts and safe shutdowns concrete |
+| Reverse proxy | Front desk | Explains routing without abstract networking first |
+| Backup strategy | Water tank / pantry reserve | Makes durability and restore planning visual |
+| Monitoring | Smoke detector / house alerts | Makes uptime and notifications feel domestic |
+| Security | Locks, gates, and house rules | Keeps the mental model accessible |
+| Docker / Compose | Utility cabinet / toolbox | Shows that services are organized, not magical |
+| Game servers | Game room / arcade | Makes hosted play feel like a real household use case |
+| Dokploy-style control | Operations desk | Shows the jump from manual commands to managed services |
+| Local LLMs | Study room / private assistant desk | Frames AI as a private household helper, not a cloud dependency |
+
+The goal is not to force one metaphor everywhere. The goal is to keep the book close to home so even advanced topics still feel like part of the same place.
+
+### 2.6 The "Bahay Bahayan" Name
 
 **Why "Bahay Bahayan"?** From the Filipino root word "bahay" (home) + "-an" (place), meaning "a place to put things." It signals:
 
@@ -61,7 +124,7 @@ Based on our research, this book serves **five reader archetypes** — the book 
 - **Hardware:** Second-hand server, NUC, existing PC
 - **Motivation:** "I need to prove I can do this job before anyone hires me"
 - **Barriers:** Time pressure, knowledge gaps, "I'm behind everyone"
-- **What they need:** Structured path, CV translation, confidence
+- **What they need:** Structured path, plain-language explanation, confidence
 
 ### 2.3 The Hobbyist (Age 20-55)
 - **Budget:** ₱10,000-₱30,000 (fun money)
@@ -88,7 +151,7 @@ Based on our research, this book serves **five reader archetypes** — the book 
 
 ## 3. Book Structure: The Journey
 
-The book is organized as **two parts plus a capstone** in the current manuscript. Part III is intentionally left for future expansion, but it is not part of the published MVP:
+The book is organized as **two parts plus a capstone** in the current manuscript. Part III is intentionally left for future expansion, but it is not part of the published MVP. The progression should be readable both as a maturity ladder and as a walk through the house:
 
 ```
 Current manuscript:
@@ -101,6 +164,19 @@ Future expansion:
 ```
 
 **Current manuscript = 13 chapters** (Ch 1-12 + Ch 13 capstone). Each chapter is self-contained with working projects. Remote access is merged into Chapter 7 as Section 7.5.
+
+The progression rules are simple:
+
+- early chapters should feel like `Prep` and `Kinder` wins;
+- Part II should steadily climb into `High School`, `College`, and `Masters` territory; and
+- anything that feels like `PhD` or `Postdoc` belongs in deep dives, appendices, or future expansion unless it clearly supports the main story.
+
+The household mapping should stay consistent:
+
+- services that protect the home belong near power, backups, and security;
+- services that help the household use the lab belong near productivity, media, and automation;
+- services that manage the lab itself belong near Docker, Compose, proxies, and operations; and
+- experimental services belong in `Malaki`, not the MVP core.
 
 ---
 
@@ -234,12 +310,12 @@ Future expansion:
 
 **Goal:** Build a multi-service homelab that you actually use daily. Learn the patterns that scale. Chapter 13 is the capstone portfolio chapter.
 
-#### Chapter 7: "The Reverse Proxy"
+#### Chapter 7: "The Reverse Proxy + Remote Access"
 **Type:** Hands-on / Networking
 **Time to Complete:** 2 hours
 
 **What this chapter does:**
-- What is a reverse proxy? (the "concierge" analogy)
+- What is a reverse proxy? (the front desk analogy)
 - Setting up Traefik or Caddy
 - SSL certificates (Let's Encrypt, automatic)
 - Accessing services by name: `vaultwarden.home.local`
@@ -340,7 +416,7 @@ Future expansion:
 - Documenting what you built
 - Architecture diagrams (simple tools)
 - Writing your homelab story
-- CV translation: "I run Jellyfin" → "I maintain a self-hosted media streaming platform"
+- Optional career translation: "I run Jellyfin" → "I maintain a self-hosted media streaming platform"
 - Building a portfolio repository
 - **Project:** Create your homelab portfolio
 - **Activity:** Write a "My Homelab" document you can share
@@ -356,13 +432,13 @@ Future expansion:
 
 ---
 
-### Part III: "Malaki" — Becoming an Architect (Chapters 15-22) — **v2 / Future**
+### Part III: "Malaki" — Becoming an Architect (Chapters 14-23) — **v2 / Future**
 
 > ⚠️ **NOT in MVP.** Part III is planned for v2 after Parts I + II are published and community feedback is gathered.
 
-**Goal:** Design systems, not just deploy services. Choose your specialization path.
+**Goal:** Design systems, not just deploy services. Choose your specialization path. This is where the book can go deeper into game hosting, Dokploy-style service orchestration, and local hosted LLMs without bloating the core manuscript.
 
-#### Chapter 15: "Choose Your Path"
+#### Chapter 14: "Choose Your Path"
 **Type:** Conceptual / Roadmap
 **Reading Time:** 30 minutes
 
@@ -376,11 +452,14 @@ Future expansion:
   - **Media** → Advanced streaming, automation, DVR
   - **Privacy** → Self-hosted everything, encryption
   - **IoT** → Home automation, sensors, energy monitoring
+  - **Games** → Hosted game servers, latency, player access, recovery
+  - **AI** → Local hosted LLMs, RAG, private assistants
+  - **Operations** → Dokploy-style service control, deploy flows, lifecycle management
 - **Activity:** Pick your path and set goals
 
 **Key Message:** *"You don't need to learn everything. Pick what excites you."*
 
-#### Chapter 16: "Kubernetes for Real Humans"
+#### Chapter 15: "Kubernetes for Real Humans"
 **Type:** Advanced / DevOps
 **Time to Complete:** 4-6 hours
 
@@ -397,7 +476,7 @@ Future expansion:
 - Is Kubernetes worth it for your homelab? (honest answer)
 - When to skip Kubernetes and use Docker Compose
 
-#### Chapter 17: "Local AI: Your Own Intelligence"
+#### Chapter 16: "Local AI: Your Own Intelligence"
 **Type:** Advanced / AI
 **Time to Complete:** 3-4 hours
 
@@ -416,7 +495,31 @@ Future expansion:
 - Running AI without a GPU (CPU inference, small models)
 - Tagalog language model options
 
-#### Chapter 18: "Home Automation"
+#### Chapter 17: "Game Room: Hosting What the House Uses"
+**Type:** Advanced / Household Use Case
+**Time to Complete:** 3-4 hours
+
+**What this chapter does:**
+- Hosting game servers for family and friends
+- Why some games need direct UDP/TCP access
+- CPU, RAM, storage, and latency tradeoffs
+- Recovery after crashes or updates
+- **Project:** Run one small private game server
+- **Activity:** Let someone else connect to it successfully
+
+#### Chapter 18: "The Operations Desk"
+**Type:** Advanced / Service Control Plane
+**Time to Complete:** 3 hours
+
+**What this chapter does:**
+- Managing services through a control plane instead of one-off commands
+- Comparing raw Docker Compose, UI-first managers, and platform-style tools
+- Environment variables, deploys, rollbacks, and logs
+- When a tool like Dokploy fits a homelab
+- **Project:** Move one service under managed deployment
+- **Activity:** Redeploy, update, and recover a service cleanly
+
+#### Chapter 19: "Home Automation"
 **Type:** Advanced / IoT
 **Time to Complete:** 3-4 hours
 
@@ -433,7 +536,7 @@ Future expansion:
 - ₱500 smart plug automation
 - Power monitoring (track your electricity bill)
 
-#### Chapter 19: "High Availability"
+#### Chapter 20: "High Availability"
 **Type:** Advanced / Reliability
 **Time to Complete:** 4-6 hours
 
@@ -449,7 +552,7 @@ Future expansion:
 - Is HA worth it for your homelab? (honest cost/benefit)
 - ₱0 HA options (software redundancy)
 
-#### Chapter 20: "Infrastructure as Code"
+#### Chapter 21: "Infrastructure as Code"
 **Type:** Advanced / Professional
 **Time to Complete:** 3-4 hours
 
@@ -465,7 +568,7 @@ Future expansion:
 - Why this matters for PH job market
 - Career relevance of IaC skills
 
-#### Chapter 21: "Community & Contribution"
+#### Chapter 22: "Community & Contribution"
 **Type:** Community / Growth
 **Reading Time:** 30 minutes
 
@@ -482,7 +585,7 @@ Future expansion:
 - Local meetups (Manila, Cebu, Davao)
 - How to contribute when English isn't your first language
 
-#### Chapter 22: "What's Next?"
+#### Chapter 23: "What's Next?"
 **Type:** Vision / Future
 **Reading Time:** 20 minutes
 
@@ -592,7 +695,7 @@ Every chapter includes Filipino-specific content:
 - **Tech terms stay in English:** Docker, container, server, IP address, firewall, backup, API, database
 - **Narration in Taglish:** "Okay, let's set up our server. First, i-install natin ang Docker."
 - **Instructions in clear English:** Code blocks and commands always in English
-- **Explanations in Taglish:** "Ang reverse proxy is like a concierge ng your building..."
+- **Explanations in Taglish:** "Ang reverse proxy is like the front desk ng bahay..."
 - **Jargon alerts in Filipino:** Explain technical terms with Filipino analogies
 - **Tone:** Conversational, like explaining to a friend over coffee
 - **Avoid:** Over-formal Tagalog, excessive slang, code-switching mid-sentence for style
@@ -657,7 +760,7 @@ Consistent with `agents.md`:
 
 > **📢 Jargon Alert:** Technical term explained in plain language.
 
-> **💼 Career Boost:** How this skill looks on your CV.
+> **💼 Career Boost:** Optional career value when it helps the reader.
 
 > **🇵🇭 PH Context:** Philippines-specific consideration.
 
@@ -825,7 +928,7 @@ Every chapter follows this exact structure:
 ---
 
 ## 💼 Career Boost
-[How to put this on your CV]
+[How to describe this clearly when needed]
 [Interview talking points]
 [Related job roles in the Philippines]
 
@@ -918,7 +1021,7 @@ Every chapter follows this exact structure:
 - **Milestone:** MVP v1.0 with community
 
 ### Phase 4: Part III — "Malaki" (Future, v2)
-- Chapters 13-22 (Kubernetes, AI, HA, IaC, etc.)
+- Chapters 14-23 (Kubernetes, AI, game hosting, service control, HA, IaC, etc.)
 - Specialization paths
 - Video companions
 - **Milestone:** Full book v2.0
@@ -974,7 +1077,7 @@ Every chapter follows this exact structure:
 This design draws from:
 
 - **Our research:** `research/homelab-ecosystems-research.md` — all 10 dimensions
-- **Our ideas:** `ideas.md` — journey phases, career accelerator, values
+- **Our ideas:** `ideas.md` — journey phases, growth, values
 - **Our manifesto:** `agents.md` — A.C.E.S. structure, voice, tone
 - **Our profiles:** `professional-profiles-matrix.md` — 14 profiles, service catalog
 - **Home Assistant:** Community-first, beginner-friendly, documentation quality

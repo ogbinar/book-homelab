@@ -137,7 +137,7 @@ nav:
   - "Start Here: Preface": preface.md
   - "Part I: Bahay Bahayan":
       - part-i.md
-      - "Ch 1: Ano ba ang Homelab?": chapters/chapter-01.md
+      - "Ch 1: What Even Is a Homelab?": chapters/chapter-01.md
       - "Ch 2: Your First Server": chapters/chapter-02.md
       - "Ch 3: Hello, Container": chapters/chapter-03.md
       - "Ch 4: Something Useful": chapters/chapter-04.md

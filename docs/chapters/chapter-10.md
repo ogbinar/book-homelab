@@ -26,6 +26,8 @@ We're going to set up the homelab equivalent of a dishwasher. *Hindi ka naglulut
 
 The goal is simple: let the machine handle the chores so you can focus on the parts of the homelab that actually teach you something.
 
+In house terms, automation is the part that keeps the utility cabinet tidy. You are reducing the chores the house has to remember.
+
 ---
 
 ## Why This Matters
@@ -36,6 +38,8 @@ Automation isn't about being lazy (though that helps). It's about:
 2. **Reliability** — Automated updates catch security fixes you'd otherwise forget.
 3. **Time** — The hours you save automating compound over months and years.
 4. **Documentation** — A script is executable documentation of what you do.
+
+This is the first chapter where service management starts to feel real: if something repeats, the machine should probably own it.
 
 > **📢 Jargon Alert:** "Cron" — A time-based job scheduler in Unix-like operating systems. Think of it as a calendar that runs commands for you. "At 3 AM every day, run this script."
 
@@ -378,7 +382,7 @@ Now let's prove your automation works:
 
 ## What's Next
 
-Your homelab is now largely automated. It updates itself, backs up itself, and monitors itself. In Chapter 11, we'll add professional-grade observability — because monitoring isn't just about knowing when things break. It's about understanding how your system behaves before it breaks.
+Your homelab is now largely automated. It updates itself, backs up itself, and monitors itself. In Chapter 11, we'll add clearer visibility into how the system behaves — because monitoring isn't just about knowing when things break. It's about understanding the house before it starts complaining.
 
 **Homework:**
 1. Set up Watchtower for automatic updates

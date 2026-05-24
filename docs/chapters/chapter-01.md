@@ -27,6 +27,8 @@ It could be a Raspberry Pi sitting on your desk running ad-blocker for your whol
 
 **The size doesn't matter. The control does.**
 
+This book grows like a school ladder, but it stays rooted in the house. If a concept feels like a power outlet, a front desk, a utility cabinet, a game room, or a study room, you're in the right neighborhood.
+
 Here's what real Filipino homelabs look like:
 
 > **Maria, 28, BPO night shift worker from Manila**
@@ -40,7 +42,7 @@ Here's what real Filipino homelabs look like:
 > Setup: Dell PowerEdge R720, 64GB RAM, 8 drives, ₱25,000 (used)
 
 > **Jasmine, 20, college student from Davao**
-> *"I use my old laptop from high school — 2016 model, 4GB RAM. It runs Docker with 3 containers: a personal blog, a password manager, and Pi-hole. My friends think it's cool. I'm putting 'self-hosted infrastructure' on my resume now. Next upgrade: second-hand mini PC from FB Marketplace for ₱5,000."*
+> *"I use my old laptop from high school — 2016 model, 4GB RAM. It runs Docker with 3 containers: a personal blog, a password manager, and Pi-hole. My friends think it's cool. I'm writing 'self-hosted infrastructure' in my notes now. Next upgrade: second-hand mini PC from FB Marketplace for ₱5,000."*
 >
 > Setup: Old laptop (4GB RAM, reused), ₱0 additional
 
@@ -68,7 +70,7 @@ You don't need to be. The best homelabbers aren't geniuses — they're just stub
 
 ### "It's too expensive."
 
-The cheapest possible homelab costs ₱0 — your old laptop or desktop already exists. The next step up is a Raspberry Pi for ₱5,000. Even the enterprise-grade setups people see on YouTube (₱100,000+) are the exception, not the rule. **Most working homelabs cost less than ₱15,000.**
+The cheapest possible homelab costs ₱0 — your old laptop or desktop already exists. The next step up is a Raspberry Pi for ₱5,000. Even the huge setups people see on YouTube (₱100,000+) are the exception, not the rule. **Most working homelabs cost less than ₱15,000.**
 
 For a lot of Filipino beginners, the real question is not "Can I afford a homelab?" It's "Can I start with what I already have?" Usually the answer is yes.
 
@@ -135,7 +137,7 @@ Here's your first homelab activity. It takes 10 minutes.
 
 1. **What frustrates me about my current tech setup?** (e.g., "I pay for 5 different subscriptions," "I want more control over my data," "I want to learn skills that'll help me get a better job")
 
-2. **What would I love to have?** (e.g., "My own cloud storage," "A way to block ads on my network," "A personal website," "Something to put on my CV")
+2. **What would I love to have?** (e.g., "My own cloud storage," "A way to block ads on my network," "A personal website," "Something to show in a portfolio")
 
 3. **How much am I willing to invest?** (Money: ₱0? ₱5,000? ₱15,000? Time: 30 min/week? 5 hours/week?)
 

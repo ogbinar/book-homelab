@@ -1,73 +1,91 @@
-# 📜 Agents.md: The Homelab Book Manifesto & Style Governance
+# 📜 Agents.md: Bahay Bahayan Style Guide
 
 This document defines the identity, voice, and structural integrity of the
-**Book Homelab** guide—a living manifesto for transforming tech consumers into
-infrastructure architects. All contributors and AI agents assisting in the
-creation of this work must adhere to these "Prime Directives."
+**Book Homelab** guide. It keeps the manuscript aligned around one voice:
+a practical Filipino kuya guiding the reader from first wins to responsible
+home-shaped systems. All contributors and AI agents assisting in this work
+must follow these rules.
 
 ---
 
-## 1. The Core Identity: "The Master Craftsman"
+## 1. The Core Identity: "The Guiding Kuya"
 
 ### The Persona
 
-A seasoned homelab architect who isn't afraid to get their hands dirty.
-We value the "clack" of a mechanical keyboard, the hum of a well-cooled rack,
-and the satisfaction of a clean `systemctl status` at 2:00 AM.
+A seasoned homelab builder who speaks like a practical older sibling:
+calm, helpful, slightly formal when needed, and never trying to impress.
+We value the feeling of a setup that works quietly at home, the satisfaction
+of a clean `systemctl status`, and the confidence that comes from knowing what
+to do next.
 
 ### The Mission
 
-To transform **consumers of tech** into **architects of infrastructure**
-—specifically for Filipino data professionals and career shifters who need
-practical, affordable, and privacy-first skills.
+To help Filipino readers move from tech consumer to responsible builder of a
+home lab that is practical, affordable, private, and actually useful in a
+real household.
+
+### The Framing
+
+- Use a school ladder to signal maturity: `Prep`, `Kinder`, `Elementary`, `High School`, `College`, `Masters`, `PhD`, `Postdoc`
+- Keep examples rooted in the household: power, water, front desk, utility cabinet, game room, study room, locks, alerts, and house rules
+- Treat advanced topics as earned depth, not as enterprise cosplay
+- Keep career value present, but secondary to home usefulness
+- Use `Bahala Na` only carefully, and only when it means brave action with preparation
 
 ### The Promise
 
-We don't just provide "copy-paste" commands; we provide the **intuition**
-behind the configuration. Every `docker run` comes with a "why."
-Every `docker network create` explains the networking model.
+We don't just provide copy-paste commands; we provide the intuition behind
+the setup. Every `docker run` comes with a reason. Every network decision
+comes with a plain-language explanation. Every chapter should leave the
+reader calmer, not more confused.
 
 ---
 
 ## 2. The Voice & Tone (Personality)
 
-### Empathetic but Candid
+### Calm, Practical, and Human
 
-- We acknowledge that networking is hard and DNS is always the problem
-- We validate the frustration of a kernel panic but push the reader to find
-  the "why"
-- Example: *"Yeah, your first NAT bridge will break. Mine did too.
-  Here's exactly what went wrong..."*
+- We acknowledge that networking is hard and DNS is often the problem.
+- We validate frustration without dramatizing it.
+- We explain the mistake, the fix, and the lesson.
+- Example: *"Oo, papalya rin 'yan minsan. Here's what usually broke for me."*
 
-### Opinionated (No Neutrality)
+### Opinionated, But Not Performative
 
-- If a specific tool is bloated or "cloud-washed," say so
-- Provide a **"Why We Use This"** section for every major tech choice
-- Example: *"We use Docker Compose over Kubernetes for homelabs because..."*
+- If a tool is bloated or unnecessary for a home setup, say so plainly.
+- Prefer simple, maintainable options over fashionable ones.
+- Explain why a choice fits a Filipino home, not just a technical benchmark.
+- Example: *"We use Docker Compose here because it is enough for one home, one admin, and one clear recovery path."*
 
-### Witty & Grounded
+### Warm and Grounded
 
-- Use analogies from the physical world (plumbing, gardening, carpentry)
-- Avoid "corporate-speak" (e.g., use "Let's get this running" instead of
-  "Let's leverage this solution")
-- Example: *"Think of your reverse proxy like a building concierge—
-  directing visitors to the right apartment without giving them the master
-  key."*
+- Use analogies from the physical world and from the house.
+- Keep humor light and familiar.
+- Avoid corporate-speak and enterprise inflation.
+- Example: *"Think of your reverse proxy like the front desk of the house: it routes visitors, but it doesn't hand out every key."*
 
 ### Anti-Gatekeeping
 
-- We speak to the "Career Shifter." If a term is jargon, define it once
-  with a **"Jargon Alert"** and then use it professionally
-- Example: *"Jargon Alert: 'Idempotent' just means 'running this command
-  10 times has the same result as running it once.' Now you know."*
+- We speak to the student, the parent, the hobbyist, and the career shifter.
+- If a term is jargon, define it once with a `Jargon Alert` and then use it normally.
+- Example: *"Jargon Alert: 'Idempotent' just means running the command many times gives the same result."*
+- Never shame the reader for starting small.
+
+### Taglish Guidance
+
+- Use Taglish when it sounds natural in a real Filipino conversation.
+- Keep it light and readable; do not force a bilingual line just to be clever.
+- Put the most natural Taglish in the preface, opening chapters, closing note, and a few lived-in examples.
+- Keep appendices clearer and more reference-like, with only light Filipino texture.
 
 ---
 
 ## 3. Structural Rules (The "Lab" Framework)
 
-Every chapter or module **must** follow the **Template Structure** below.
-This structure is optimized for Filipino beginners — it starts with a story
-and builds to technical depth.
+Every chapter or module should follow the template below closely enough to
+feel like the same book, but not so rigidly that the voice becomes mechanical.
+The structure is optimized for Filipino beginners: story first, then useful
+technical depth.
 
 ### Standard Chapter Structure
 
@@ -101,7 +119,7 @@ and builds to technical depth.
 [Advanced topics for those who want more]
 
 ## 💼 Career Boost
-[How this translates to career value — CV entries, interview talking points]
+[Optional or brief: how this can help at work, in interviews, or in a portfolio]
 
 ## 🇵🇭 PH Context
 [Filipino-specific considerations: costs, ISPs, hardware, culture]
@@ -128,7 +146,7 @@ and builds to technical depth.
 | Quick Start | ✅ Yes | Hands-on steps with verification |
 | The Why | ✅ Yes | Conceptual understanding |
 | Deep Dive | ✅ Yes | Advanced/optional topics |
-| Career Boost | ✅ Yes | CV entries, interview talking points |
+| Career Boost | ⚠️ Keep brief | Use only when it helps the reader; do not let it dominate the chapter |
 | PH Context | ✅ Yes | Philippine-specific considerations |
 | Stress Test | ✅ Yes | "Break it to prove it works" |
 | What's Next | ✅ Yes | Transition to next chapter |
@@ -257,15 +275,15 @@ There are 8 callout types in the book:
 
 ---
 
-## 6. The "Career Accelerator" Rule
+## 6. The "Career Value" Rule
 
-Every technical tutorial must answer:
-**"How do I put this on my CV?"**
+Every technical tutorial may answer:
+**"How could this help at work or in a portfolio?"**
 
 ### Career Boost Section Format
 
-At the end of every chapter (except Chapter 1), include a **Career Boost**
-section with:
+At the end of a chapter, include a **Career Boost** section only if it
+genuinely helps the reader see the value outside the home.
 
 ```markdown
 ---
@@ -281,13 +299,14 @@ section with:
 > *"I designed and maintained [infrastructure] using [tools], achieving
 > [result]. The infrastructure includes [components]."*
 
-(Remove this template text and replace with actual content.)
+(Use this template only when it fits the chapter. Keep it brief.)
 ```
 
-### CV Translation Table
+### Optional Translation Table
 
-When appropriate, include a translation table showing how homelab terms map
-to professional language:
+When appropriate, include a small translation table showing how homelab terms
+map to professional language. Do not force one into every chapter, and keep it
+brief when you do use it.
 
 | Homelab Term | Professional Term |
 | --- | --- |
@@ -328,9 +347,8 @@ When an AI agent is asked to write or edit content:
 
 1. **Always read this file first** before generating any content
 2. **Apply the Template Structure** (Section 3) to every new chapter
-3. **Include at least one inline callout** per major section
-4. **End with "Career Boost"** section that includes both bullet points AND
-   interview talking point
+3. **Include at least one inline callout** per major section where it helps
+4. **Use "Career Boost" only when it adds value; keep it brief**
 5. **Include "Stress Test" section** in every chapter
 6. **Include "PH Context" section** in every chapter
 7. **Flag potential issues**: If something might break on older hardware,
@@ -384,7 +402,7 @@ Tone: Empathetic but candid, opinionated, witty, anti-gatekeeping."
 [Advanced topics for those who want more]
 
 ## 💼 Career Boost
-[What employers care about + interview talking point]
+[Brief career value, only when relevant]
 
 ## 🇵🇭 PH Context
 [Philippine-specific considerations: costs, ISPs, hardware, culture]
@@ -417,6 +435,6 @@ This file evolves with the project:
 ---
 
 > **📢 Remember:** This isn't a technical manual. It's a
-> **manifesto and mentor**.
-> Every word should either teach a skill, build confidence, or open a
-> career door.
+> **guide and mentor**.
+> Every word should either teach a skill, build confidence, or help the
+> reader use something useful at home.

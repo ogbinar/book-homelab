@@ -1,7 +1,7 @@
 # Chapter 11: Monitoring — Eyes on Everything
 
 ## What You'll Build
-A professional monitoring dashboard using Prometheus and Grafana that tracks your server's health, container status, and service availability — with alerts that notify you when something goes wrong.
+A clear monitoring dashboard using Prometheus and Grafana that tracks your server's health, container status, and service availability — with alerts that notify you when something goes wrong.
 
 ## How Long It Takes
 2 hours (including reading and configuration)
@@ -30,6 +30,8 @@ If your home setup sits behind CGNAT or shares one household connection, monitor
 
 This chapter builds that dashboard. Hindi ka na manghuhula kung anong sira.
 
+Think of monitoring as the house's alert system: it tells you when something is wrong before someone in the family complains.
+
 > **📢 Jargon Alert:** "Observability" — The ability to understand the internal state of a system by examining its outputs (metrics, logs, traces). Monitoring is collecting the data. Observability is understanding what it means.
 
 ---
@@ -44,6 +46,8 @@ Monitoring tells you:
 - **Soon:** What's going to break? (trends and alerts)
 
 Without monitoring, you're flying blind. *Kung may magpa-message na "down ang service mo" at hindi mo alam — that's the difference between being in control and being surprised.* With monitoring, you're in control.
+
+That same idea is why monitoring should cover the things that matter to the household, not just the fun dashboards. If self, family, or public users depend on it, it deserves a signal.
 
 ---
 
@@ -300,7 +304,7 @@ If Prometheus+Grafana feels overwhelming, Uptime Kuma (which you already have) i
 - Container monitoring
 
 **Interview talking point:**
-> *"I designed and deployed a full observability stack using Prometheus for metrics collection, Grafana for visualization, and cAdvisor for container-level monitoring. The stack tracks 50+ metrics across 7 services with automated alerting via Telegram, achieving complete infrastructure visibility."*
+> *"I designed and deployed a monitoring stack using Prometheus for metrics collection, Grafana for visualization, and cAdvisor for container-level monitoring. The stack tracks key metrics across several services with automated alerting, giving me clear visibility into how the home system behaves."*
 
 ---
 

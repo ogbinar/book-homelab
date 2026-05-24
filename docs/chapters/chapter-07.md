@@ -1,4 +1,4 @@
-# Chapter 7: The Reverse Proxy
+# Chapter 7: The Reverse Proxy + Remote Access
 
 ## What You'll Build
 A reverse proxy (Traefik or Caddy) that lets you access all your homelab services through clean, friendly URLs with automatic SSL certificates. `vault.home.local`, `kuma.home.local`, `nextcloud.home.local` — all working through a single port.
@@ -28,9 +28,9 @@ That's... not great. Every service needs a different port number. You have to re
 
 If your family also uses the same Wi-Fi, random port numbers make the setup feel like a scavenger hunt. Clean URLs make it usable, not just technically correct.
 
-Enter the **reverse proxy** — the "concierge" of your homelab.
+Enter the **reverse proxy** — the front desk of your homelab.
 
-A reverse proxy sits in front of all your services and directs traffic to the right one based on the URL you type. It's like a building concierge: you tell them which apartment you want to visit, and they direct you there. You don't need to know the building's layout.
+A reverse proxy sits in front of all your services and directs traffic to the right one based on the URL you type. It's like the front desk of the house: you say where you want to go, and it points you to the right room. You don't need to know the building's layout.
 
 With a reverse proxy:
 ```
@@ -374,6 +374,8 @@ You've got all your services running behind a reverse proxy on your local networ
 
 This section covers how to access your homelab from anywhere — your phone on mobile data, a coffee shop, or your commute — without opening ports on your router or exposing your lab to the internet unsafely.
 
+Use this chapter to keep the trust boundary clear: some services are for self, some are for family, and only a few should ever be public.
+
 ### Tailscale — Your Homelab, Everywhere (Easiest)
 
 [Tailscale](https://tailscale.com/) is the fastest way to access your homelab from anywhere. It creates a private, encrypted network between all your devices — your server, your phone, your laptop — even when they're on different networks.
@@ -512,6 +514,8 @@ Open any browser (even on a device without Tailscale) and go to `https://kuma.yo
 | **Auth** | Tailscale account | Your service's own auth |
 | **Best for** | Personal access | Sharing with others |
 | **Cost** | Free (personal) | Free (basic) |
+
+If you want a simple rule: Tailscale is usually for `self` and close family, while Cloudflare Tunnel is for the few services you intentionally make public. Keep the front gate small.
 
 ### Security: Why These Are Better Than Port Forwarding
 

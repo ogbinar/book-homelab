@@ -9,6 +9,8 @@ This book is written for readers who want a homelab that is practical, affordabl
 
 The goal is simple: start with what you already have, learn the core patterns well, and build only what you can keep running.
 
+The book uses a school ladder to show maturity, but it keeps the real-world metaphor in the house. Think power, locks, front desk, water reserve, game room, and study room. If a topic does not fit a real household need, it probably belongs later or outside the core path.
+
 ---
 
 ## Read This Book in Order First
@@ -31,6 +33,7 @@ A good homelab should fit your real conditions.
 - If your area gets brownouts, plan for graceful shutdowns and backups early.
 - If your internet is shared with family, housemates, or work-from-home traffic, keep your setup light and predictable.
 - If your ISP is PLDT, Globe, or Converge and you are behind CGNAT, that is normal. The book accounts for that reality.
+- If a service is just for you, keep it private. If it is for the family, keep it simple. If it is public, treat it like a front gate.
 
 You do not need a rack, enterprise gear, or a dedicated room. Sa maraming bahay, an old laptop, a used mini PC, or one quiet box beside the router is already enough.
 
@@ -46,6 +49,8 @@ It means:
 - you can recover when something breaks;
 - you know the limits of your hardware and connection; and
 - your setup still makes sense for your budget, kuryente bill, and daily routine.
+
+That includes knowing who the service is really for: self, family, or the public.
 
 That is already real systems work.
 
@@ -76,4 +81,4 @@ Keep three expectations in mind:
 
 If that sounds acceptable, you are ready.
 
-Continue to **[Chapter 1: Ano ba ang Homelab?](chapters/chapter-01.md)** →
+Continue to **[Chapter 1: What Even Is a Homelab?](chapters/chapter-01.md)** →

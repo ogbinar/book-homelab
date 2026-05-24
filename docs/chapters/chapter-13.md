@@ -1,7 +1,7 @@
 # Chapter 13: Your Homelab Portfolio
 
 ## What You'll Build
-A professional portfolio document that shows what you've built, translates your homelab skills into career language, and gives you something to share with employers, friends, or the homelab community. By the end, you'll have a living document that grows with your lab.
+A clear portfolio document that shows what you've built, explains it in plain language, and gives you something useful to share with employers, friends, family, or the homelab community. By the end, you'll have a living document that grows with your lab and stays useful even if you never change jobs.
 
 ## How Long It Takes
 2 hours (including reading, writing, and setting up a GitHub repo)
@@ -16,13 +16,11 @@ A professional portfolio document that shows what you've built, translates your 
 
 ## The Story
 
-You've spent weeks (or months) building your homelab. You've deployed services, configured networks, set up backups, and hardened your security. You feel proud.
+You've spent weeks (or months) building your homelab. You've deployed services, configured networks, set up backups, and hardened your security. You should feel proud.
 
-But here's the problem: **no one else knows.**
+But here's the problem: **your work is easy to forget if you never write it down.**
 
-Unless you tell someone, your homelab is invisible. And in the professional world, invisible work doesn't count — no matter how much you learned or how much it helped you grow. *Walang masakit sa paggawa ng magandang bagay na walang nakakakita. So let's make sure they see it.*
-
-If you write it down well, the same setup that helped you learn can also help someone hire you. That is the bridge this chapter is building.
+If you document it well, the same setup that helped you learn can also help you explain your skills to someone else. That is the bridge this chapter is building.
 
 This chapter is about making your work visible. Not bragging. Not showing off. But **documenting what you built** so that:
 - Employers see your skills in action
@@ -32,13 +30,15 @@ This chapter is about making your work visible. Not bragging. Not showing off. B
 
 Think of your portfolio as a **bridge between what you know and what you can show.**
 
-> **📢 Jargon Alert:** "Portfolio" — A collection of your best work, organized to demonstrate your skills. In tech, a portfolio is often more valuable than a resume because it shows proof, not just claims.
+You can also make the story easier to understand by saying who the system serves: self, family, or public. That helps the reader see whether your homelab is a private toolbox, a household service, or something more public-facing.
+
+> **📢 Jargon Alert:** "Portfolio" — A collection of your best work, organized to demonstrate your skills. In tech, a portfolio often matters because it shows proof, not just claims.
 
 ---
 
 ## Why This Matters
 
-### The "Experience Paradox"
+### The Experience Paradox
 
 Here's a frustrating truth about the job market:
 - Entry-level jobs require "experience"
@@ -47,7 +47,7 @@ Here's a frustrating truth about the job market:
 
 It's a catch-22. Unless you know about homelabs.
 
-**A homelab IS experience.** It's hands-on work with the same tools, concepts, and challenges that professionals use every day. The only difference is that you're doing it at home instead of in an office. *Hindi ka nag-aaral ng theory — you're actually doing the work. And that's worth more than any certificate.*
+**A homelab IS experience.** It's hands-on work with the same tools, concepts, and challenges that professionals use every day. The only difference is that you're doing it at home instead of in an office. *Hindi ka nag-aaral ng theory — you're actually doing the work. And that matters whether you're keeping it for yourself or talking about it at work.*
 
 When an employer asks "Do you have experience with Docker?" you can say:
 
@@ -61,6 +61,8 @@ That's not "homelab experience." That's **real infrastructure experience.** The 
 2. **For your learning:** Writing about what you built forces you to understand it deeply
 3. **For your community:** Other beginners will learn from your journey
 4. **For your future self:** You'll forget what you did. Documentation saves you from that.
+
+> **💡 Quick Win:** Add one short line to every service description answering two questions: who uses this, and who maintains it?
 
 ---
 
@@ -190,7 +192,7 @@ echo "# My Homelab" > README.md
 
 ## Architecture
 
-![Architecture Diagram](diagrams/architecture.png)
+[Diagram or link to diagram]
 
 ## What I've Learned
 
@@ -199,7 +201,7 @@ echo "# My Homelab" > README.md
 - Backup strategies and disaster recovery
 - Security hardening (SSH keys, firewalls)
 - Automation with cron and scripts
-- Monitoring and observability
+- Monitoring and alerts
 
 ## What I'm Working On
 
@@ -212,9 +214,9 @@ Documentation is shared under [your choice of license].
 Code configurations are shared under MIT License.
 ```
 
-### Step 5: CV Translation — From "Homelab" to "Professional"
+### Step 5: Optional Translation — From "Homelab" to "Professional"
 
-This is the most important step. You need to translate your homelab work into language that HR and hiring managers understand.
+This is a useful step when you need it. Translate your homelab work into language that HR and hiring managers understand, but keep the original story intact.
 
 **The translation table:**
 
@@ -226,17 +228,17 @@ This is the most important step. You need to translate your homelab work into la
 | "I configured Caddy" | "I deployed a reverse proxy with automated TLS" |
 | "I set up backups" | "I designed a disaster recovery strategy" |
 | "I use cron jobs" | "I automate infrastructure maintenance" |
-| "I monitor with Grafana" | "I implement observability and alerting" |
+| "I monitor with Grafana" | "I implement monitoring and alerting" |
 
 **Before and After examples:**
 
 > ❌ **Bad:** "I have a homelab with Docker and some services."
 
-> ✅ **Good:** "I designed and maintain a self-hosted infrastructure stack running 6+ services including monitoring (Prometheus/Grafana), security (Vaultwarden), and file storage (Nextcloud). Infrastructure is managed via Docker Compose with automated backups and health monitoring."
+> ✅ **Good:** "I designed and maintain a self-hosted infrastructure stack running several services including monitoring, security, and file storage. Infrastructure is managed via Docker Compose with automated backups and health monitoring."
 
 > ❌ **Bad:** "I learned networking by setting up my homelab."
 
-> ✅ **Good:** "I implemented network architecture including static IP assignment, DNS configuration (Pi-hole), reverse proxy routing (Caddy), and SSL/TLS management for internal services."
+> ✅ **Good:** "I implemented network architecture including static IP assignment, DNS configuration, reverse proxy routing, and SSL/TLS management for internal services."
 
 **Interview talking points:**
 
@@ -321,7 +323,7 @@ Copy this structure into your portfolio README and replace the placeholders with
 2. [Lesson 2]
 3. [Lesson 3]
 
-## What's Next
+## What Comes Next
 - [ ] [Next goal 1]
 - [ ] [Next goal 2]
 - [ ] [Next goal 3]
@@ -350,21 +352,21 @@ Where to share your work:
 
 ## 💼 Career Boost
 
-### How to Talk About Your Homelab in Interviews
+### How to Talk About Your Homelab When It Helps
 
 When asked "Tell me about yourself" or "What projects have you worked on?":
 
-> *"Outside of work, I design and maintain a self-hosted infrastructure stack. I run 6 services using Docker and Docker Compose — including a password manager, file storage, ad blocker, and monitoring system. The infrastructure includes automated backups, security hardening, and observability with Prometheus and Grafana. I started it to save on subscriptions, but it became the fastest way I've found to learn real infrastructure skills. The biggest challenge was getting Pi-hole working with my router — it taught me more about DNS and networking than any course could."*
+> *"Outside of work, I design and maintain a self-hosted infrastructure stack. I run several services using Docker and Docker Compose — including a password manager, file storage, ad blocker, and monitoring system. The infrastructure includes automated backups, security hardening, and monitoring. I started it to save on subscriptions, but it became a practical way to learn real infrastructure skills. The biggest challenge was getting Pi-hole working with my router — it taught me more about DNS and networking than any course could."*
 
-### CV/Resume Entries
+### Resume / Portfolio Entries
 
-Add this section to your resume:
+Add this section to your portfolio or resume if it helps:
 
 ```
 Self-Hosted Infrastructure | Personal Project | [Date] - Present
-• Designed and maintain a 6-service homelab stack using Docker and Docker Compose
+• Designed and maintained a 6-service homelab stack using Docker and Docker Compose
 • Implemented automated backups (3-2-1 strategy) with monthly restore verification drills
-• Deployed monitoring and alerting stack (Prometheus, Grafana, node-exporter)
+• Deployed a monitoring and alerting stack (Prometheus, Grafana, node-exporter)
 • Configured reverse proxy (Caddy) with automatic TLS for internal services
 • Implemented security hardening: SSH key authentication, firewall (UFW), fail2ban
 • Automated infrastructure maintenance with cron jobs and Watchtower, reducing
@@ -374,7 +376,7 @@ Self-Hosted Infrastructure | Personal Project | [Date] - Present
 
 ### Remote Work Opportunities
 
-Homelab skills translate directly to remote work roles:
+Homelab skills can translate directly to remote work roles:
 - **DevOps Engineer** — Docker, automation, monitoring
 - **Site Reliability Engineer** — Uptime, reliability, backups
 - **Cloud Engineer** — Same concepts, just in the cloud
@@ -450,9 +452,9 @@ But the journey doesn't end here. There are always more services to deploy, more
 
 ---
 
-> **💸 Lean Path:** GitHub is free for public repositories. Your homelab portfolio doesn't need fancy tools — a well-written README.md, a few screenshots, and honest career translations are worth more than any polished portfolio website. The best portfolio is the one you actually finish, not the one you spend months designing.
+> **💸 Lean Path:** GitHub is free for public repositories. Your homelab portfolio doesn't need fancy tools — a well-written README.md, a few screenshots, and honest explanations are worth more than any polished portfolio website. The best portfolio is the one you actually finish, not the one you spend months designing.
 
-> **🚀 Turbo:** Want to stand out even more? Write a blog post about your homelab journey. Use GitHub Pages (free) to host a simple site with your architecture diagram, lessons learned, and budget breakdown. Recruiters don't just want to see that you built something — they want to see that you can communicate about it. A well-written blog post is worth more than three certifications.
+> **🚀 Turbo:** Want to stand out even more? Write a blog post about your homelab journey. Use GitHub Pages (free) to host a simple site with your architecture diagram, lessons learned, and budget breakdown. People reviewing your work don't just want to see that you built something — they want to see that you can communicate about it. A well-written blog post is worth more than three certifications.
 
 ---
 
@@ -466,6 +468,6 @@ But the journey doesn't end here. There are always more services to deploy, more
 
 ---
 
-> **📢 Remember:** Your homelab is real work. Don't minimize it. Don't apologize for it. Own it. The skills you're building here are the same skills that power the companies you want to work for. The only difference is the address.
+> **📢 Remember:** Your homelab is real work. Don't minimize it. Don't apologize for it. Own it. The skills you're building here are useful at home and useful at work. The only difference is the address.
 
 Before you head to the reference material, read the short **[Closing Note](../closing-note.md)**.

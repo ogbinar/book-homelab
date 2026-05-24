@@ -50,6 +50,8 @@ These definitions stay beginner-friendly on purpose. When a term has a Philippin
 
 **Docker Volume** — A way to store data outside of containers so it persists when containers are deleted. Think of it like a USB drive for your container's data.
 
+**Dokploy** — A web-based tool for deploying and managing containerized applications. Think of it as a control panel or operations desk for a growing homelab.
+
 ---
 
 ## F
@@ -162,6 +164,8 @@ These definitions stay beginner-friendly on purpose. When a term has a Philippin
 
 **Localhost / 127.0.0.1** — Refers to your own computer. When a service binds to localhost, it can only be accessed from the same machine. Useful for services that don't need external access.
 
+**Local LLM** — A large language model that runs on your own hardware instead of a cloud service. Useful for private AI experiments, document chat, and offline assistance, but hardware requirements vary a lot.
+
 ---
 
 ## T (added)
@@ -202,6 +206,8 @@ These definitions stay beginner-friendly on purpose. When a term has a Philippin
 
 **Systemd** — The init system and service manager used by Ubuntu and most modern Linux distributions. It controls what services start at boot, monitors running services, and manages system state. Commands like `systemctl restart ssh` or `systemctl enable docker` use systemd.
 
+**Stakeholder Lens** — A simple way to ask who a service is for: self, family, public, or service management. It helps decide how private, simple, or exposed the service should be.
+
 ---
 
 ## N (added)
@@ -217,6 +223,8 @@ These definitions stay beginner-friendly on purpose. When a term has a Philippin
 **Grep** — A command-line tool for searching text. `grep "error" /var/log/syslog` finds all lines containing "error" in the syslog file. Essential for log analysis and troubleshooting.
 
 **GUI** — Graphical User Interface. The visual way of interacting with a computer (windows, icons, mouse). Ubuntu Server has no GUI — you interact with it entirely through the command line (CLI). This is intentional: servers don't need GUIs, and removing them saves resources.
+
+**Game Server** — A server that hosts multiplayer game sessions for friends or family. In a homelab, game servers are useful because they need real CPU, RAM, network, and recovery planning.
 
 ---
 
