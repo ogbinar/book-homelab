@@ -26,6 +26,8 @@ http://192.168.1.100:8096   # Jellyfin
 
 That's... not great. Every service needs a different port number. You have to remember which port goes with which service. And if you ever want to access your homelab from outside your home, you need to figure out port forwarding for each one. *Think about it — you're already tired remembering which port is which. Imagine kung may 10 services ka. Hindi 'yan sustainable.*
 
+If your family also uses the same Wi-Fi, random port numbers make the setup feel like a scavenger hunt. Clean URLs make it usable, not just technically correct.
+
 Enter the **reverse proxy** — the "concierge" of your homelab.
 
 A reverse proxy sits in front of all your services and directs traffic to the right one based on the URL you type. It's like a building concierge: you tell them which apartment you want to visit, and they direct you there. You don't need to know the building's layout.

@@ -22,6 +22,8 @@ But here's the problem: **no one else knows.**
 
 Unless you tell someone, your homelab is invisible. And in the professional world, invisible work doesn't count — no matter how much you learned or how much it helped you grow. *Walang masakit sa paggawa ng magandang bagay na walang nakakakita. So let's make sure they see it.*
 
+If you write it down well, the same setup that helped you learn can also help someone hire you. That is the bridge this chapter is building.
+
 This chapter is about making your work visible. Not bragging. Not showing off. But **documenting what you built** so that:
 - Employers see your skills in action
 - Friends and family understand what you do
@@ -465,3 +467,5 @@ But the journey doesn't end here. There are always more services to deploy, more
 ---
 
 > **📢 Remember:** Your homelab is real work. Don't minimize it. Don't apologize for it. Own it. The skills you're building here are the same skills that power the companies you want to work for. The only difference is the address.
+
+Before you head to the reference material, read the short **[Closing Note](../closing-note.md)**.

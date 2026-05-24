@@ -24,6 +24,8 @@ You can reinstall everything. But your **data**? The photos you took? The docume
 
 If you set up a quick manual backup in Chapter 5, you have a safety net. But a manual copy is not a strategy. *Ang manual backup parang nag-iipon ng pera sa ilalim ng kutson — may nakaipon ka, pero kailangan mong i-check kung nandoon pa rin.'* This chapter upgrades you from "I hope I backed up" to "I know my backups work" — with the full 3-2-1 strategy, automation, and tested restore drills.
 
+That matters just as much in a Filipino home where the backup drive might live in a drawer, a closet, or a relative's place across town.
+
 ---
 
 ## Why This Matters

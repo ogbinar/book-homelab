@@ -19,6 +19,8 @@ You've got a server. You've got Docker. You've got Uptime Kuma watching over eve
 
 This chapter is about building something useful. Something you'll touch every day. Something that makes you go: *Hindi ko kailangan magbayad ng subscription para sa 'to.*
 
+Sa totoo lang, the best first win is usually the boring one that solves a real daily headache. If you live with family, share Wi-Fi with siblings, or keep all your files on a phone that is always full, pick the service that feels useful on day one.
+
 You get to choose. Pick at least one — we recommend starting with 2-3 so you have enough services for Chapter 8. You can always add more later, but for now, pick a couple and make them good.
 
 ---
@@ -31,6 +33,8 @@ Choosing your first service is about choosing your first win. You want something
 3. You'll actually use every day
 
 The service you pick becomes the proof that self-hosting isn't just a hobby — it's a better way to manage your digital life.
+
+If it saves you money, time, or frustration in a Philippine setup, that's not a side benefit. That's the whole point.
 
 ---
 
@@ -182,6 +186,8 @@ Access it at `http://YOUR_SERVER_IP:8096`. Follow the setup wizard to add your m
 - Your own collection ( DVDs, downloads you already have)
 - Public domain content (Internet Archive, Public Domain Torrents)
 - Your own photos and home videos (this is actually the most popular use)
+
+If your family already shares videos through Messenger or Google Drive, Jellyfin is the cleaner version of that habit. Same use case, but walang subscription at walang random storage warning.
 
 > **💸 Lean Path:** Start with your own photos and home videos. That's free, meaningful, and a great way to learn Jellyfin without worrying about "piracy" conversations.
 

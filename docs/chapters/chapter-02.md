@@ -22,6 +22,8 @@ Your first server doesn't need to be that.
 
 It could be your old laptop from college. It could be a Raspberry Pi that fits on your desk. It could be a second-hand mini PC you found on Facebook Marketplace for ₱5,000. It could even be a desktop you were going to throw away. *Bakit bawasan pa ang bayad sa cloud kapag may existing na hardware na walang ginagawa?*
 
+Sa maraming bahay, the first server is just the machine nobody is using anymore. That's enough to start learning without spending extra.
+
 **A server is just a computer that stays on and serves something.** That's it. The word makes it sound bigger than it is.
 
 Think of it like this: your laptop IS a server right now. It's serving you. If you installed server software on it and left it running to serve files to your phone, it'd be a file server. The hardware doesn't change — only what it does.

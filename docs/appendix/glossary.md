@@ -2,6 +2,8 @@
 
 _Terms and definitions used throughout this book._
 
+These definitions stay beginner-friendly on purpose. When a term has a Philippines-specific implication, the glossary calls it out instead of assuming you already know the local edge case.
+
 ---
 
 ## A

@@ -93,7 +93,7 @@ This guide is heavily inspired by the spirit of **[Data Engineering Pilipinas (D
 
 ## Ready?
 
-Let's start with **[Chapter 1: Ano ba ang Homelab?](chapters/chapter-01.md)** →
+Start with the short **[Preface: How to Use This Book](preface.md)**, then continue to Chapter 1.
 
 ---
 

@@ -23,6 +23,8 @@ Now imagine your house has 10 rooms, but the doors have no numbers. You have to 
 
 Your home network probably works right now — your phone gets internet, your laptop streams Netflix, your smart TV plays YouTube. But do you know how? Do you know what happens when you type a URL and hit Enter? *Kung naka-dependé ka sa internet every day, worth it 'yang effort na ma-intindihan mo kung paano ito gumagana.*
 
+Sa maraming Filipino homes, one router feeds a lot of devices, and nobody thinks about the wiring until something slows down or disappears. Once you understand the layout, the whole house makes more sense.
+
 Let's find out.
 
 ---

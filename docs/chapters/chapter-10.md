@@ -24,6 +24,8 @@ Think of automation like a dishwasher. You could wash every dish by hand. It wor
 
 We're going to set up the homelab equivalent of a dishwasher. *Hindi ka nagluluto ng pagkain para maghugas ng plato, right? So why spend your time on repetitive tasks na pwedeng gawin ng machine?*
 
+The goal is simple: let the machine handle the chores so you can focus on the parts of the homelab that actually teach you something.
+
 ---
 
 ## Why This Matters

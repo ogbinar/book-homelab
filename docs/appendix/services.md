@@ -8,6 +8,8 @@ _Self-hosted services and tools for your homelab, with complexity ratings, resou
 
 > **Quick Reference:** Deployment — **[Chapter 4](../chapters/chapter-04.md)**. Reverse proxy — **[Chapter 7](../chapters/chapter-07.md)**. Monitoring — **[Chapter 11](../chapters/chapter-11.md)**.
 
+These service notes are written for Filipino beginners first: they call out local cost pressure, mobile-first usage, and ISP realities where it matters.
+
 ---
 
 ### Uptime Kuma — Monitoring

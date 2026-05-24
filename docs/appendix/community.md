@@ -11,6 +11,8 @@ _How to connect with other homelabbers._
 ### Data Engineering Pilipinas (DEP)
 **[https://dataengineering.ph/](https://dataengineering.ph/)**
 
+If you want this hobby to stick, plug into people early. The right community makes homelabbing less lonely, less intimidating, and a lot more fun.
+
 This guide exists because of DEP. This guide is inspired by DEP. This guide is for DEP.
 
 DEP is built around:

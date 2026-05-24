@@ -20,6 +20,8 @@ Two weeks later, your power goes out during a storm. When it comes back, your se
 
 You spend 3 hours fixing it. Your service is back. But you make a promise to yourself: *Hindi na ulit 'to.*
 
+Sa PH, this is not some edge case. A brownout, a loose power cable, or a quick flicker from the utility line can turn a "working" setup into a Saturday rescue mission.
+
 That promise is what this chapter is about. The difference between a toy and a tool is **reliability**. Anyone can deploy something that works today. A homelabber builds systems that work tomorrow, next week, and next month — even when things go wrong.
 
 Because they will.
@@ -31,6 +33,8 @@ Because they will.
 In professional infrastructure, there's a concept called **Mean Time Between Failures (MTBF)**. It's how long a system runs before something breaks. In homelabbing, your MTBF is measured in days, not years. Power outages. Docker updates that break things. Disk errors. Network issues.
 
 The goal isn't to prevent failures (impossible). The goal is to **recover quickly and automatically**.
+
+If the power blips while you're out, or somebody in the house shuts off the breaker, you want the system to come back without drama. Hindi yung uubusin mo ang oras mo kakahanap kung anong serbisyo ang nawala.
 
 > **📢 Jargon Alert:** "Idempotent" — Running this command 10 times has the same result as running it once. Like pressing the "play" button on Spotify — pressing it once or ten times, you get the same song playing. We want our infrastructure to be idempotent: no matter how many times we restart, the result is the same working system.
 
@@ -77,6 +81,8 @@ Uptime Kuma (which you installed in Chapter 3) is already monitoring your servic
    - Your homelab services (HTTP monitors on their ports)
    - Your server itself (Ping monitor on your server's IP)
    - Your internet connection (Ping monitor on 8.8.8.8)
+
+If your ISP is flaky, also add a monitor for your router or gateway. That way you can tell the difference between "the service is down" and "the internet is down," which is a very different problem in a Filipino home.
 
 **Example monitor settings:**
 - **Type:** HTTP(s)

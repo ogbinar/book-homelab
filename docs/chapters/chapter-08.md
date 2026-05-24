@@ -26,6 +26,8 @@ Adding a new service means:
 
 What if you could manage your entire homelab from one file? One command to start everything. One command to back up everything. One command to rebuild from scratch? *Imagine kung sa-isang command, lahat ng services mo ay nabubuhay ulit. No more hunting for config files sa iba't-ibang directories.*
 
+That matters even more when you are juggling work, family, and a setup that's growing in spare time. Less hunting, less kalat, less stress.
+
 That's what a **Docker Compose stack** is — a single file that defines every service, every network, every volume, and every environment variable for your entire homelab. Isang source of truth lang. Less kalat, less guesswork.
 
 ---

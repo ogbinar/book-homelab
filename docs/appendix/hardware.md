@@ -6,6 +6,8 @@ _Recommended hardware for building your homelab, from lean to turbo — with pri
 
 > **⚠️ Disclaimer:** Prices are estimates based on Q1 2026 market rates in the Philippines. Hardware prices change frequently — always verify before purchasing.
 
+This appendix is intentionally PH-practical: it assumes budget pressure, second-hand parts, hot rooms, weak upload speeds, and the kind of power reality most home setups deal with here.
+
 ---
 
 ## 🟢 Lean Path: ₱0-₱15,000

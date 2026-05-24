@@ -3,7 +3,7 @@ site_name: "Bahay Bahayan: Build Your First Homelab"
 site_description: >
   Start Small. Learn Fast. Build What's Yours.
   A Filipino-first guide to building your homelab.
-site_url: https://book-homelab.pages.dev
+site_url: https://ogbinar.com/book-homelab/
 repo_url: https://github.com/ogbinar/book-homelab
 repo_name: ogbinar/book-homelab
 copyright: "Bahay Bahayan is released under CC BY-SA 4.0. Free forever."
@@ -134,6 +134,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - "Start Here: Preface": preface.md
   - "Part I: Bahay Bahayan":
       - part-i.md
       - "Ch 1: Ano ba ang Homelab?": chapters/chapter-01.md
@@ -151,6 +152,7 @@ nav:
       - "Ch 11: Monitoring: Eyes on Everything": chapters/chapter-11.md
       - "Ch 12: Security: Don't Get Hacked": chapters/chapter-12.md
       - "Ch 13: Your Homelab Portfolio": chapters/chapter-13.md
+  - "Closing Note": closing-note.md
   - Appendices:
       - "A: About the Author": appendix/author.md
       - "B: Glossary": appendix/glossary.md
@@ -159,3 +161,5 @@ nav:
       - "E: Service Directory": appendix/services.md
       - "F: Community": appendix/community.md
       - "G: Commands Reference": appendix/commands.md
+  - Archive:
+      - "[Archived] Launch Readiness Report": launch-readiness-report.md

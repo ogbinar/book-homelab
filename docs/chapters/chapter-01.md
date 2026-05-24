@@ -70,6 +70,8 @@ You don't need to be. The best homelabbers aren't geniuses — they're just stub
 
 The cheapest possible homelab costs ₱0 — your old laptop or desktop already exists. The next step up is a Raspberry Pi for ₱5,000. Even the enterprise-grade setups people see on YouTube (₱100,000+) are the exception, not the rule. **Most working homelabs cost less than ₱15,000.**
 
+For a lot of Filipino beginners, the real question is not "Can I afford a homelab?" It's "Can I start with what I already have?" Usually the answer is yes.
+
 ### "I'll break something."
 
 You might. And that's fine. In a homelab, breaking things is how you learn. Your homelab isn't running a hospital or air traffic control. If something breaks, you fix it or reinstall it. That's the point.

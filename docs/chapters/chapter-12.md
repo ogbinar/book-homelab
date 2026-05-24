@@ -29,6 +29,8 @@ This chapter isn't about fear. It's about **knowing what you're doing.** Every s
 
 > **🇵🇭 PH Context — Power Cycles and Security:** In areas with brownouts or frequent power cuts (common during typhoon season in the PH), your server might reboot unexpectedly. Make sure your firewall rules, SSH keys, and fail2ban settings survive reboots. After a power outage, your server should come up secure — not vulnerable. *Hindi naman natin 'to ginagawa para matakot ka. Ginagawa natin 'to para alam mo na pinagmumulan ng security ang mga settings na 'to.*
 
+Sa bahay, people often think the router password or the default admin page is "good enough." That habit is exactly what makes small home setups easy to poke at.
+
 ---
 
 ## Why This Matters

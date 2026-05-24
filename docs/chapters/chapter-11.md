@@ -26,6 +26,8 @@ Or you could have a single dashboard that shows you everything at a glance:
 - Is the internet connection stable? *(In the PH context, this is a fair question — PLDT, Globe, and Converge fiber cuts happen regularly, especially during typhoon season. Your monitoring should distinguish between "service is down" and "internet is down.")*
 - How many requests is each service handling?
 
+If your home setup sits behind CGNAT or shares one household connection, monitoring is the only way to know whether a problem is local, upstream, or just a temporary brownout.
+
 This chapter builds that dashboard. Hindi ka na manghuhula kung anong sira.
 
 > **📢 Jargon Alert:** "Observability" — The ability to understand the internal state of a system by examining its outputs (metrics, logs, traces). Monitoring is collecting the data. Observability is understanding what it means.
@@ -218,6 +220,7 @@ Prometheus and Grafana are a strong fit for a homelab because they split collect
 
 - Prometheus keeps your metrics locally, which means you can build history without paying for a SaaS monitoring bill.
 - Grafana turns that data into dashboards you can actually use on desktop or mobile.
+- In a PH home, that also means you can keep checking your setup even when the ISP is having a bad day, because your own metrics history is still there.
 - Node Exporter and cAdvisor give you both server-level and container-level visibility.
 - The whole stack runs comfortably on modest hardware, which matters when you are building at home and not in a datacenter.
 

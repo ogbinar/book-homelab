@@ -13,6 +13,8 @@ This part takes you from **"What even is a homelab?"** to **"I have a working mu
 
 Each chapter is self-contained. You can read them in order, or jump around if you need to. Every chapter should leave you with something real.
 
+If you want the cleanest starting point, read the short **[Preface: How to Use This Book](preface.md)** first.
+
 ---
 
 ## The Journey: Consumer → Tinkerer
