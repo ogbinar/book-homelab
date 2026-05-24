@@ -183,7 +183,7 @@ Access it at `http://YOUR_SERVER_IP:8096`. Follow the setup wizard to add your m
 - Public domain content (Internet Archive, Public Domain Torrents)
 - Your own photos and home videos (this is actually the most popular use)
 
-> **💸 The Lean Path:** Start with your own photos and home videos. That's free, meaningful, and a great way to learn Jellyfin without worrying about "piracy" conversations.
+> **💸 Lean Path:** Start with your own photos and home videos. That's free, meaningful, and a great way to learn Jellyfin without worrying about "piracy" conversations.
 
 ---
 

@@ -2,7 +2,7 @@
 
 _Recommended hardware for building your homelab, from lean to turbo — with prices, vendors, and compatibility guides._
 
-> **Quick Reference:** Hardware setup — **[Chapter 2](chapters/chapter-02.md)**. Power considerations — **[Chapter 5](chapters/chapter-05.md)**. Storage planning — **[Chapter 8](chapters/chapter-08.md)**. Remote access — **[Chapter 7](chapters/chapter-07.md)**.
+> **Quick Reference:** Hardware setup — **[Chapter 2](../chapters/chapter-02.md)**. Power considerations — **[Chapter 5](../chapters/chapter-05.md)**. Storage planning — **[Chapter 8](../chapters/chapter-08.md)**. Remote access — **[Chapter 7](../chapters/chapter-07.md)**.
 
 > **⚠️ Disclaimer:** Prices are estimates based on Q1 2026 market rates in the Philippines. Hardware prices change frequently — always verify before purchasing.
 
@@ -351,4 +351,4 @@ You don't need to plan your upgrade. Start with what you have. Here's when it's 
 3. **CPU is maxed out** — `htop` shows sustained 100% usage → Upgrade to next tier
 4. **You need more services** — Your current setup handles what you need → You're not ready to upgrade yet
 
-> **💸 The Lean Path Reminder:** The best server is the one you already own. Don't buy anything new unless you absolutely need to. Start with what you have, learn, and upgrade only when you hit a real limitation. A homelab on a ₱5,000 mini PC is infinitely more valuable than a homelab plan for a ₱100,000 setup that never gets built.
+> **💸 Lean Path Reminder:** The best server is the one you already own. Don't buy anything new unless you absolutely need to. Start with what you have, learn, and upgrade only when you hit a real limitation. A homelab on a ₱5,000 mini PC is infinitely more valuable than a homelab plan for a ₱100,000 setup that never gets built.

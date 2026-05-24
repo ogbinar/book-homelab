@@ -201,7 +201,7 @@ This is a basic safety net. In **Chapter 9**, you'll set up the full automated b
 | **Restic** | Encrypted, deduplicated, cloud support | Steeper learning curve | Advanced users |
 | **BorgBackup** | Excellent deduplication, encrypted | Linux-only, complex | Large datasets |
 
-> **💸 The Lean Path:** If you don't have an external drive yet, your backup is "manual: copy important data to a friend's house or Google Drive." That's better than nothing.
+> **💸 Lean Path:** If you don't have an external drive yet, your backup is "manual: copy important data to a friend's house or Google Drive." That's better than nothing.
 
 ---
 

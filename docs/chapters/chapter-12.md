@@ -25,7 +25,7 @@ Here's what happens when you expose anything to the internet: **bots find it.** 
 
 > ⚠️ **The Pitfall:** Your homelab is not "just a hobby." To a bot, it's just another server with an IP address. Bots don't care that you're learning — they'll try to exploit your server just like they'd try to exploit a production server.
 
-This chapter isn't about fear. It's about **knowing what you're doing.** Every step here has a reason. Skip them at your own risk.
+This chapter isn't about fear. It's about **knowing what you're doing.** Every step here has a reason. Hindi natin pinapahirapan ang sarili natin; binabawasan lang natin ang attack surface. Skip them at your own risk.
 
 > **🇵🇭 PH Context — Power Cycles and Security:** In areas with brownouts or frequent power cuts (common during typhoon season in the PH), your server might reboot unexpectedly. Make sure your firewall rules, SSH keys, and fail2ban settings survive reboots. After a power outage, your server should come up secure — not vulnerable. *Hindi naman natin 'to ginagawa para matakot ka. Ginagawa natin 'to para alam mo na pinagmumulan ng security ang mga settings na 'to.*
 
@@ -369,7 +369,7 @@ Then assign services to appropriate networks based on their exposure requirement
 
 ## 🇵🇭 PH Context
 
-> **💸 Lean Path:** Every security tool in this chapter is free: UFW (built into Ubuntu), fail2ban (open source, free), SSH keys (free), Docker security features (free). You're building enterprise-grade security with ₱0 in software costs. The only investment is learning time — and that's the kind of time that pays dividends in your career.
+> **💸 Lean Path:** Every security tool in this chapter is free: UFW (built into Ubuntu), fail2ban (open source, free), SSH keys (free), Docker security features (free). You're building enterprise-grade security with ₱0 in software costs. The only investment is learning time — and that's the kind of time that pays dividends in your career. Walang dagdag bayad, pero malaking bawas risk.
 
 ### Philippine-Specific Threats
 
@@ -407,7 +407,7 @@ Now let's prove your security works:
 
 ## What's Next
 
-Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. Remote access patterns are covered in Chapter 7 alongside the reverse proxy — check back there if you haven't set up Tailscale or Cloudflare Tunnel yet. In Chapter 13, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.**
+Your homelab is now secure. You've gone from a curious beginner to someone who can build, secure, monitor, and maintain a production-grade infrastructure at home. Remote access patterns are covered in Chapter 7 alongside the reverse proxy — check back there if you haven't set up Tailscale or Cloudflare Tunnel yet. In Chapter 13, we'll document everything you've built and turn it into a portfolio that shows employers: **here's what I can do.** Hindi lang ito setup; may story na rin ang work mo.
 
 **Homework:**
 1. Set up SSH key authentication and disable password login

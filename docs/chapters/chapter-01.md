@@ -58,7 +58,7 @@ And beyond ownership, a homelab is the single fastest way to learn real technolo
 
 ---
 
-## Common Fears (And Why They're Wrong
+## Common Fears (And Why They're Wrong)
 
 Let's address the elephant in the room. Before anyone starts a homelab, they usually have these fears:
 
@@ -212,7 +212,7 @@ The Filipino tech community is one of the best resources for homelabbers:
 
 ## What's Next
 
-Now that you know what a homelab is and why you might want one, it's time to get practical. In **[Chapter 2: Your First Server](chapters/chapter-02.md)**, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.
+Now that you know what a homelab is and why you might want one, it's time to get practical. In **[Chapter 2: Your First Server](chapter-02.md)**, we'll talk about hardware — what you need, where to get it in the Philippines, and why you can probably start with ₱0.
 
 **Homework:** Write down your "why." Keep it somewhere you'll see it. We'll come back to it.
 

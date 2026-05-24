@@ -11,7 +11,7 @@ hide:
 
 > **Start Small. Learn Fast. Build What's Yours.**
 
-Kumusta! This is a Filipino-first guide to building your own homelab — your personal server at home where you run your own services, control your own data, and learn real infrastructure skills.
+Kumusta! This is a Filipino-first guide to building your own homelab — your personal server at home where you run your own services, control your own data, and learn real infrastructure skills. Start small, learn fast, and build something you can actually keep running.
 
 Whether you're a student, a career shifter, a hobbyist, or just curious — this book is for you.
 
@@ -81,13 +81,13 @@ Here's what self-hosting can save you:
 
 ## About the Author
 
-**Myk** is not a hardcore sysadmin or enterprise architect. He's just someone who likes to tinker, experiment, and see how far existing computers can still go before throwing them away.
+**Myk Ogbinar** is a full-time corporate professional and part-time PhD student with a long-running interest in data, AI, and community building. His work tends to favor useful systems, clear thinking, and honest execution.
 
-What started as curiosity slowly turned into a homelab, a personal cloud, and eventually a small AI lab built mostly from **recycled hardware, open-source software, and lots of trial and error.**
+Outside of work and study, he keeps up with learning, books, games, and family life. That mix of responsibilities is why this book stays practical, budget-aware, and focused on what you can actually maintain.
 
 This guide is heavily inspired by the spirit of **[Data Engineering Pilipinas (DEP)](https://dataengineering.ph/)** — a community built around learning openly, sharing knowledge freely, and helping people grow without gatekeeping.
 
-> **The goal is not perfection.** The goal is to build, learn, break things, fix them, and hopefully help others do the same.
+> **The goal is not perfection.** The goal is to build, learn, break things, fix them, and keep moving with a clearer point of view.
 
 ---
 

@@ -2,6 +2,10 @@
 
 > **A Filipino-context-aware guide to building your first homelab — from ₱0 to a fully automated, monitored, and secure infrastructure.**
 
+**Official repository:** https://github.com/ogbinar/book-homelab
+
+**README:** https://github.com/ogbinar/book-homelab/blob/main/README.md
+
 **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
@@ -86,41 +90,61 @@ This book is written for Filipinos, by Filipinos (well, for Filipinos). We inclu
 Contributions are welcome! This book is licensed under CC BY-SA 4.0.
 
 1. Fork and clone this repository
-2. Follow the chapter template in `templates/chapter-template.md`
-3. Maintain the Taglish tone (natural mix of Filipino + English)
-4. Include PH context where relevant
+2. Follow the structure used in the existing chapters under `docs/chapters/`
+3. Keep the Taglish tone natural, not forced
+4. Include PH context where it helps the reader
 5. Submit a pull request
+
+## Report an Error
+
+If you find a factual error, broken link, typo, or unclear instruction:
+
+1. Open a GitHub issue at https://github.com/ogbinar/book-homelab/issues
+2. Include the chapter, section heading, and the exact line or quote that needs fixing
+3. Describe the correction you want to see
+4. If you already know the fix, submit a pull request instead of waiting for a maintainer
+
+Keep reports specific. "Chapter 8, Docker Compose example, missing volume mount" is actionable. "Something is wrong" is not.
 
 ## Directory Structure
 
 ```
 book-homelab/
-├── README.md                  # This file
-├── agents.md                  # Style guide and manifesto
+├── README.md
+├── agents.md
 ├── design/
-│   └── book-design.md         # Full book structure and design spec
-├── ideas.md                   # Brainstorming and user journey
-├── research/
-│   └── homelab-ecosystems-research.md
-├── professional-profiles-matrix.md
-├── templates/
-│   └── chapter-template.md    # Template for new chapters
-└── chapters/
-    ├── part-i-bahay/          # Chapters 1-6 (Building the foundation)
-    │   ├── chapter-01-what-is-homelab.md
-    │   ├── chapter-02-your-first-server.md
-    │   ├── chapter-03-hello-container.md
-    │   ├── chapter-04-something-useful.md
-    │   ├── chapter-05-keeping-it-alive.md
-    │   └── chapter-06-your-first-network.md
-    └── part-ii-lumaki/        # Chapters 7-13 (Growing your lab)
-        ├── chapter-07-reverse-proxy.md
-        ├── chapter-08-multiple-services-one-system.md
-        ├── chapter-09-your-data-safe.md
-        ├── chapter-10-automation-work-less.md
-        ├── chapter-11-monitoring-eyes-on-everything.md
-        ├── chapter-12-security-dont-get-hacked.md
-        └── chapter-13-homelab-portfolio.md
+│   └── book-design.md
+├── docs/
+│   ├── index.md
+│   ├── launch-readiness-report.md
+│   ├── part-i.md
+│   ├── part-ii.md
+│   ├── chapters/
+│   │   ├── chapter-01.md
+│   │   ├── chapter-02.md
+│   │   ├── chapter-03.md
+│   │   ├── chapter-04.md
+│   │   ├── chapter-05.md
+│   │   ├── chapter-06.md
+│   │   ├── chapter-07.md
+│   │   ├── chapter-08.md
+│   │   ├── chapter-09.md
+│   │   ├── chapter-10.md
+│   │   ├── chapter-11.md
+│   │   ├── chapter-12.md
+│   │   └── chapter-13.md
+│   └── appendix/
+│       ├── author.md
+│       ├── commands.md
+│       ├── community.md
+│       ├── errors.md
+│       ├── glossary.md
+│       ├── hardware.md
+│       └── services.md
+├── mkdocs.yml
+├── review-report.md
+├── plan-fix.md
+└── plan-fix-review.md
 ```
 
 ## License

@@ -279,7 +279,7 @@ When you share your journey, you're contributing to a community that helps other
 
 ### Portfolio Structure Template
 
-Use this structure for your portfolio README:
+Copy this structure into your portfolio README and replace the placeholders with your own details:
 
 ```markdown
 # [Your Name]'s Homelab
@@ -329,6 +329,8 @@ Use this structure for your portfolio README:
 - Portfolio: [Your website or Notion page]
 - LinkedIn: linkedin.com/in/yourprofile
 ```
+
+If you want the shortest path: paste this template, fill it in, add 3-5 screenshots, and publish. Hindi kailangan perfect; kailangan visible at honest.
 
 ### Sharing Your Portfolio
 

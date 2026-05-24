@@ -9,9 +9,9 @@ description: "Consumer to Tinkerer. Get something running in under 2 hours."
 
 > **Goal:** Get something running on a server in under 2 hours. Build confidence. Understand what a homelab is.
 
-This part takes you from **"What even is a homelab?"** to **"I have a working multi-service lab on my network."**
+This part takes you from **"What even is a homelab?"** to **"I have a working multi-service lab on my network."** The point is momentum: one chapter, one result, no fluff.
 
-Each chapter is self-contained. You can read them in order, but you can also jump around. Every chapter produces something real.
+Each chapter is self-contained. You can read them in order, or jump around if you need to. Every chapter should leave you with something real.
 
 ---
 

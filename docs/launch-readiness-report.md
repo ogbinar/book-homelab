@@ -1,8 +1,8 @@
-# Launch Readiness Report: Bahay Bahayan MVP v1.0
+# [Archived] Launch Readiness Report: Bahay Bahayan MVP v1.0
 
 **Date:** May 18, 2026
 **Scope:** Plan vs. implementation comparison across 13 chapters + 7 appendices
-**Verdict:** ⚠️ **CONDITIONAL LAUNCH** — structurally complete, needs polish on 4 items
+**Verdict:** Historical snapshot only. This report predates the current cleanup pass and is kept for reference, not as source of truth.
 
 ---
 

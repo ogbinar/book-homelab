@@ -15,7 +15,7 @@ A well-organized Docker Compose stack that manages all your homelab services fro
 
 ## The Story
 
-Right now, your services are probably scattered across different directories, each started with its own `docker run` command or separate `docker-compose.yml` file. It works, but it's messy.
+Right now, your services are probably scattered across different directories, each started with its own `docker run` command or separate `docker-compose.yml` file. It works, but it's messy. Sa totoo lang, nakakaubos ng oras maghanap ng config kung saan-saan nakatago.
 
 Adding a new service means:
 1. Creating a new directory
@@ -26,7 +26,7 @@ Adding a new service means:
 
 What if you could manage your entire homelab from one file? One command to start everything. One command to back up everything. One command to rebuild from scratch? *Imagine kung sa-isang command, lahat ng services mo ay nabubuhay ulit. No more hunting for config files sa iba't-ibang directories.*
 
-That's what a **Docker Compose stack** is — a single file that defines every service, every network, every volume, and every environment variable for your entire homelab.
+That's what a **Docker Compose stack** is — a single file that defines every service, every network, every volume, and every environment variable for your entire homelab. Isang source of truth lang. Less kalat, less guesswork.
 
 ---
 
@@ -465,7 +465,7 @@ As you add more services, your data directory grows:
 
 **Recommendation:** Start with a 256GB SSD (₱1,500-₱2,500). Upgrade to 1TB+ when you hit 70% capacity.
 
-> **💸 Lean Path:** GitHub public repositories are free. Private repositories are also free (unlimited repos, up to 2 collaborators on free plan). Your homelab config doesn't need to be secret — it's just Docker configs. Use a public repo for your portfolio and a private one if you store `.env` with real passwords.
+> **💸 Lean Path:** GitHub public repositories are free. Private repositories are also free (unlimited repos, up to 2 collaborators on free plan). Your homelab config doesn't need to be secret — it's just Docker configs. Use a public repo for your portfolio and a private one if you store `.env` with real passwords. Kung maayos ang `.gitignore`, safe ka.
 
 ### Git for Configuration
 

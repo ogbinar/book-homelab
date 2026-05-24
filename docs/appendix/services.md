@@ -6,7 +6,7 @@ _Self-hosted services and tools for your homelab, with complexity ratings, resou
 
 ## Services Covered in This Book
 
-> **Quick Reference:** Deployment — **[Chapter 4](chapters/chapter-04.md)**. Reverse proxy — **[Chapter 7](chapters/chapter-07.md)**. Monitoring — **[Chapter 11](chapters/chapter-11.md)**.
+> **Quick Reference:** Deployment — **[Chapter 4](../chapters/chapter-04.md)**. Reverse proxy — **[Chapter 7](../chapters/chapter-07.md)**. Monitoring — **[Chapter 11](../chapters/chapter-11.md)**.
 
 ---
 
@@ -381,4 +381,4 @@ _Estimate what your homelab needs based on the services you want._
 | 7-10 (Heavy) | 12GB | 16GB | Tower PC (i5/i7 8th-9th gen) |
 | 10+ (Power User) | 24GB | 32GB+ | Multi-server or beefy single server |
 
-> **💸 The Lean Path:** You don't need all of these. Start with ONE service that solves a real problem for you. Add more when you need them. A homelab with one useful service is better than a homelab with ten unused ones.
+> **💸 Lean Path:** You don't need all of these. Start with ONE service that solves a real problem for you. Add more when you need them. A homelab with one useful service is better than a homelab with ten unused ones.

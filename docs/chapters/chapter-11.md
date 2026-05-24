@@ -26,7 +26,7 @@ Or you could have a single dashboard that shows you everything at a glance:
 - Is the internet connection stable? *(In the PH context, this is a fair question — PLDT, Globe, and Converge fiber cuts happen regularly, especially during typhoon season. Your monitoring should distinguish between "service is down" and "internet is down.")*
 - How many requests is each service handling?
 
-This chapter builds that dashboard.
+This chapter builds that dashboard. Hindi ka na manghuhula kung anong sira.
 
 > **📢 Jargon Alert:** "Observability" — The ability to understand the internal state of a system by examining its outputs (metrics, logs, traces). Monitoring is collecting the data. Observability is understanding what it means.
 
@@ -212,6 +212,17 @@ You should now see a beautiful dashboard showing:
 - **Prometheus:** Stores all metrics as time-series data
 - **Grafana:** Visualizes the data in dashboards
 
+### Why This Stack Works for Homelabs
+
+Prometheus and Grafana are a strong fit for a homelab because they split collection from presentation:
+
+- Prometheus keeps your metrics locally, which means you can build history without paying for a SaaS monitoring bill.
+- Grafana turns that data into dashboards you can actually use on desktop or mobile.
+- Node Exporter and cAdvisor give you both server-level and container-level visibility.
+- The whole stack runs comfortably on modest hardware, which matters when you are building at home and not in a datacenter.
+
+> **💡 Quick Win:** Start with one dashboard and one alert. You do not need to monitor everything on day one. The first win is simply knowing when your server goes weird.
+
 ### Alerting
 
 Prometheus can alert when things go wrong. Add alerting rules:
@@ -292,7 +303,7 @@ If Prometheus+Grafana feels overwhelming, Uptime Kuma (which you already have) i
 
 ## 🇵🇭 PH Context
 
-> **💸 Lean Path:** Grafana OSS (open source) and Prometheus are completely free. No paid tiers, no per-metric charges. Unlike Datadog ($15+/node/month) or New Relic ($0.40/GB ingested), your monitoring stack costs exactly ₱0 to run. The only cost is the ~400-800MB RAM they consume.
+> **💸 Lean Path:** Grafana OSS (open source) and Prometheus are completely free. No paid tiers, no per-metric charges. Unlike Datadog ($15+/node/month) or New Relic ($0.40/GB ingested), your monitoring stack costs exactly ₱0 to run. The only cost is the ~400-800MB RAM they consume. Sulit na sulit kung gusto mo ng control without recurring bills.
 
 ### Resource Considerations
 
@@ -330,9 +341,22 @@ Now let's prove your monitoring works:
 
 ---
 
+### Monitoring Failure Modes
+
+Even a good monitoring stack can fail in predictable ways:
+
+- If Prometheus is down, Grafana loses its data source.
+- If your scrape interval is too aggressive on weak hardware, the monitoring stack itself can become noisy.
+- If your network or ISP is down, you may get false alarms unless you distinguish local failure from upstream outage.
+- If you never test alerts, you will eventually trust silent failure.
+
+The fix is simple: monitor the monitoring stack, keep the first dashboard small, and test one alert end to end.
+
+---
+
 ## What's Next
 
-You can now see everything happening in your homelab. In Chapter 12, we'll secure it — because a monitored but unprotected homelab is just a vulnerable one.
+You can now see everything happening in your homelab. In Chapter 12, we'll secure it — because a monitored but unprotected homelab is just a vulnerable one. Kita mo na ang signals; next step, siguraduhin nating hindi basta-basta mapapasok.
 
 > **🇵🇭 PH Context — Monitoring During Typhoon Season:** When typhoons hit the Philippines, internet outages are common. Configure your monitoring to distinguish between "service is down" and "internet is down." This saves you from panic-calling yourself at 2 AM because a power outage took down your home WiFi, and your monitoring sent you a false alarm.
 

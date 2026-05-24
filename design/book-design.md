@@ -5,7 +5,7 @@
 > **Target Audience:** Absolute beginners in the Philippines — age 16 to 60, any background  
 > **Format:** Digital-first (web + PDF), progressive disclosure, modular chapters  
 > **Language:** **Taglish** (natural mix of Filipino + English, code/tech terms in English)  
-> **Scope:** **MVP first** — 12 chapters (Parts I + II only), Part III as future expansion  
+> **Scope:** **Current manuscript** — 13 chapters (Parts I + II plus capstone Chapter 13), Part III reserved for future expansion  
 > **Tone:** Friendly, opinionated, anti-gatekeeping, Taglish, Filipino-context-aware  
 > **License:** **Open source** — free forever, CC BY-SA 4.0, community contributions welcome
 
@@ -88,20 +88,19 @@ Based on our research, this book serves **five reader archetypes** — the book 
 
 ## 3. Book Structure: The Journey
 
-The book is organized as **two parts for MVP** (with a third planned for v2), following the identity transformation arc from our research:
+The book is organized as **two parts plus a capstone** in the current manuscript. Part III is intentionally left for future expansion, but it is not part of the published MVP:
 
 ```
-MVP (v1):
-  Part I:  "Bahay Bahayan" (Home)     →  Consumer → Tinkerer   (Chapters 1-6)
-  Part II: "Lumaki" (Grow)     →  Tinkerer → Builder     (Chapters 7-12)
-          + Portfolio Ch 13 (capstone)
+Current manuscript:
+  Part I:  "Bahay Bahayan" (Home)  →  Consumer → Tinkerer   (Chapters 1-6)
+  Part II: "Lumaki" (Grow)         →  Tinkerer → Builder     (Chapters 7-12)
+          + Chapter 13 portfolio capstone
 
-Future (v2):
-  Ch 13: Virtualization
-  Part III: "Malaki" (Become)  →  Builder → Architect    (Chapters 15-22)
+Future expansion:
+  Part III: "Malaki" (Become)      →  Builder → Architect    (Not yet written)
 ```
 
-**MVP = 13 chapters** (Ch 1-12 + Ch 13 capstone). Each chapter is self-contained with working projects. Remote Access merged into Ch 7.        Remote Access merged into Ch 7 (Section 7.5). Chapter 13 (Virtualization) deferred to v2.
+**Current manuscript = 13 chapters** (Ch 1-12 + Ch 13 capstone). Each chapter is self-contained with working projects. Remote access is merged into Chapter 7 as Section 7.5.
 
 ---
 
@@ -231,9 +230,9 @@ Future (v2):
 
 ---
 
-### Part II: "Lumaki" — Growing Your Lab (Chapters 7-12 + 14)
+### Part II: "Lumaki" — Growing Your Lab (Chapters 7-13)
 
-**Goal:** Build a multi-service homelab that you actually use daily. Learn the patterns that scale. Ch 13 (Virtualization) moved to v2.
+**Goal:** Build a multi-service homelab that you actually use daily. Learn the patterns that scale. Chapter 13 is the capstone portfolio chapter.
 
 #### Chapter 7: "The Reverse Proxy"
 **Type:** Hands-on / Networking
@@ -333,24 +332,6 @@ Future (v2):
 - Data privacy law context (Philippine Data Privacy Act of 2012)
 - Affordable security options
 
-#### Chapter 13: "Virtualization: More Servers, One Machine" — **v2 / Future**
-**Type:** Virtualization / Architecture
-**Time to Complete:** 3 hours
-
-> ⚠️ Moved to v2. Keep MVP focused on containers (Docker). Virtualization builds on the foundation.
-
-**What this chapter does:**
-- What is virtualization? (the "apartment building" analogy)
-- Proxmox VE installation
-- Creating your first VM
-- When to use VMs vs. containers
-- **Project:** Run Proxmox with multiple VMs
-- **Activity:** Create a VM and install a service inside it
-
-**Filipino Context:**
-- Hardware requirements (what second-hand server to get)
-- Power consumption comparison (server vs. NUC vs. Pi)
-
 #### Chapter 13: "Your Homelab Portfolio" (MVP Capstone)
 **Type:** Career / Documentation
 **Time to Complete:** 2 hours
@@ -371,9 +352,7 @@ Future (v2):
 
 ---
 
-**MVP = 12 chapters:** Ch 1-6 (Part I) + Ch 7-12 (Part II). Chapter 13 (Virtualization) moved to v2. Chapter 14 (Portfolio) becomes Chapter 13 capstone. Remote Access merged into Ch 7.
-
-Total MVP chapters: **13** (Chapters 1-13, with Remote Access as Section 7.5)
+**Current manuscript = 13 chapters:** Ch 1-6 (Part I) + Ch 7-13 (Part II + capstone). Remote Access is merged into Ch 7 as Section 7.5.
 
 ---
 
@@ -981,11 +960,11 @@ Every chapter follows this exact structure:
 3. **Community:** Build alongside the book, or launch after?
 4. **Updates:** How to keep hardware prices and software versions current?
 5. **Validation:** Beta readers from target personas before full publication?
-6. **Part III:** When to expand to advanced chapters (Kubernetes, AI, HA)?
+6. **Part III:** When to expand beyond the current 13-chapter manuscript?
 
 ### Decided
 - ✅ **Language:** Taglish (natural Filipino + English mix, tech terms in English)
-- ✅ **Scope:** MVP first — 12 chapters (Parts I + II), Part III deferred to v2
+- ✅ **Scope:** Current manuscript first — 13 chapters (Parts I + II + capstone), Part III deferred to future expansion
 - ✅ **License:** Open source, free forever (CC BY-SA 4.0), no paid tier
 
 ---

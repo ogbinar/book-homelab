@@ -378,6 +378,6 @@ sudo systemctl restart ssh
 
 ---
 
-> **💸 The Lean Path:** Your old laptop is a perfectly valid server. Don't spend money you don't need to spend. Start with ₱0.Upgrade when you hit a real limitation.
+> **💸 Lean Path:** Your old laptop is a perfectly valid server. Don't spend money you don't need to spend. Start with ₱0. Upgrade when you hit a real limitation.
 
 > **🇵🇭 PH Context:** A second-hand mini PC from Computer City or FB Marketplace for ₱5,000-₱10,000 is the sweet spot for most beginners. Look for Intel i5 6th gen or newer, 8GB RAM, and an SSD.

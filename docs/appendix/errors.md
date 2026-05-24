@@ -2,7 +2,7 @@
 
 _The top 50+ errors you'll encounter, with causes, solutions, and Philippines-specific context._
 
-> **Quick Reference:** Most errors are covered in **[Chapter 3](chapters/chapter-03.md)** (Docker basics), **[Chapter 5](chapters/chapter-05.md)** (keeping services alive), **[Chapter 7](chapters/chapter-07.md)** (reverse proxy + remote access).
+> **Quick Reference:** Most errors are covered in **[Chapter 3](../chapters/chapter-03.md)** (Docker basics), **[Chapter 5](../chapters/chapter-05.md)** (keeping services alive), **[Chapter 7](../chapters/chapter-07.md)** (reverse proxy + remote access).
 
 ---
 

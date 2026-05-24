@@ -24,6 +24,8 @@ The other way: use standard shipping containers. A container is the same size, s
 
 That's why Docker is the gateway drug of homelabbing. Once you understand containers, everything else becomes easier. *Parang nag-open ng bagong mundo — suddenly, you can run anything, anywhere, without breaking your system.*
 
+Hindi mo kailangan maging expert agad. Kapag na-get mo na ang idea ng container, mas less nakakatakot ang susunod na chapters.
+
 ---
 
 ## Why This Matters
@@ -292,7 +294,7 @@ docker compose pull
 docker compose up -d
 ```
 
-> **💸 Lean Path:** Docker Desktop is free for personal use and works on Windows and macOS. On Linux, Docker is always free. The container images you pull from Docker Hub are all free. There's zero cost to start containerizing your services — the only investment is your time.
+> **💸 Lean Path:** Docker Desktop is free for personal use and works on Windows and macOS. On Linux, Docker is always free. The container images you pull from Docker Hub are all free. There's zero cost to start containerizing your services — the only investment is your time. Hindi kailangan ng malaking budget para magsimula.
 
 > **💡 Quick Win:** Start using Docker Compose from the beginning. Even for a single service, it makes your setup portable and documentable.
 

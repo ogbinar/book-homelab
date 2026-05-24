@@ -11,7 +11,7 @@ description: "Tinkerer to Builder. Build a multi-service homelab you use daily."
 
 Finishing Part I means you have a working homelab. Now let's make it **reliable, secure, and professional.**
 
-This part takes you from **"I have a server"** to **"I run a multi-service infrastructure."**
+This part takes you from **"I have a server"** to **"I run a multi-service infrastructure."** Mas less hobby, mas more system.
 
 ---
 
