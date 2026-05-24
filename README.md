@@ -4,9 +4,13 @@
 
 **Official repository:** https://github.com/ogbinar/book-homelab
 
+**Public site:** https://ogbinar.com/book-homelab/
+
 **README:** https://github.com/ogbinar/book-homelab/blob/main/README.md
 
-**License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+**Book license:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+**Code license:** [MIT](https://opensource.org/license/mit)
 
 ---
 
@@ -87,7 +91,10 @@ This book is written for Filipinos, by Filipinos (well, for Filipinos). We inclu
 
 ## Contributing
 
-Contributions are welcome! This book is licensed under CC BY-SA 4.0.
+Contributions are welcome!
+
+- Book prose, diagrams, and documentation are licensed under CC BY 4.0.
+- Code snippets, scripts, and reusable code artifacts are licensed under MIT.
 
 1. Fork and clone this repository
 2. Follow the structure used in the existing chapters under `docs/chapters/`
@@ -149,17 +156,23 @@ book-homelab/
 
 ## License
 
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+This book and its documentation are licensed under the Creative Commons
+Attribution 4.0 International License.
 
 You are free to:
 - **Share** — Copy and redistribute the material in any medium or format
-- **Adapt** — Remix, transform, and build upon the material for any purpose
+- **Adapt** — Remix, transform, and build upon the material for any purpose,
+  even commercially
 
 Under the following terms:
 - **Attribution** — You must give appropriate credit
-- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license
+- No additional restrictions — You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the license permits
 
-See [LICENSE](LICENSE) for the full text.
+See [LICENSE](LICENSE) for the full text of the book license.
+
+Code snippets and scripts in this repository are licensed under MIT unless a
+file says otherwise.
 
 ---
 
